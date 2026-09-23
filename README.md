@@ -21,3 +21,14 @@ El flujo incluirá el procesamiento y control de calidad de secuencias de amplic
 
 ## **Material adicional**
 
+[Repo de AliciaMstt](https://github.com/AliciaMstt/BioinfinvRepro/tree/master)
+
+[Taller bioinfo Vinuesta](https://github.com/vinuesa/intro2linux)
+
+[Curso avanzado de programación](https://vinuesa.github.io/intro2linux/index.html#expresiones-regulares---una-breve-introducci%C3%B3n)
+
+[Advancecd R](https://adv-r.hadley.nz/index.html)
+
+[R for data science](https://r4ds.had.co.nz/index.html)
+
+
