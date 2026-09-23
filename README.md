@@ -10,7 +10,7 @@ Material para el curso de bioinformática par
 
 5. Flujo de trabajo para el
 
-Profesores 
+**Profesores** 
 
 Héctor Martínez Gregorio
 
