@@ -11,13 +11,13 @@ El flujo incluirá el procesamiento y control de calidad de secuencias de amplic
 
 #### 1. Secuenciación masiva y aplicaciones
 
-#### 2. Introducción a Linux
+##### 2. Introducción a Linux
    
-#### 3. Introducción a R
+##### 3. Introducción a R
 
-#### 4. Flujo de trabajo para el
+##### 4. Flujo de trabajo para el
 
-#### 5. Análisis de datos
+##### 5. Análisis de datos
 
 ## **Material adicional**
 
