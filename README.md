@@ -15,9 +15,9 @@ El flujo incluirá el procesamiento y control de calidad de secuencias de amplic
    
 ##### 3. Introducción a R
 
-##### 4. Flujo de trabajo para el
+##### 4. Flujo de trabajo con QIIME2
 
-##### 5. Análisis de datos
+##### 5. Análisis de datos con microeco
 
 ## **Material adicional**
 
