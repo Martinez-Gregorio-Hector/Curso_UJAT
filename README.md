@@ -1,5 +1,10 @@
 # Curso_UJAT
 
+**Objetivo del curso**
+
+Aprender 
+
+
 Material para el curso de bioinformática par
 
 1. Secuenciación masiva y aplicaciones
