@@ -6,9 +6,9 @@ Material para el curso de bioinformática par
 
 2. Introducción a Linux
    
-3.Introducción a R
+3. Introducción a R
 
-4. Flujo de trabajo para el
+5. Flujo de trabajo para el
 
 Profesores 
 
