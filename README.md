@@ -1,5 +1,7 @@
 # Curso_UJAT
 
+Les damos la bienvenida al repositorio oficial del taller "Del dato crudo al genoma: Ensamblado de novo y anotación de genomas de cloroplasto y mitocondria" en el marco del X Congreso Mexicano de Ecología y I Congreso ReLatE.
+
 ## **Objetivo del curso**
 
 Adquirir habilidades en el uso de comandos de Linux y R para implementar un flujo de trabajo bioinformático orientado al análisis de datos de microbioma. 
