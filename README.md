@@ -1,6 +1,17 @@
-# Curso_UJAT
+# Introducción a la bioinformática con un enfoque al análisis del microbioma
 
-Les damos la bienvenida al repositorio oficial del taller "Del dato crudo al genoma: Ensamblado de novo y anotación de genomas de cloroplasto y mitocondria" en el marco del X Congreso Mexicano de Ecología y I Congreso ReLatE.
+Este curso forma parte de la colaboración entre el Laboratorio Nacional en la Salud de la Facultad de Estudios Superiores Iztacala, UNAM con la Universidad Juárez Autónoma de Tabasco. Es un curso intensivo de bioinformática orientado a la adquisición de herramientas bioinformáticas - linux y R - para el análisis del microbioma.
+
+Instructores:
+
+Dr. Héctor Martínez Gregorio
+
+Dra. Clara Estela Días Velásquez
+
+Dr. Felipe Vaca Paniagua 
+
+Página del laboratorio Nacional [x](https://labnalsalud-fes.iztacala.unam.mx/)
+
 
 ## **Objetivo del curso**
 
