@@ -79,13 +79,13 @@ Existen varios Shell disponibles (lista no exhaustiva):
   <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/shell.png? raw=true" alt="shell" width="1000" height="400">
 </p>
 
-## Las responsabilidades de shell
+### Las responsabilidades de shell
 
 <p align="center">  
   <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/ActividadesShell.png? raw=true" alt="shell" width="1000" height="600">
 </p>
 
-## bash
+### bash
 
 Bash es amigable.
 
@@ -97,7 +97,7 @@ Gestión de jobs en segundo plano (background).
 
 Posibilidad de definir alias.
 
-## Sistema de archivos
+### Sistema de archivos
 
 El sistema de archivos representa el método con el cual el sistema operativo organiza los datos. 
 
@@ -111,7 +111,7 @@ El referencial de todo el sistema de archivo de una máquina es el caracter **�
 
 ### Tengo una PC que corre windows, ¿cómo puedo correr Linux en mi máquina? 
 
-1. Puedes instalar Linux en una nueva partición (Lo más recomendable). descargas gratuitas de distribuciones desde:
+1. Puedes instalar Linux en una nueva partición (recomendable siempre y cuando tengas una computadora que tenga una buena memoria RAM). descargas gratuitas de distribuciones desde:
    
 => 1. **[Ubuntu 22.04.1 LTS](https://ubuntu.com/download/desktop)**
 
@@ -121,16 +121,16 @@ El referencial de todo el sistema de archivo de una máquina es el caracter **�
 
 
 <p align="center">  
-  <img src="Figuras/DistribucionesLinux.png? raw=true" alt="shell" width="600" height="600">
+  <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/DistribucionesLinux.png? raw=true" alt="shell" width="600" height="600">
 </p>
 
 2. Puedes instalar **[MobaXterm](https://mobaxterm.mobatek.net/download.html)**, que proporciona una terminal para Windows con un servidor de ambiente gráfico X11, un cliente SSH para establecer sesiones remotas seguras con un servidor, diversas herramientas de red y más. 
 
 <p align="center">  
-  <img src="Figuras/MobaxTermn.png? raw=true" alt="shell" width="800" height="800">
+  <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/MobaxTermn.png? raw=true" alt="shell" width="800" height="800">
 </p>
 
-## Uso de MobaXterm para establecer sesiones remotas a un servidor vía protocolo SSH
+### Uso de MobaXterm para establecer sesiones remotas a un servidor vía protocolo SSH
 
 Para establecer una conexión remota vía SSH elige el protocol SSH (secure shell) y usa la IP, usuario y contraseña indicados en el taller
 
@@ -155,19 +155,20 @@ Una vez establecida la sesión remota al servidor, estarán trabajando en él!
 
 => 1. Usar la terminal en entorno de Windows 10. Acceder a la terminal y comunicarnos con el servidor.
 
-=> 2. Usar Rstudio, en la pestaña tools, seleccionar terminal. Acceder y comunicarnos con el servidor. (Opción más práctica del curso).
+=> 2. Usar Rstudio, en la pestaña tools, seleccionar terminal. Acceder y comunicarnos con el servidor.
 
 Usaremos el servidor del lab13 de la UBIMED de la FES Iztacala. $${\color{red}NOTA \space IMPORTANTE: \space no \space acceder \space después \space del \space curso}$$
-
 
 El servidor es una máquina con 8 núcleos y 16G de RAM.
 
 Esta máquina cuenta con los programas que se usarán en el curso.
 
-## Tipos de Shell
+# Conexión al servidor
+
+### Tipos de Shell
 
 <p align="center">  
-  <img src="Figuras/LocalRemota.jpg? raw=true" alt="shell" width="1000" height="600">
+  <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/LocalRemota.jpg? raw=true" alt="shell" width="1000" height="600">
 </p>
 
 ## Terminal
