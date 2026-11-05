@@ -67,7 +67,7 @@ Aprenderás a utilizar el paquete microeco en R para el análisis ecológico del
 
 
 <p align="center">  
-  <img src="portada.jpg? raw=true" alt="shell" width="1000" height="700">
+  <img src="portada.jpg? raw=true" alt="shell" width="600" height="400">
 </p>
 
 
