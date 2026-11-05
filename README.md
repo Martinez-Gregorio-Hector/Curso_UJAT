@@ -61,7 +61,7 @@ Aprenderás a utilizar el paquete microeco en R para el análisis ecológico del
 
     También puedes utilizar cualquier otro editor de texto de tu preferencia, siempre que permita trabajar con archivos de código.
 
-    Importante: No utilizar Microsoft Word ni otros procesadores de texto, ya que pueden modificar el formato del código y generar errores al ejecutarlo.
+    Importante: **No utilizar Microsoft Word ni otros procesadores de texto, ya que pueden modificar el formato del código y generar errores al ejecutarlo**.
 
 3. Instalación de R y RStudio. Para realizar los análisis bioinformáticos y estadísticos durante el curso, es necesario instalar [R](https://www.r-project.org/) y [RStudio](https://posit.co/products/open-source/rstudio), que utilizaremos como entorno de programación y análisis de datos.
 
