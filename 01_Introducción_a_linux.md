@@ -450,47 +450,41 @@ ls -l my_scr[!i]pt
 ## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scrupt
 
 ```
+### Copiando archivos
 
+Copiar archivos y directorios de una ubicación a otra en el sistema de archivos es una práctica común para los administradores de sistemas. El comando **cp** proporciona esta función.
 
-NOS QUEDAMOS AQUI
-
-
-
-
-## Copiando archivos
-
-Copiar archivos y directorios de una ubicación a otra en el sistema de archivos es una práctica común para los administradores de sistemas. El comando *_cp_* proporciona esta función.
-
-En su forma más básica, el comando cp utiliza dos parámetros: el objeto de origen y el objeto de destino: *_cp fuente destino_*  
+En su forma más básica, el comando cp utiliza dos parámetros: el objeto de origen y el objeto de destino: **cp fuente destino**  
 
 ```
-cp test_one test_two
-ls -lh test*
+cp my_scrapt my_scrapt_v2
+ls -lh my*
 
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 00:51 test_one
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 07:26 test_two
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scrapt
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 17:48 my_scrapt_v2
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scrept
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_script
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scropt
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scrupt
 
 ```
 
-El parámetro -R es una potente opción del comando cp. Permite copiar recursivamente el contenido de un directorio completo con un solo comando: *_cp -R Scripts/ Mod_Scripts_*
+El parámetro -R es una potente opción del comando cp. Permite copiar recursivamente el contenido de un directorio completo con un solo comando: **cp -R Scripts/ Mod_Scripts**
 
 ## Renombrando archivos
 
-En Linux, renombrar archivos se llama mover archivos. El comando *_mv_* permite mover archivos y directorios a otra ubicación o a un nuevo nombre:
+En Linux, renombrar archivos se llama mover archivos. El comando **mv** permite mover archivos y directorios a otra ubicación o a un nuevo nombre. Vamos a renombrar el archivo my_scrapt_v2
 
 ```
-ls -lh f?ll
+mv my_scrapt_v2 mi_primer_script
 
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 07:33 fall
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 07:33 fell
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 07:33 fill
 
-mv fall fzll
-ls -lh f?ll
-
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 07:33 fell
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 07:33 fill
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 07:33 fzll
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 17:48 mi_primer_script
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scrapt
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scrept
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_script
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scropt
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scrupt
 
 ```
 
@@ -498,18 +492,16 @@ ls -lh f?ll
 
 Lo más probable es que en algún momento quieras poder eliminar archivos existentes. Ya sea para limpiar un sistema de archivos o para eliminar un paquete de software, siempre tienes la oportunidad de eliminar archivos.
 
-En Linux, eliminar se llama remover. El comando para eliminar archivos en la shell bash es **rm**. La forma básica del comando **rm** es simple:
-
+En Linux, eliminar se llama remover. El comando para eliminar archivos es **rm**. La forma básica del comando **rm** es simple: **rm que_quiero_eliminar**. Vamos a eliminar el archivo **mi_primer_script**
 
 ```
-rm fzll 
+rm mi_primer_script 
 
-ls -lh f?ll 
-
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 07:33 fell
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 07:33 fill
-
-rm f?ll 
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scrapt
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scrept
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_script
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scropt
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scrupt
 ```
 
 ## Visualización del archivo
@@ -519,6 +511,7 @@ Si tiene un archivo de texto grande, quizás quiera ver su contenido. Linux cuen
 El comando **cat** es una herramienta útil para mostrar todos los datos dentro de un archivo de texto
 
 ```
+# Para descargar un archivo por internet 
 wget https://raw.githubusercontent.com/Martinez-Gregorio-Hector/AnalisisGenomico-EcologiaFESIztacala/refs/heads/main/Unidad1/Datos/flights.csv
 
 ##
