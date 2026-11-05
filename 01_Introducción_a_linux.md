@@ -367,74 +367,76 @@ mv HectorMartinez MAGH
 ls -lh
 
 ## drwxr-xr-x. 2 lab13 lab13 6 Nov  5 16:15 MAGH
-
 ```
+
+Vayan a su carpeta que acaban de crear para que los siguientes ejercicios
+
 
 ## Comando touch
 
-El comando touch se usa para crear archivos vacíos. Vamos a crear unos archivos vacrios con el siguiente comando 
+El comando touch se usa para crear archivos vacíos. Vamos a crear unos archivos vacíos con el siguiente comando 
 
 ```
-touch my_scr{a,e,i,o,u}
+# Generar archivos vacíos
+touch my_scr{a,e,i,o,u}pt
 
 ls -lh
 
-## -rw-r--r--. 1 lab13 lab13 0 May 10 19:02 my_scrapt
-## -rw-r--r--. 1 lab13 lab13 0 May 10 19:02 my_scrept
-## -rw-r--r--. 1 lab13 lab13 0 May 10 19:02 my_script
-## -rw-r--r--. 1 lab13 lab13 0 May 10 19:02 my_scropt
-## -rw-r--r--. 1 lab13 lab13 0 May 10 19:02 my_scrupt
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scrapt
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scrept
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_script
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scropt
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scrupt
 ```
 
 El comando ls también reconoce caracteres comodín estándar y los utiliza para encontrar patrones dentro del filtro:
 ■ Un signo de interrogación (?) para representar un carácter
 ■ Un asterisco (*) para representar cualquier número de caracteres
 
+
 ```
 ls -lh my_scr?pt
 
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 00:32 my_scrapt
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 00:32 my_scrept
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 00:32 my_script
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 00:32 my_scropt
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 00:32 my_scrupt
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scrapt
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scrept
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_script
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scropt
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scrupt
 
 ls -lh my*
 
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 00:32 my_scrapt
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 00:32 my_scrept
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 00:32 my_script
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 00:32 my_scropt
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 00:32 my_scrupt
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scrapt
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scrept
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_script
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scropt
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scrupt
 ```
 
-El asterisco busca tres archivos diferentes, comenzando con el nombre "my". Al igual que con el signo de interrogación, puede colocar los asteriscos en cualquier parte del filtro:
+El asterisco busca los cinco archivos diferentes, comenzando con el nombre "my". Al igual que con el signo de interrogación, puede colocar los asteriscos en cualquier parte del filtro:
 
 ```
 ls -lh my_s*t
 
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 00:32 my_scrapt
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 00:32 my_scrept
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 00:32 my_script
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 00:32 my_scropt
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 00:32 my_scrupt
-
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scrapt
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scrept
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_script
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scropt
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scrupt
 ```
 
 El uso del asterisco y el signo de interrogación en el filtro se denomina "globbing" de archivos. El "globbing" de archivos consiste en procesar la coincidencia de patrones mediante comodines. Los comodines se denominan oficialmente comodines de metacaracteres. Se pueden usar más comodines de metacaracteres para el "globbing" de archivos que solo el asterisco y el signo de interrogación. También se pueden usar corchetes.
 
 ```
-ls -l my_scr[ai]pt
+ls -lh my_scr[ai]pt
 
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 00:32 my_scrapt
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 00:32 my_script
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scrapt
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_script
 
-ls -l my_scr[a-i]pt
+ls -lh my_scr[a-i]pt
 
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 00:32 my_scrapt
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 00:32 my_scrept
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 00:32 my_script
-
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scrapt
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scrept
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_script
 ```
 
 También puedes especificar qué no debe incluirse en la coincidencia de patrones utilizando el signo de exclamación (!):
@@ -442,23 +444,19 @@ También puedes especificar qué no debe incluirse en la coincidencia de patrone
 ```
 ls -l my_scr[!i]pt
 
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 00:32 my_scrapt
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 00:32 my_scrept
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 00:32 my_scropt
-## -rw-r--r--. 1 lab13 lab13 0 Aug 11 00:32 my_scrupt
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scrapt
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scrept
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scropt
+## -rw-r--r--. 1 lab13 lab13 0 Nov  5 16:51 my_scrupt
 
 ```
-## Manejo de archivos
 
-De vez en cuando, es necesario crear un archivo vacío. Por ejemplo, a veces las aplicaciones esperan que exista un archivo de registro antes de poder escribir en él. En estas situaciones, se puede usar el comando *`touch`* para crear fácilmente un archivo vacío:
 
-```
-touch test_one
-ls -l test_one
+NOS QUEDAMOS AQUI
 
-## --rw-r--r--. 1 lab13 lab13 0 Aug 11 00:51 test_one
 
-```
+
+
 ## Copiando archivos
 
 Copiar archivos y directorios de una ubicación a otra en el sistema de archivos es una práctica común para los administradores de sistemas. El comando *_cp_* proporciona esta función.
@@ -569,6 +567,11 @@ head -n 8 flights.csv
 ## 2011-01-06 12:00:00,13,59,1359,1503,-1,-7,"AA",428,"DFW","N262AA",0,45,224
 ## 2011-01-07 12:00:00,13,59,1359,1509,-1,-1,"AA",428,"DFW","N493AA",0,43,224
 ```
+
+
+
+
+
 
 ## Uso de variables
 
