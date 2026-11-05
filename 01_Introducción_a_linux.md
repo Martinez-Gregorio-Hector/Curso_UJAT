@@ -15,8 +15,7 @@ Su principal objetivo es impulsar el software de **libre distribución** junto c
 </p>
 
 
-
-## ¿Por qué usar Linux y no Windows?
+### ¿Por qué usar Linux y no Windows?
 
 | Ventajas de usar Windows                 | Ventajas de usar Linux                                                     |
 |------------------------------------------|----------------------------------------------------------------------------|
@@ -34,7 +33,7 @@ Su principal objetivo es impulsar el software de **libre distribución** junto c
   <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/LinuxVsWindows.png? raw=true" alt="shell" width="1000" height="600">
 </p>
 
-## Hardware y software
+### Hardware y software
 
 Hardware: Conjunto de elementos físicos o materiales que constituyen una computadora.
 
@@ -53,14 +52,14 @@ Controla el acceso a cada recurso (memoria, CPU, disco duro, tarjeta de vídeo)
 Ordena el acceso a la(s) CPU(s) de los programas.
 
 <p align="center">  
-  <img src="Figuras/Kernel.png? raw=true" alt="shell" width="500" height="600">
+  <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/Kernel.png? raw=true" alt="shell" width="500" height="600">
 </p>
 
 <p align="center">  
-  <img src="Figuras/HardwareSoftware2.png? raw=true" alt="shell" width="1000" height="600">
+  <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/HardwareSoftware2.png? raw=true" alt="shell" width="1000" height="600">
 </p>
 
-## Shell
+### Shell
 
 El Shell permite interactuar con el sistema (vía el kernel).
 
