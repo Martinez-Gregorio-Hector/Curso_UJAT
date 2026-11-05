@@ -198,7 +198,7 @@ ssh lab13@132.248.216.138
 
 ### ¿Dónde encuentro una descripción básica de los comandos disponibles? 
 
-* [lista de comandos útiles](https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/tree/main/MaterialDeApoy)
+* [lista de comandos útiles](https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/tree/main/MaterialDeApoyo)
 
 * En Wikipedia: **[Linux commands](http://en.wikibooks.org/wiki/Linux_Guide/Linux_commands)** y **[List of Unix programs](http://en.wikipedia.org/wiki/List_of_Unix_programs)**
 
