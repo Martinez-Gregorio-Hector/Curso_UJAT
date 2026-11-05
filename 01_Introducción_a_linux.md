@@ -227,14 +227,18 @@ El comando **ls** en su forma más básica muestra los archivos y directorios ub
 ```
 ls
 
-## Alumnos  Equipo01  Equipo02  Equipo03  Equipo04  Equipo05
-## Equipo06  Equipo07  Equipo08  Equipo09  Equipo10
+##  anaconda3  Documents  miniconda3  Pictures  Public  Reference  Templates     Videos
+##  Desktop    Downloads  Music       Programs  R       Rlibs      tmp_polyclip
 ```
 
 El comando **ls** puede combinar con opciones, para ver esas opciones se corre **ls** con **help**
 
 ```
 ls --help
+
+## Usage: ls [OPTION]... [FILE]...
+## List information about the FILEs (the current directory by default).
+## Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
 
 ## -a list all (lista archivo ocultos tipo .directorio o .archivo)
 ## -l long format (muestra permisos y otros atributos como usuario, grupo, tamaño del archivo y fecha de modificación)
@@ -246,42 +250,47 @@ ls --help
 ## etc ...
 ```
 
-En los listados básicos, el comando **ls** no genera mucha información sobre cada archivo. Para obtener información adicional, otro parámetro popular es **-l**. El parámetro **-l** genera un formato de listado largo, que proporciona más información sobre cada archivo del directorio.
+En los listados básicos, el comando **ls** no genera mucha información sobre cada archivo. Para obtener información adicional, otro parámetro popular es **-l**. El parámetro **-l** genera un formato de listado largo, que proporciona más información sobre cada archivo del directorio. El parámetro **-h** se utiliza para que sea leíble para los humanos.
 
 ```
 ls -lh
 
-## drwxr-xr-x. 2 lab13 lab13 6 Apr 22 22:16 Alumnos
-## drwxr-xr-x. 2 lab13 lab13 6 Apr 22 22:16 Equipo01
-## drwxr-xr-x. 2 lab13 lab13 6 Apr 22 22:16 Equipo02
-## drwxr-xr-x. 2 lab13 lab13 6 Apr 22 22:16 Equipo03
-## drwxr-xr-x. 2 lab13 lab13 6 Apr 22 22:16 Equipo04
-## drwxr-xr-x. 2 lab13 lab13 6 Apr 22 22:16 Equipo05
-## drwxr-xr-x. 2 lab13 lab13 6 Apr 22 22:16 Equipo06
-## drwxr-xr-x. 2 lab13 lab13 6 Apr 22 22:16 Equipo07
-## drwxr-xr-x. 2 lab13 lab13 6 Apr 22 22:16 Equipo08
-## drwxr-xr-x. 2 lab13 lab13 6 Apr 22 22:16 Equipo09
-## drwxr-xr-x. 2 lab13 lab13 6 Apr 22 22:16 Equipo10
+## drwxr-xr-x. 38 lab13 lab13 4.0K Oct 21 19:45 anaconda3
+## drwxr-xr-x.  2 lab13 lab13    6 Mar 18  2026 Desktop
+## drwxr-xr-x.  8 lab13 lab13  104 Nov  4 14:58 Documents
+## drwxr-xr-x.  3 lab13 lab13  132 Oct 21 19:36 Downloads
+## drwxr-xr-x. 26 lab13 lab13 4.0K Oct 28 09:07 miniconda3
+## drwxr-xr-x.  2 lab13 lab13    6 Oct  9  2024 Music
+## drwxr-xr-x.  2 lab13 lab13    6 Sep 10 09:32 Pictures
+## drwxr-xr-x. 11 lab13 lab13 4.0K Oct 21 19:48 Programs
+## drwxr-xr-x.  2 lab13 lab13    6 Oct  9  2024 Public
+## drwxr-xr-x.  3 lab13 lab13   45 Jan  9  2025 R
+## drwxr-xr-x.  8 lab13 lab13  132 Apr 13  2026 Reference
+## drwxr-xr-x. 18 lab13 lab13 4.0K Sep 24  2025 Rlibs
+## drwxr-xr-x.  2 lab13 lab13    6 Dec 10  2024 Templates
+## drwxr-xr-x.  3 lab13 lab13   22 Oct 26 13:09 tmp_polyclip
+## drwxr-xr-x.  2 lab13 lab13    6 Oct  9  2024 Videos
 ```
-
-Vamos a entrar en la carpeta de **Alumnos**. Recuerden para entrar a la carpeta utilizamos el comando **cd**
-
-
-
-Una vez que accedemos al servidor nos dirigimos a la carpeta de Ecologia2026
 
 ### comando cd
 
-el comando **cd** (change directory) se usa para mover la sesión de shell a otro directorio del sistema de archivos de Linux. La sintaxis del comando cd es bastante simple: **cd destino**. El comando **cd** puede tener un solo parámetro, destino, que especifica el nombre del directorio al que se desea acceder. Si no se especifica un destino en el comando cd, lo llevará a su directorio personal.
+el comando **cd** (change directory) se usa para mover la sesión de shell a otro directorio del sistema de archivos de Linux. La sintaxis del comando cd es bastante simple: **cd destino**. El comando **cd** puede tener un solo parámetro, destino, que especifica el nombre del directorio al que se desea acceder. Si no se especifica un destino en el comando cd, lo llevará a su directorio personal (**home**).
 
 ```
 cd
-cd /home/lab13/Documents/Ecologia2026
+pwd
+
+## /home/lab13
 ```
 
+Vamos a estar trabajando en este directorio **/home/lab13/Documents/Curso_UJED**. Para entrar al directorio de trabajo vamos utilizar el comando **cd**
+
 ```
-cd Documents/Ecologia2026
+cd Documents/Curso_UJED
+pwd
+## /home/lab13/Documents/Curso_UJED
 ```
+
 
 
 
