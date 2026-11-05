@@ -181,15 +181,13 @@ Esta máquina cuenta con los programas que se usarán en el curso.
 
 **ssh user@host**
 
-ssh lab13@132.248.216.138
+**ssh lab13@132.248.216.138**
 
-ssh hectormartinez@132.248.216.138
+**ssh hectormartinez@132.248.216.138**
 
-ssh felipevaca@132.248.216.138
+**ssh felipevaca@132.248.216.138**
 
-ssh claraestela@132.248.216.138
-
-ssh emiliocordoba@132.248.216.138
+**ssh claraestela@132.248.216.138**
 
 Vamos a acceder al servidor con la siguiente dirección **ip**
 
@@ -197,13 +195,7 @@ Vamos a acceder al servidor con la siguiente dirección **ip**
 ssh lab13@132.248.216.138
 ```
 
-Una vez que accedemos al servidor nos dirigimos a la carpeta de Ecologia2026
-
-```
-cd Documents/Ecologia2026
-```
-
-# Introducción a línea de comandos
+## 3. Introducción a línea de comandos
 
 ```
 command [-flag(s)] [-option(s)] [value] [argument(s)]
@@ -223,6 +215,15 @@ command [-flag(s)] [-option(s)] [value] [argument(s)]
 * Un sencillo tutorial (caps 1-5): **[Unix](http://www.ee.surrey.ac.uk/Teaching/Unix/)**
 
 * **[intro2linux](https://vinuesa.github.io/intro2linux/index.html)**
+
+
+
+Una vez que accedemos al servidor nos dirigimos a la carpeta de Ecologia2026
+
+```
+cd Documents/Ecologia2026
+```
+
 
 ## comando cd
 
