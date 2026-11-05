@@ -217,10 +217,10 @@ El comando **pwd** (print work directory) muestra la ubicación del directorio a
 
 ```
 pwd
-## /home/lab13/Documents/Ecologia2026
+## /home/lab13
 ```
 
-## comando ls
+### comando ls
 
 El comando **ls** en su forma más básica muestra los archivos y directorios ubicados en su directorio actual. Ten en cuenta que el comando **ls** genera la lista en orden alfabético (en filas en lugar de columnas).
 
