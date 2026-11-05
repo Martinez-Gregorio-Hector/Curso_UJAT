@@ -11,10 +11,10 @@ Su principal objetivo es impulsar el software de **libre distribución** junto c
 ### Línea de tiempo de los SO
 
 <p align="center">  
-  <img src="[Figuras/TimelineOS.jpg](https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/TimelineOS.jpg?%20raw=true)? raw=true" alt="shell" width="1000" height="600">
+  <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/TimelineOS.jpg? raw=true" alt="shell" width="1000" height="600">
 </p>
 
-Breve historia de los **[SO](https://techsnap.tv/operating-systems/a-brief-history-of-operating-systems/)**
+
 
 ## ¿Por qué usar Linux y no Windows?
 
