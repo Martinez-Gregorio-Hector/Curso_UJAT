@@ -6,12 +6,12 @@ Un sistema operativo (SO) es un conjunto de órdenes y programas que controlan l
 
 Linux es un SO diseñado por cientos de programadores de todo el planeta. El principal responsable del proyecto es [Linus Torvalds](https://www.cisinformatica.cat/es/quien-es-linus-torvalds-el-padre-de-linux/).
 
-Su principal objetivo es impulsar el software de libre distribución junto con su código fuente para que pueda ser modificado por cualquier persona.
+Su principal objetivo es impulsar el software de **libre distribución** junto con su código fuente para que pueda ser modificado por cualquier persona.
 
-## Línea de tiempo de los SO
+### Línea de tiempo de los SO
 
 <p align="center">  
-  <img src="Figuras/TimelineOS.jpg? raw=true" alt="shell" width="1000" height="600">
+  <img src="[Figuras/TimelineOS.jpg](https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/TimelineOS.jpg?%20raw=true)? raw=true" alt="shell" width="1000" height="600">
 </p>
 
 Breve historia de los **[SO](https://techsnap.tv/operating-systems/a-brief-history-of-operating-systems/)**
