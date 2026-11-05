@@ -1,4 +1,4 @@
-# Que es Linux
+# Introducción a Linux
 
 # Comandos básicos
 
