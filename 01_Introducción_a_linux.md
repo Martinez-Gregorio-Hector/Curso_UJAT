@@ -196,16 +196,9 @@ ssh lab13@132.248.216.138
 
 ## 3. Introducción a línea de comandos
 
-```
-command [-flag(s)] [-option(s)] [value] [argument(s)]
-```
-
-<p align="center">  
-  <img src="Figuras/bash-cheat-sheet.webp? raw=true" alt="shell" width="800" height="600">
-</p>
-
-
 ### ¿Dónde encuentro una descripción básica de los comandos disponibles? 
+
+[lista de comandos útiles](https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/tree/main/MaterialDeApoy)
 
 
 * En Wikipedia: **[Linux commands](http://en.wikibooks.org/wiki/Linux_Guide/Linux_commands)** y **[List of Unix programs](http://en.wikipedia.org/wiki/List_of_Unix_programs)**
@@ -216,6 +209,9 @@ command [-flag(s)] [-option(s)] [value] [argument(s)]
 * **[intro2linux](https://vinuesa.github.io/intro2linux/index.html)**
 
 
+```
+command [-flag(s)] [-option(s)] [value] [argument(s)]
+```
 
 Una vez que accedemos al servidor nos dirigimos a la carpeta de Ecologia2026
 
