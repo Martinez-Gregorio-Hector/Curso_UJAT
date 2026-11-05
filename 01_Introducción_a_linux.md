@@ -1,13 +1,8 @@
 # Introducción a Linux
 
-# Fundamentos de Linux
+### Que es linux
 
-## Objetivo
-Desarrollar habilidades en el uso de comandos básicos del sistema operativo (SO) Linux para su aplicación en el análisis bioinformático del gen _16S rRNA_, orientado a la identificación taxonómica de bacterias de interés ecológico a partir de distintas muestras fecales.
-
-## Que es linux
-
-Un SO es un conjunto de órdenes y programas que controlan los procesos básicos de una computadora y permiten el funcionamiento de otros programas.
+Un sistema operativo (SO) es un conjunto de órdenes y programas que controlan los procesos básicos de una computadora y permiten el funcionamiento de otros programas.
 
 Linux es un SO diseñado por cientos de programadores de todo el planeta. El principal responsable del proyecto es [Linus Torvalds](https://www.cisinformatica.cat/es/quien-es-linus-torvalds-el-padre-de-linux/).
 
