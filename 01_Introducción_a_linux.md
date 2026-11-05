@@ -15,7 +15,6 @@ Su principal objetivo es impulsar el software de **libre distribución** junto c
   <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/TimelineOS.jpg? raw=true" alt="shell" width="1000" height="600">
 </p>
 
-
 ### ¿Por qué usar Linux y no Windows?
 
 | Ventajas de usar Windows                 | Ventajas de usar Linux                                                     |
@@ -206,7 +205,7 @@ command [-flag(s)] [-option(s)] [value] [argument(s)]
 </p>
 
 
-## ¿Dónde encuentro una descripción básica de los comandos disponibles? 
+### ¿Dónde encuentro una descripción básica de los comandos disponibles? 
 
 
 * En Wikipedia: **[Linux commands](http://en.wikibooks.org/wiki/Linux_Guide/Linux_commands)** y **[List of Unix programs](http://en.wikipedia.org/wiki/List_of_Unix_programs)**
