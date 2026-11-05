@@ -283,19 +283,13 @@ pwd
 ## /home/lab13
 ```
 
-Vamos a estar trabajando en este directorio **/home/lab13/Documents/Curso_UJED**. Para entrar al directorio de trabajo vamos utilizar el comando **cd**
+Vamos a estar trabajando en este directorio **/home/lab13/Documents/Curso_UJED**. Entra al directorio de trabajo usando **cd**
 
 ```
 cd Documents/Curso_UJED
 pwd
 ## /home/lab13/Documents/Curso_UJED
 ```
-
-
-
-
-
-
 
 El parámetro de destino se puede expresar mediante dos métodos diferentes. Un método utiliza una **ruta absoluta** o una **ruta relativa** al directorio.
 
