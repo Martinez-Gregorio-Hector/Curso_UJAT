@@ -43,7 +43,7 @@ Software: Programas para realizar determinadas tareas
   <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/HardwareSoftware.jpg? raw=true" alt="shell" width="1000" height="600">
 </p>
 
-## Kernel
+### Kernel
 
 El **[kernel](https://linuxsimply.com/what-is-kernel/)** es el componente de software encargado de controlar la computadora (hardware).
 
@@ -76,13 +76,13 @@ Existen varios Shell disponibles (lista no exhaustiva):
 * Z shell (zsh) 
 
 <p align="center">  
-  <img src="Figuras/shell.png? raw=true" alt="shell" width="1000" height="400">
+  <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/shell.png? raw=true" alt="shell" width="1000" height="400">
 </p>
 
 ## Las responsabilidades de shell
 
 <p align="center">  
-  <img src="Figuras/ActividadesShell.png? raw=true" alt="shell" width="1000" height="600">
+  <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/ActividadesShell.png? raw=true" alt="shell" width="1000" height="600">
 </p>
 
 ## bash
@@ -106,10 +106,10 @@ Incluye los archivos, y tambien los directorios ( o carpetas)
 El referencial de todo el sistema de archivo de una máquina es el caracter **“/"**
 
 <p align="center">  
-  <img src="Figuras/EstructuraLinux.png? raw=true" alt="shell" width="1000" height="600">
+  <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/EstructuraLinux.png? raw=true" alt="shell" width="1000" height="600">
 </p>
 
-## Tengo una PC que corre windows, ¿cómo puedo correr Linux en mi máquina? 
+### Tengo una PC que corre windows, ¿cómo puedo correr Linux en mi máquina? 
 
 1. Puedes instalar Linux en una nueva partición (Lo más recomendable). descargas gratuitas de distribuciones desde:
    
