@@ -1,6 +1,6 @@
 # Introducción a la bioinformática con un enfoque al análisis del microbioma
 
-Este curso forma parte de la colaboración entre el Laboratorio Nacional en  Salud de la Facultad de Estudios Superiores Iztacala, UNAM con la Universidad Juárez Autónoma de Tabasco. Es un curso intensivo de bioinformática orientado a la adquisición de herramientas bioinformáticas - linux y R - para el análisis del microbioma.
+Este curso forma parte de la colaboración entre el **Laboratorio Nacional en  Salud de la Facultad de Estudios Superiores Iztacala, UNAM** con la **Universidad Juárez Autónoma de Tabasco**. Es un curso intensivo de bioinformática orientado a la adquisición de herramientas bioinformáticas - linux y R - para el análisis del microbioma.
 
 Instructores:
 
