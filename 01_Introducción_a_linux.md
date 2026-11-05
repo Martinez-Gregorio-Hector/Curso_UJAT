@@ -31,7 +31,7 @@ Su principal objetivo es impulsar el software de **libre distribución** junto c
 
 
 <p align="center">  
-  <img src="Figuras/LinuxVsWindows.png? raw=true" alt="shell" width="1000" height="600">
+  <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/LinuxVsWindows.png? raw=true" alt="shell" width="1000" height="600">
 </p>
 
 ## Hardware y software
