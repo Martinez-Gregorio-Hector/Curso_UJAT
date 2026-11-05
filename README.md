@@ -66,7 +66,9 @@ Aprenderás a utilizar el paquete microeco en R para el análisis ecológico del
 3. Instalación de R y RStudio. Para realizar los análisis bioinformáticos y estadísticos durante el curso, es necesario instalar [R](https://www.r-project.org/) y [RStudio](https://posit.co/products/open-source/rstudio), que utilizaremos como entorno de programación y análisis de datos.
 
 
-
+<p align="center">  
+  <img src="portada.jpg? raw=true" alt="shell" width="1000" height="700">
+</p>
 
 
 
