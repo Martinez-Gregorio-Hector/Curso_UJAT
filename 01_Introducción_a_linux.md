@@ -6,7 +6,7 @@ Un sistema operativo (SO) es un conjunto de órdenes y programas que controlan l
 
 Linux es un SO diseñado por cientos de programadores de todo el planeta. El principal responsable del proyecto es [Linus Torvalds](https://www.cisinformatica.cat/es/quien-es-linus-torvalds-el-padre-de-linux/).
 
-Su principal objetivo es impulsar el software de **libre distribución** junto con su código fuente para que pueda ser modificado por cualquier persona.
+Su principal objetivo es impulsar el software de **libre distribución** junto con su **código fuente** para que pueda ser modificado por cualquier persona.
 
 ### Línea de tiempo de los SO
 
@@ -41,7 +41,7 @@ Hardware: Conjunto de elementos físicos o materiales que constituyen una comput
 Software: Programas para realizar determinadas tareas
 
 <p align="center">  
-  <img src="Figuras/HardwareSoftware.jpg? raw=true" alt="shell" width="1000" height="600">
+  <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/HardwareSoftware.jpg? raw=true" alt="shell" width="1000" height="600">
 </p>
 
 ## Kernel
@@ -201,7 +201,8 @@ Una vez que accedemos al servidor nos dirigimos a la carpeta de Ecologia2026
 ```
 cd Documents/Ecologia2026
 ```
-## Introducción a línea de comandos
+
+# Introducción a línea de comandos
 
 ```
 command [-flag(s)] [-option(s)] [value] [argument(s)]
