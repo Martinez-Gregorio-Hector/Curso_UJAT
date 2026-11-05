@@ -1,14 +1,14 @@
 # Introducción a la bioinformática con un enfoque al análisis del microbioma
 
-Este curso forma parte de la colaboración entre el **Laboratorio Nacional en  Salud de la Facultad de Estudios Superiores Iztacala, UNAM** con la **Universidad Juárez Autónoma de Tabasco**. Es un curso intensivo de bioinformática orientado a la adquisición de herramientas bioinformáticas - linux y R - para el análisis del microbioma.
+Este curso forma parte de la colaboración entre el **Laboratorio Nacional en  Salud de la Facultad de Estudios Superiores Iztacala, UNAM** con la **Universidad Juárez Autónoma de Tabasco**. Es un curso teórico-práctico orientado a la adquisición de herramientas bioinformáticas - linux y R - para el análisis del microbioma.
 
 Instructores:
 
-**Dr. Héctor Martínez Gregorio**, Profesor Asociado de la FES Iztacala 
+**Dr. Héctor Martínez Gregorio**, Profesor Asociado de la FES Iztacala, UNAM
 
-**Dra. Clara Estela Días Velásquez**, Técnico Académico de la FES Iztacala
+**Dra. Clara Estela Días Velásquez**, Técnico Académico de la FES Iztacala, UNAM
 
-**Dr. Felipe Vaca Paniagua**, Profesor Titular C de la FES Iztacala
+**Dr. Felipe Vaca Paniagua**, Profesor Titular C de la FES Iztacala, UNAM
 
 [Página del laboratorio Nacional](https://labnalsalud-fes.iztacala.unam.mx/)
 
@@ -19,7 +19,7 @@ Adquirir habilidades en el uso de comandos de Linux y R para implementar flujos 
 
 ## Estructura del repositorio
 
-Este repositorio proporciona a los participantes los materiales de consulta, comandos, scripts y recursos utilizados durante el curso. 
+Este repositorio proporciona a los participantes los materiales de consulta, comandos, scripts y recursos utilizados para el curso. 
 
 Los materiales del curso se encuentran organizados de la siguiente manera:
 
@@ -47,18 +47,21 @@ Aprenderás a utilizar el paquete microeco en R para el análisis ecológico del
 
 1. El curso tiene un enfoque teórico-práctico, por lo que es indispensable contar con una computadora. Se recomienda utilizar un equipo con sistema operativo **macOS o GNU/Linux**.
 
-    Si cuentas con una computadora con **Windows**, también podrás participar utilizando [MobaXterm](https://mobaxterm.mobatek.net/download.html), una aplicación que proporciona un entorno de terminal compatible con herramientas de Linux. Además, integra un servidor gráfico X11, un cliente SSH para establecer conexiones remotas seguras y diversas herramientas de red que facilitan el trabajo en entornos de cómputo y servidores.
+    Si cuentas con una computadora con **Windows** tienes que instalar [MobaXterm](https://mobaxterm.mobatek.net/download.html), una aplicación que proporciona un entorno de terminal compatible con herramientas de Linux. Además, integra un servidor gráfico X11, un cliente SSH para establecer conexiones remotas seguras y diversas herramientas de red que facilitan el trabajo en entornos de cómputo y servidores.
 
-2. 
-4. 
+2. Editor de texto. Es necesario contar con un editor de texto para crear, modificar y guardar archivos de código y scripts durante las sesiones prácticas del curso.
 
+      Puedes utilizar cualquiera de las siguientes opciones:
+   
+   [Visual Studio Code]()
 
+   [Sublime Text]()
 
+   [Atom]()
 
+    También puedes utilizar cualquier otro editor de texto de tu preferencia, siempre que permita trabajar con archivos de código.
 
-
-
-Adicionalmente necesitamos un editor de texto, puedes descargar [](), [](), [](), o
+Importante: No utilizar Microsoft Word ni otros procesadores de texto, ya que pueden modificar el formato del código y generar errores al ejecutarlo.
 
 
 
