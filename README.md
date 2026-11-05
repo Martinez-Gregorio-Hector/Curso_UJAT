@@ -1,6 +1,6 @@
 # Introducción a la bioinformática con un enfoque al análisis del microbioma
 
-Este curso forma parte de la colaboración entre el **Laboratorio Nacional en  Salud de la Facultad de Estudios Superiores Iztacala, UNAM** con la **Universidad Juárez Autónoma de Tabasco**. Es un curso teórico-práctico orientado a la adquisición de herramientas bioinformáticas - linux y R - para el análisis del microbioma.
+Este curso forma parte de la colaboración entre el [**Laboratorio Nacional en  Salud de la Facultad de Estudios Superiores Iztacala, UNAM**](https://labnalsalud-fes.iztacala.unam.mx/) con la **Universidad Juárez Autónoma de Tabasco**. Es un curso teórico-práctico orientado a la adquisición de herramientas bioinformáticas - linux y R - para el análisis del microbioma.
 
 Instructores:
 
@@ -9,9 +9,6 @@ Instructores:
 **Dra. Clara Estela Días Velásquez**, Técnico Académico de la FES Iztacala, UNAM
 
 **Dr. Felipe Vaca Paniagua**, Profesor Titular C de la FES Iztacala, UNAM
-
-[Página del laboratorio Nacional](https://labnalsalud-fes.iztacala.unam.mx/)
-
 
 ## Objetivo del curso
 
