@@ -53,15 +53,15 @@ Aprenderás a utilizar el paquete microeco en R para el análisis ecológico del
 
       Puedes utilizar cualquiera de las siguientes opciones:
    
-   [Visual Studio Code]()
+   [Visual Studio Code](https://code.visualstudio.com/)
 
-   [Sublime Text]()
+   [Sublime Text](https://www.sublimetext.com/3)
 
-   [Atom]()
+   [Atom](https://atom-editor.cc/)
 
     También puedes utilizar cualquier otro editor de texto de tu preferencia, siempre que permita trabajar con archivos de código.
 
-Importante: No utilizar Microsoft Word ni otros procesadores de texto, ya que pueden modificar el formato del código y generar errores al ejecutarlo.
+    Importante: No utilizar Microsoft Word ni otros procesadores de texto, ya que pueden modificar el formato del código y generar errores al ejecutarlo.
 
 
 
