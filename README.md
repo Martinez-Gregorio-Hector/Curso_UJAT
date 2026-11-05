@@ -1,16 +1,16 @@
 # Introducción a la bioinformática con un enfoque al análisis del microbioma
 
-Este curso forma parte de la colaboración entre el Laboratorio Nacional en la Salud de la Facultad de Estudios Superiores Iztacala, UNAM con la Universidad Juárez Autónoma de Tabasco. Es un curso intensivo de bioinformática orientado a la adquisición de herramientas bioinformáticas - linux y R - para el análisis del microbioma.
+Este curso forma parte de la colaboración entre el Laboratorio Nacional en  Salud de la Facultad de Estudios Superiores Iztacala, UNAM con la Universidad Juárez Autónoma de Tabasco. Es un curso intensivo de bioinformática orientado a la adquisición de herramientas bioinformáticas - linux y R - para el análisis del microbioma.
 
 Instructores:
 
-Dr. Héctor Martínez Gregorio
+**Dr. Héctor Martínez Gregorio**, Profesor Asociado de la FES Iztacala 
 
-Dra. Clara Estela Días Velásquez
+**Dra. Clara Estela Días Velásquez**, Técnico Académico de la FES Iztacala
 
-Dr. Felipe Vaca Paniagua 
+**Dr. Felipe Vaca Paniagua**, Profesor Titular C de la FES Iztacala
 
-Página del laboratorio Nacional [x](https://labnalsalud-fes.iztacala.unam.mx/)
+[Página del laboratorio Nacional](https://labnalsalud-fes.iztacala.unam.mx/)
 
 
 ## **Objetivo del curso**
