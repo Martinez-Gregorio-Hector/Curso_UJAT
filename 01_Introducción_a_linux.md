@@ -1,6 +1,7 @@
 # Introducción a Linux
 
-### Que es linux
+## 1. Linux
+
 
 Un sistema operativo (SO) es un conjunto de órdenes y programas que controlan los procesos básicos de una computadora y permiten el funcionamiento de otros programas.
 
@@ -163,7 +164,7 @@ El servidor es una máquina con 8 núcleos y 16G de RAM.
 
 Esta máquina cuenta con los programas que se usarán en el curso.
 
-# Conexión al servidor
+## 2. Conexión al servidor
 
 ### Tipos de Shell
 
