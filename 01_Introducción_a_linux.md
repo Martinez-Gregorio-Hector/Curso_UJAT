@@ -151,7 +151,7 @@ Una vez establecida la sesión remota al servidor, estarán trabajando en él!
   <img src="https://github.com/Martinez-Gregorio-Hector/AnalisisGenomico-EcologiaFESIztacala/blob/main/Unidad1/Figuras/MobaXterm_2.png? raw=true" alt="shell" >
 </p>
 
-## Otras opciones
+### Otras opciones
 
 => 1. Usar la terminal en entorno de Windows 10. Acceder a la terminal y comunicarnos con el servidor.
 
@@ -173,7 +173,7 @@ Esta máquina cuenta con los programas que se usarán en el curso.
 
 ## Terminal
 <p align="center">  
-  <img src="Figuras/shell2.jpg? raw=true" alt="shell" width="1000" height="600">
+  <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/shell2.jpg? raw=true" alt="shell" width="1000" height="600">
 </p>
 
 ## Conexión remota
