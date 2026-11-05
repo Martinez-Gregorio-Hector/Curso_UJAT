@@ -205,50 +205,13 @@ ssh lab13@132.248.216.138
 * Un sencillo tutorial (caps 1-5): **[Unix](http://www.ee.surrey.ac.uk/Teaching/Unix/)**
 
 * **[intro2linux](https://vinuesa.github.io/intro2linux/index.html)**
-* **[linux_geek](https://www.geeksforgeeks.org/linux-unix/linux-commands-cheat-sheet/)
-
+* **[linux_geek](https://www.geeksforgeeks.org/linux-unix/linux-commands-cheat-sheet/)**
 
 ```
 command [-flag(s)] [-option(s)] [value] [argument(s)]
 ```
 
-Una vez que accedemos al servidor nos dirigimos a la carpeta de Ecologia2026
-
-```
-cd Documents/Ecologia2026
-```
-
-
-## comando cd
-
-el comando **cd** (change directory) se usa para mover la sesión de shell a otro directorio del sistema de archivos de Linux. La sintaxis del comando cd es bastante simple: **cd destino**. El comando **cd** puede tener un solo parámetro, destino, que especifica el nombre del directorio al que se desea acceder. Si no se especifica un destino en el comando cd, lo llevará a su directorio personal.
-
-```
-cd
-cd /home/lab13/Documents/Ecologia2026
-```
-
-El parámetro de destino se puede expresar mediante dos métodos diferentes. Un método utiliza una **ruta absoluta** o una **ruta relativa** al directorio.
-
-<p align="center">  
-  <img src="Figuras/Rutas.jpg? raw=true" alt="shell" width="600" height="600">
-</p>
-
-Supongamos que estoy en el directorio **dir_001** y quiero dirigirme a **dir_002**, se puede hacer de dos maneras, siguiento una **ruta absoluta** o una **ruta relativa**
-
-```
-## Ruta absoluta
-cd /home/filogenomica/dir_002
-## Ruta relativa
-cd ../dir_002
-```
-Para nuestra actividad vamos a trabajar en el directorio de Ecologia2026, si todavía no estás en la carpeta puedes utilizar la siguiente **ruta absoluta** para que puedas llegar al directorio
-
-```
-cd /home/lab13/Documents/Ecologia2026
-```
-
-## comando pwd 
+### comando pwd 
 
 El comando **pwd** (print work directory) muestra la ubicación del directorio actual de la sesión de shell
 
@@ -302,6 +265,49 @@ ls -lh
 ```
 
 Vamos a entrar en la carpeta de **Alumnos**. Recuerden para entrar a la carpeta utilizamos el comando **cd**
+
+
+
+Una vez que accedemos al servidor nos dirigimos a la carpeta de Ecologia2026
+
+### comando cd
+
+el comando **cd** (change directory) se usa para mover la sesión de shell a otro directorio del sistema de archivos de Linux. La sintaxis del comando cd es bastante simple: **cd destino**. El comando **cd** puede tener un solo parámetro, destino, que especifica el nombre del directorio al que se desea acceder. Si no se especifica un destino en el comando cd, lo llevará a su directorio personal.
+
+```
+cd
+cd /home/lab13/Documents/Ecologia2026
+```
+
+```
+cd Documents/Ecologia2026
+```
+
+
+
+
+
+
+El parámetro de destino se puede expresar mediante dos métodos diferentes. Un método utiliza una **ruta absoluta** o una **ruta relativa** al directorio.
+
+<p align="center">  
+  <img src="Figuras/Rutas.jpg? raw=true" alt="shell" width="600" height="600">
+</p>
+
+Supongamos que estoy en el directorio **dir_001** y quiero dirigirme a **dir_002**, se puede hacer de dos maneras, siguiento una **ruta absoluta** o una **ruta relativa**
+
+```
+## Ruta absoluta
+cd /home/filogenomica/dir_002
+## Ruta relativa
+cd ../dir_002
+```
+Para nuestra actividad vamos a trabajar en el directorio de Ecologia2026, si todavía no estás en la carpeta puedes utilizar la siguiente **ruta absoluta** para que puedas llegar al directorio
+
+```
+cd /home/lab13/Documents/Ecologia2026
+```
+
 
 ```
 cd Alumnos
