@@ -302,47 +302,43 @@ Supongamos que estoy en el directorio **dir_001** y quiero dirigirme a **dir_002
 ```
 ## Ruta absoluta
 cd /home/filogenomica/dir_002
+
 ## Ruta relativa
 cd ../dir_002
 ```
-Para nuestra actividad vamos a trabajar en el directorio de Ecologia2026, si todavía no estás en la carpeta puedes utilizar la siguiente **ruta absoluta** para que puedas llegar al directorio
+Para nuestra actividad vamos a trabajar en el directorio de **Curso_UJED**, si todavía no estás en la carpeta puedes utilizar la siguiente **ruta absoluta** para que puedas llegar al directorio
 
 ```
-cd /home/lab13/Documents/Ecologia2026
+cd /home/lab13/Documents/Curso_UJED
 ```
 
+### comando mkdir
 
-```
-cd Alumnos
-```
-
-
-## comando mkdir
-
-Dentro de la carpeta Alumnos vamos a crear un directorio con nuestro nombre con el comando **mkdir**, por ejemplo, mi nombre es Hector Martinez, voy a crear un directorio con el nombre de HectorMartinez.
+Dentro de la carpeta **Curso_UJED** vamos a crear un directorio con nuestro nombre con el comando **mkdir**, por ejemplo, mi nombre es Hector Martinez, voy a crear un directorio con el nombre de **HectorMartinez**.
 
 Algunas recomendaciones para nombrar directorio o archivos:
 
-* Nombra todos tus archivos en minúsculas.
-* En lugar de un espacio, usa un guion bajo (_) o un guion corto (–).
+* Nombra todos tus archivos en minúsculas o una combinación de mayúsculas o minúsculas (**hectormartinez** o **HectorMartinez**)
+* En lugar de un espacio, usa un guion bajo (_) o un guion corto (–) (**hector_martinez** en lugar de **hector martinez**)
 * Utiliza formatos de archivo consistentes. Usa jpg o jpg.
 * Solo utiliza caracteres alfanuméricos, puntos, guiones bajos y guiones; no uses símbolos como % y $.
 * Los nombres de los archivos deben ser cortos y descriptivos.
 
-  Vamos a crear los siguientes directorio
+Creamos entonces el directorio
   
 ```
 mkdir Hector Martinez
 mkdir HectorMartinez
 ```
+
 Vamos a ver que carpetas tenermos en nuestros directorio
 
 ```
 ls -lh
 
-## drwxr-xr-x 2 magh staff 64 may  6 23:09 Hector
-## drwxr-xr-x 2 magh staff 64 may  6 23:09 HectorMartinez
-## drwxr-xr-x 2 magh staff 64 may  6 23:09 Martinez
+## drwxr-xr-x. 2 lab13 lab13 6 Nov  5 16:15 Hector
+## drwxr-xr-x. 2 lab13 lab13 6 Nov  5 16:08 HectorMartinez
+## drwxr-xr-x. 2 lab13 lab13 6 Nov  5 16:15 Martinez
 ```
 
 ## Comando rmdir 
@@ -351,26 +347,26 @@ Para eliminar directorios usamos el comando **rmdir** seguido del directorio que
 
 ```
 # Eliminar directorio
-rmdir Hector
+rmdir Hector Martinez
 
 # Ver que directorios tenemos en nuestras carpetas
 ls -lh
 
-drwxr-xr-x. 2 lab13 lab13 6 May 10 18:50 HectorMartinez
-drwxr-xr-x. 2 lab13 lab13 6 May 10 18:49 Martinez
+## drwxr-xr-x. 2 lab13 lab13 6 Nov  5 16:15 HectorMartinez
 ```
+
 ## Comando mv
 
 El comando **mv** se usa para dos cosas: i) mover un directorio a otro lugar y ii) renombrar archivos. La sintáxis básica de mv es la siguiente: **mv** [Directorio y/o Nombre del archivo] [Lugar del nuevo directorio y/o nombre del archivo]
 
 ```
-mv Martinez MAGH
+# Renombrar el archivo
+mv HectorMartinez MAGH
 
-##
+# 
 ls -lh
 
-## drwxr-xr-x. 2 lab13 lab13 6 May 10 18:50 HectorMartinez
-## drwxr-xr-x. 2 lab13 lab13 6 May 10 18:49 MAGH
+## drwxr-xr-x. 2 lab13 lab13 6 Nov  5 16:15 MAGH
 
 ```
 
