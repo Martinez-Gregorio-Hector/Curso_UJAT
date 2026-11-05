@@ -294,7 +294,7 @@ pwd
 El parámetro de destino se puede expresar mediante dos métodos diferentes. Un método utiliza una **ruta absoluta** o una **ruta relativa** al directorio.
 
 <p align="center">  
-  <img src="Figuras/Rutas.jpg? raw=true" alt="shell" width="600" height="600">
+  <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/Rutas.jpg? raw=true" alt="shell" width="600" height="600">
 </p>
 
 Supongamos que estoy en el directorio **dir_001** y quiero dirigirme a **dir_002**, se puede hacer de dos maneras, siguiento una **ruta absoluta** o una **ruta relativa**
