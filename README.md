@@ -43,6 +43,28 @@ Aprenderás a utilizar el paquete microeco en R para el análisis ecológico del
 
 [05_bonus.md](05_bonus.md)
 
+## Que necesitamos para este curso
+
+1. El curso tiene un enfoque teórico-práctico, por lo que es indispensable contar con una computadora. Se recomienda utilizar un equipo con sistema operativo **macOS o GNU/Linux**.
+
+    Si cuentas con una computadora con **Windows**, también podrás participar utilizando [MobaXterm](https://mobaxterm.mobatek.net/download.html), una aplicación que proporciona un entorno de terminal compatible con herramientas de Linux. Además, integra un servidor gráfico X11, un cliente SSH para establecer conexiones remotas seguras y diversas herramientas de red que facilitan el trabajo en entornos de cómputo y servidores.
+
+2. 
+4. 
+
+
+
+
+
+
+
+Adicionalmente necesitamos un editor de texto, puedes descargar [](), [](), [](), o
+
+
+
+
+
+
 
 
 
