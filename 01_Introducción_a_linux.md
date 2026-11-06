@@ -517,16 +517,19 @@ wget https://raw.githubusercontent.com/Martinez-Gregorio-Hector/AnalisisGenomico
 ##
 cat flights.csv
 
-## 2011-12-11 12:00:00,10,22,1022,1342,-3,-4,"US",1174,"CLT","N433US",0,117,912
-## 2011-12-11 12:00:00,8,48,848,1201,-3,-15,"US",1220,"CLT","N458UW",0,112,912
-## 2011-12-11 12:00:00,17,35,1735,2045,-5,-20,"US",1679,"CLT","N445US",0,113,912
-## 2011-12-11 12:00:00,6,55,655,1003,-5,-22,"US",1696,"CLT","N405US",0,109,912
-## 2011-12-11 12:00:00,12,8,1208,1527,8,5,"US",1702,"CLT","N451UW",0,122,912
-## 2011-12-11 12:00:00,7,59,759,1152,-1,-21,"US",1820,"PHL","N953UW",0,160,1325
-
+## "date","hour","minute","dep","arr","dep_delay","arr_delay","carrier","flight","dest","plane","cancelled","time","dist"
+## 2011-01-01 12:00:00,14,0,1400,1500,0,-10,"AA",428,"DFW","N576AA",0,40,224
+## 2011-01-02 12:00:00,14,1,1401,1501,1,-9,"AA",428,"DFW","N557AA",0,45,224
+## 2011-01-03 12:00:00,13,52,1352,1502,-8,-8,"AA",428,"DFW","N541AA",0,48,224
+## 2011-01-04 12:00:00,14,3,1403,1513,3,3,"AA",428,"DFW","N403AA",0,39,224
+## 2011-01-05 12:00:00,14,5,1405,1507,5,-3,"AA",428,"DFW","N492AA",0,44,224
+## 2011-01-06 12:00:00,13,59,1359,1503,-1,-7,"AA",428,"DFW","N262AA",0,45,224
+## 2011-01-07 12:00:00,13,59,1359,1509,-1,-1,"AA",428,"DFW","N493AA",0,43,224
+## 2011-01-08 12:00:00,13,55,1355,1454,-5,-16,"AA",428,"DFW","N477AA",0,40,224
+## 2011-01-09 12:00:00,14,43,1443,1554,43,44,"AA",428,"DFW","N476AA",0,41,224
 ```
 
-Con _*cat*_ solo observamos el contenido del archivo de texto. Sin embargo, el comando cat tiene algunos parámetros que puede ayudar. El parámetro -n numera todas las líneas automáticamente:
+Con **cat** solo observamos el contenido del archivo de texto. Sin embargo, el comando cat tiene algunos parámetros que puede ayudar. El parámetro -n numera todas las líneas automáticamente:
 
 ```
 cat -n flights.csv
@@ -540,18 +543,14 @@ cat -n flights.csv
 ```
 Esta función será útil al examinar scripts. Si solo desea numerar las líneas que contienen texto, el parámetro -b es ideal.
 
-Por último, si no desea que aparezcan caracteres de tabulación, utilice el parámetro -T.
-
-
-
-## Una alternative de cat es more, less, tail, head
+### Una alternative de cat es more, less, tail, head
 
 Con **head** y **tail** puedes especificar con -n para ver cuantas líneas quieres ver en tu terminal
 
 ```
 head -n 8 flights.csv 
 
-##"date","hour","minute","dep","arr","dep_delay","arr_delay","carrier","flight","dest","plane","cancelled","time","dist"
+## "date","hour","minute","dep","arr","dep_delay","arr_delay","carrier","flight","dest","plane","cancelled","time","dist"
 ## 2011-01-01 12:00:00,14,0,1400,1500,0,-10,"AA",428,"DFW","N576AA",0,40,224
 ## 2011-01-02 12:00:00,14,1,1401,1501,1,-9,"AA",428,"DFW","N557AA",0,45,224
 ## 2011-01-03 12:00:00,13,52,1352,1502,-8,-8,"AA",428,"DFW","N541AA",0,48,224
@@ -561,16 +560,21 @@ head -n 8 flights.csv
 ## 2011-01-07 12:00:00,13,59,1359,1509,-1,-1,"AA",428,"DFW","N493AA",0,43,224
 ```
 
+Para contar cuantos linea tiene **flights.csv**  podemos usar **wc**
 
+```
+wc flights.csv
+## 227497   454993 17148271 flights.csv
 
+wc -l flights.csv
+## 227497 flights.csv
+```
 
+### Uso de variables
 
+Bash utiliza una función llamada variables de entorno para almacenar información sobre la sesión del shell y el entorno de trabajo. Esta función también permite almacenar datos en memoria a los que cualquier programa o script que se ejecute desde el shell puede acceder fácilmente.
 
-## Uso de variables
-
-El shell bash utiliza una función llamada variables de entorno para almacenar información sobre la sesión del shell y el entorno de trabajo (de ahí el nombre de variables de entorno). Esta función también permite almacenar datos en memoria a los que cualquier programa o script que se ejecute desde el shell puede acceder fácilmente. Es una forma práctica de almacenar datos persistentes necesarios.
-
-Existen dos tipos de variables de entorno en el shell bash:
+Existen dos tipos de variables de entorno en el bash:
 
 * Variables globales
 
@@ -579,28 +583,53 @@ Existen dos tipos de variables de entorno en el shell bash:
 Para ver las variables de entorno globales, utilice el comando **env** o **printenv**
 
 ```
-env | head -n 7
+env | head -n 10
 
-## TERM_PROGRAM=Apple_Terminal
-## SHELL=/bin/zsh
-## TERM=xterm-256color
-## TMPDIR=/var/folders/lz/_pw1ngjd2b5gs47g9x2sy6pr0000gn/T/
-## TERM_PROGRAM_VERSION=453
-## TERM_SESSION_ID=04F1D001-5AF4-4EB5-9F0E-7A5CFF702EF7
-## USER=magh
+SHELL=/bin/bash
+HISTCONTROL=ignoredups
+CONDA_EXE=/home/lab13/miniconda3/bin/conda
+_CE_M=
+HISTSIZE=1000
+HOSTNAME=host-132.248.216.138
+JAVA_HOME=/home/lab13/miniconda3
+JAVA_LD_LIBRARY_PATH=/home/lab13/miniconda3/lib/server
+XML_CATALOG_FILES=file:///home/lab13/miniconda3/etc/xml/catalog file:///etc/xml/catalog
+EDITOR=/usr/bin/editor
 
 echo $USER
+## lab13
 
-## magh
+echo $HOSTNAME
+host-132.248.216.138
 ```
-## Variables locales
 
+### Variables locales
 
-Tras iniciar bash (o generar un script), se pueden crear variables locales definidas por el usuario, visibles en el proceso de shell. Se puede asignar un valor numérico o de cadena a una variable de entorno, asignándola a un valor con el signo igual:
+Tras iniciar bash (o generar un script), se pueden crear variables locales definidas por el usuario. Se puede asignar un valor numérico o de cadena a una variable de entorno, asignándola a un valor con el signo igual:
 
 ```
 my_variable=Hello 
 echo $my_variable
+```
+
+Ejemplo
+
+```
+## Taxonomía
+qiime feature-classifier classify-sklearn \
+--i-classifier /home/lab13/Reference/Referencia_silva_138/silva-138-99-nb-classifier.qza \
+--i-reads qiime2/qza/seqs-dada2.qza \
+--o-classification qiime2/qza/taxonomy.qza
+
+## Mismo script con una variable local
+
+silva138=/home/lab13/Reference/Referencia_silva_138/silva-138-99-nb-classifier.qza
+
+# Taxonomia
+qiime feature-classifier classify-sklearn \
+--i-classifier $silva138 \
+--i-reads qiime2/qza/seqs-dada2.qza \
+--o-classification qiime2/qza/taxonomy.qza
 ```
 
 ## Permisos
