@@ -793,13 +793,11 @@ Cuando el Proyecto GNU adaptó el editor **vi** al mundo del código abierto, de
 
 ## Explorando vim basico
 
-El editor **vim** trabaja con datos en un búfer de memoria. Para iniciarlo, simplemente escriba el comando **vim** (o vi si hay un alias o un archivo vinculado) y el nombre del archivo que desea editar:
+Para iniciarlo, simplemente escriba el comando **vim** (o vi si hay un alias o un archivo vinculado) y el nombre del archivo que desea editar:
 
 ```
-vim test1.sh
+vim prueba1.sh
 ```
-
-Si inicia **vim** sin un nombre de archivo, o si el archivo no existe, vim abre un nuevo búfer para su edición. Si especifica un archivo existente en la línea de comandos, **vim** lee todo el contenido del archivo en un búfer, donde está listo para su edición.
 
 El editor vim tiene dos modos de funcionamiento:
 
@@ -807,11 +805,11 @@ El editor vim tiene dos modos de funcionamiento:
 
 ■ Modo de inserción
 
-Al abrir un archivo por primera vez (o crear uno nuevo) para editarlo, el editor **vim** entra en modo normal. En modo normal, el editor **vim** interpreta las pulsaciones de teclas como comandos (más información más adelante). 
+Al abrir un archivo por primera vez (o crear uno nuevo) para editarlo, el editor **vim** entra en modo normal. En modo normal, el editor **vim** interpreta las pulsaciones de teclas como comandos.
 
 En el modo de inserción, **vim** inserta cada tecla que pulsas en la posición actual del cursor en el búfer. Para entrar en el modo de inserción, pulsa la tecla **i**. Para salir del modo de inserción y volver al modo normal, pulsa la tecla **escape**.
 
-Dentro del modo de línea de comandos -inserición- hay varios comandos para guardar el búfer en el archivo y salir de vim:
+Dentro del modo de línea de comandos -inserición- hay varios comandos para guardar el archivo y salir de vim:
 
 ■ q para salir si no se han realizado cambios en los datos del búfer
 
@@ -821,11 +819,11 @@ Dentro del modo de línea de comandos -inserición- hay varios comandos para gua
 
 ■ wq para guardar los datos del búfer en el archivo y salir.
 
+
 ```
-## Después de que hayas hecho un script, para salir presione **scape** y después **:wq**
+## Después de que hayas hecho un script, para salir presione **escape** y después **:wq**
 
 Script
-
 
 :wq
 ```
@@ -841,7 +839,7 @@ El editor de texto **nano** es un clon del editor Pico de Unix. Aunque Pico tamb
 El editor de texto nano viene instalado por defecto en la mayoría de las distribuciones de Linux. Todo en el editor de texto nano es sencillo. Para abrir un archivo en la línea de comandos con nano:
 
 ```
-nano test2.sh
+nano prueba2.sh
 ```
 
 Una vez que se termine de redactar el script o los comandos que se utilicen para cierta actividad o análisis se tiene que guardar. Observe que en la parte inferior de la ventana del editor nano se muestran varios comandos con una breve descripción. Estos comandos son los comandos de control nano. El símbolo de intercalación (^) representa la tecla Ctrl. Por lo tanto, ^X representa la secuencia de teclado Ctrl+X. Para salir ejecutamos estas secuencias.
@@ -857,13 +855,15 @@ Posteriormente, nos va a salir otro menú y guardamos los cambios con la letra *
   <img src="https://github.com/Martinez-Gregorio-Hector/AnalisisGenomico-EcologiaFESIztacala/blob/main/Unidad1/Figuras/nano2.png? raw=true" alt="shell" >
 </p>
 
-# bash scripting básico
 
-## Usando comandos múltiples
+
+### bash scripting básico
+
+### Usando comandos múltiples
 
 Hasta ahora has visto cómo usar la interfaz de línea de comandos (CLI) del shell para introducir comandos y ver sus resultados. La clave de los scripts de shell reside en la capacidad de introducir múltiples comandos y procesar los resultados de cada uno, incluso pudiendo pasar los resultados de un comando a otro. El shell permite encadenar comandos en un solo paso.
 
-Si quieres ejecutar dos comandos a la vez, puedes introducirlos en la misma línea del prompt, separados com un **punto y coma**
+Si quieres ejecutar dos comandos a la vez, puedes introducirlos en la misma línea del prompt, separados com un **punto y coma**.
 
 ```
 date ; who 
@@ -873,7 +873,7 @@ Este sencillo script usa solo dos comandos de shell bash. El comando "date" se e
 
 Esta técnica es adecuada para scripts pequeños, pero tiene una desventaja importante: debes ingresar el comando completo en el símbolo del sistema cada vez que quieras ejecutarlo. En lugar de tener que ingresar manualmente los comandos en una línea de comandos, puedes combinarlos en un simple archivo de texto. Cuando necesites ejecutar los comandos, simplemente ejecuta el archivo de texto.
 
-## Creando un bash scripting
+### Creando un bash scripting
 
 Para colocar comandos de shell en un archivo de texto, primero debe usar un **editor de texto** para crear un archivo y luego ingresar los comandos.
 
@@ -883,7 +883,7 @@ Al crear un archivo de script de shell, debe especificar el shell que está usan
 #!/bin/bash
 ```
 
-En una línea de shell scripting, el signo de almohadilla (#) se usa como línea de comentario. El shell no procesa una línea de comentario en un shell scripting. Sin embargo, la primera línea de un archivo de shell scripting es un caso especial, y el signo de almohadilla seguido del signo de exclamación le indica al shell en qué shell ejecutar el script. Haz un shell scripting usando la siguiente información, puedes guardarlo en una sesión que se llama **test3.sh** y **cambia el permiso del archivo creado: chmod u+x test3.sh**
+En una línea de shell scripting, el signo de almohadilla (#) se usa como línea de comentario. El shell no procesa una línea de comentario en un shell scripting. Sin embargo, la primera línea de un archivo de shell scripting es un caso especial, y el signo de almohadilla seguido del signo de exclamación le indica al shell en qué shell ejecutar el script. Haz un shell scripting usando la siguiente información, puedes guardarlo en una sesión que se llama **prueba3.sh** y **cambia el permiso del archivo creado: chmod u+x prueba3.sh**
 
 ```
 #!/bin/bash
@@ -893,7 +893,6 @@ En una línea de shell scripting, el signo de almohadilla (#) se usa como línea
 date
 who
 ```
-
 
 ## Variables
 
@@ -914,20 +913,21 @@ El script de shell determina automáticamente el tipo de dato utilizado para el 
 
 Al igual que las variables de sistema, las variables de usuario pueden referenciarse mediante el símbolo de dólar:
 
-Crear un shell scripting **test5.sh**
+Crear un shell scripting **prueba4.sh**
 
 ```
 #!/bin/bash
 
 # testing variables
 
-days=10
-guest="Katie"
-echo "$guest checked in $days days ago"
+dias=10
+quien="Maria"
+echo "$quien se registro hace $days días"
 
-days=5
-guest="Jessica"
-echo "$guest checked in $days days ago"
+dias=10
+quien="Maria"
+
+echo "$quien se registro hace $days días"
 ```
 
 ## Redireccionando input y output
@@ -945,16 +945,16 @@ command > outputfile
 Todo lo que aparecería en el monitor a partir del comando se almacena en el archivo de salida especificado:
 
 ```
-who > test8
+who > prueba5.txt
 ```
 
 A veces, en lugar de sobrescribir el contenido del archivo, puede que necesite añadir la salida de un comando a un archivo existente; por ejemplo, si está creando un archivo de registro para documentar una acción en el sistema. En este caso, puede usar el símbolo de mayor que (>>) para añadir datos:
 
 ```
-who >> test8
+who >> prueba5.txt
 ```
 
-## Comando for
+### Comando for
 
 Iterar una serie de comandos es una práctica común en programación. A menudo, es necesario repetir un conjunto de comandos hasta que se cumpla una condición específica, como procesar todos los archivos de un directorio, todos los usuarios de un sistema o todas las líneas de un archivo de texto.
 
@@ -982,7 +982,6 @@ for test in Alabama Alaska Arizona Arkansas California Colorado
 do 
 echo The next state is $test
 done
-
 ```
 
 Otro ejemplo
@@ -998,6 +997,10 @@ echo El $i hace $maullido
 done
 
 ```
+
+
+
+
 
 # Evaluación de la calidad
 
