@@ -22,7 +22,7 @@ Este repositorio proporciona a los participantes los materiales de consulta, com
 
 Los materiales del curso se encuentran organizados de la siguiente manera:
 
-**[Técnicas de secuenciación masiva y Aplicaciones de la secuenciación masiva](https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/tree/main/Presentaci%C3%B3nDiapositivas) - 30 de noviembre 2026**
+**[00_Técnicas de secuenciación masiva y Aplicaciones de la secuenciación masiva](https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/tree/main/Presentaci%C3%B3nDiapositivas) - 30 de noviembre 2026**
 
 **[01_Introducción_a_linux.md](01_Introducción_a_linux.md) - 2 de diciembre 2026**
 
