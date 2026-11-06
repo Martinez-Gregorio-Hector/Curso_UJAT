@@ -632,40 +632,63 @@ qiime feature-classifier classify-sklearn \
 --o-classification qiime2/qza/taxonomy.qza
 ```
 
-## Permisos
+### Permisos
 
-## Usuario, grupo y resto del mundo (User, Group, Others …) y permisos 
+### Usuario, grupo y resto del mundo (User, Group, Others …) y permisos 
+
+Revisar la siguiente información
+
+```
+ls -lh
+
+-rw-r--r--. 1 lab13 lab13 17M Nov  5 17:55 flights.csv
+-rw-r--r--. 1 lab13 lab13   0 Nov  5 16:51 my_scrapt
+-rw-r--r--. 1 lab13 lab13   0 Nov  5 16:51 my_scrept
+-rw-r--r--. 1 lab13 lab13   0 Nov  5 16:51 my_script
+-rw-r--r--. 1 lab13 lab13   0 Nov  5 16:51 my_scropt
+-rw-r--r--. 1 lab13 lab13   0 Nov  5 16:51 my_scrupt
+drwxr-xr-x. 2 lab13 lab13   6 Nov  5 18:40 script
+```
 
 En sistemas UNIX y GNU/Linux cada archivo y directorio tiene unos permisos determinados de 
 
-*lectura=𝑟
+* lectura=𝑟
 
-*escritura=𝑤
+* escritura=𝑤
 
-*ejecución=𝑥
+* ejecución=𝑥
 
 para el usuario, grupo y resto del mundo, asignados en ese orden (UGO). Un archivo regular, escrito por el usuario tiene los siguientes permisos por defecto, como muestra el comando 𝑙𝑠−𝑙
 
 ```
-ls -l | grep odp
--rw-r--r-- 1 vinuesa vinuesa 2993606 sep 30 10:52 intro_biocomputo_Linux_LCG.odp
+ls -lh
+
+-rw-r--r--. 1 lab13 lab13 17M Nov  5 17:55 flights.csv
+-rw-r--r--. 1 lab13 lab13   0 Nov  5 16:51 my_scrapt
+-rw-r--r--. 1 lab13 lab13   0 Nov  5 16:51 my_scrept
+-rw-r--r--. 1 lab13 lab13   0 Nov  5 16:51 my_script
+-rw-r--r--. 1 lab13 lab13   0 Nov  5 16:51 my_scropt
+-rw-r--r--. 1 lab13 lab13   0 Nov  5 16:51 my_scrupt
+drwxr-xr-x. 2 lab13 lab13   6 Nov  5 18:40 script
 
 ```
 
 Veamos lo que quiere decir. Para ello necesitamos separar la cadena de caracteres en los siguientes componentes
 
 ```
-   U   G   O       usuario grupo
-1  2   3   4  5    6       7
--|rw-|r--|r-- 1 vinuesa vinuesa
+   U  G     O
+-|rw-|r--|r--. 1 lab13 lab13 17M Nov  5 17:55 flights.csv
+-|rw-|r--|r--. 1 lab13 lab13   0 Nov  5 16:51 my_scrapt
+d|rwx|r-x|r-x. 2 lab13 lab13   6 Nov  5 18:40 script
+
+
 
 donde:
 
-1. la posición 1 (-) indica que se trata de un archivo regular. Un directorio se indica con "d" y una liga simbólica con "l"
-2. El grupo 2,3 y 4 de caraceres indican el "modo" del archivo (permisos) para el usuario (U), grupo (G) y otros (resto del mundo O), 
-   separados por "|" para facilitar su visualización.
-   En este caso el usuario tiene permisos de lectura (r) y escritura (w) sobre el archivo que no es ejecutable (-)
-   El grupo y el resto del mundo sólo pueden leer el archivo, pero no modificarlo.
+1. la posición 1 (-) indica que se trata de un archivo regular. Un directorio se indica con "d"
+2. El grupo 2,3 y 4 de caraceres indican el "modo" del archivo (permisos) para el usuario (U), grupo (G) y otros (resto del mundo O), separados por "|" para facilitar su visualización.
+
+Para el primer archivo **flights.csv** el usuario tiene permisos de lectura (r) y escritura (w) pero  no es ejecutable (-). El grupo y el resto del mundo sólo pueden leer el archivo, pero no modificarlo.
 ```
 
 ## Tabla de atributos de los permisos
@@ -684,7 +707,7 @@ La siguiente tabla resume los atributos que tienen los permisos 𝑟, 𝑤, 𝑥
 
 Hay dos maneras de hacerlo:
 
-### 1 Usando notación simbólica para U|G|O y todos (a)
+### i. Usando notación simbólica para U|G|O y todos (a)
 
 
 ```
@@ -697,7 +720,7 @@ Hay dos maneras de hacerlo:
 
 ```
 
-Ejemplos: 𝑐ℎ𝑚𝑜𝑑 𝑛𝑜𝑡𝑎𝑐𝑖ó𝑛 𝑎𝑟𝑐ℎ𝑖𝑣𝑜|𝑑𝑖𝑟
+Ejemplos: chmod notación archivo|dir
 
 ```
 |  Notación  | Significado                                |
@@ -707,19 +730,18 @@ Ejemplos: 𝑐ℎ𝑚𝑜𝑑 𝑛𝑜𝑡𝑎𝑐𝑖ó𝑛 𝑎𝑟𝑐ℎ𝑖
 | o-r        | otros (resto del mundo) no puede leer      |
 | +x         | equivale a a+x                             |
 | o-rw       | quitar a otros permisos de rw              |
-| u+x,go=-rx | asignar +x a U, revocar a O permisos de rx |
 ```
 
-𝑐ℎ𝑚𝑜𝑑 𝑎+𝑟𝑥 𝑠𝑐𝑟𝑖𝑝𝑡.𝑠ℎ hace el archivo script.sh leíble y ejecutable para todos
+chmod a+rx script.sh hace el archivo script.sh leíble y ejecutable para todos
 
 
-### 2 Usando representación octal
+### ii. Usando representación octal
 
-Los sistemas de numeración 𝑜𝑐𝑡𝑎𝑙 (base 8) y su primo el ℎ𝑒𝑥𝑎𝑑𝑒𝑐𝑖𝑚𝑎𝑙 (base 16) se usan frecuentemente para expresar números en computadoras.
+Los sistemas de numeración octal (base 8) y su primo el hexadecimal (base 16) se usan frecuentemente para expresar números en computadoras.
 
-Los humanos usamos el sistama 𝑑𝑒𝑐𝑖𝑚𝑎𝑙 ya que (la mayoría) tenemos 10 dedos. Las computadoras en cambio “nacieron con un solo dedo”, por lo que cuentan usando el sistema 𝑏𝑖𝑛𝑎𝑟𝑖𝑜 (base 2) usando sólo 1s y 0s. Por tanto en binario, contamos así: 0,1, 10,11, 100,101, 110,111 …
+Los humanos usamos el sistama decimal ya que (la mayoría) tenemos 10 dedos. Las computadoras en cambio “nacieron con un solo dedo”, por lo que cuentan usando el sistema binario (base 2) usando sólo 1s y 0s. Por tanto en binario, contamos así: 0,1, 10,11, 100,101, 110,111 …
 
-En 𝑜𝑐𝑡𝑎𝑙, contamos así: 0,1,2,3,4,5,6,7, 10,11,12,13,14,15,16,17, 20,21 …
+En octal, contamos así: 0,1,2,3,4,5,6,7, 10,11,12,13,14,15,16,17, 20,21 …
 
 Usando una cadena de tres dígitos octales, podemos de manera muy conveniente definir el modo de un archivo para U|G|O acorde a la siguiente tabla
 
@@ -758,7 +780,9 @@ con las posiciones U|G|O, define los modos:
 𝑐ℎ𝑚𝑜𝑑 755 𝑠𝑐𝑟𝑖𝑝𝑡.𝑠ℎ
 𝑐ℎ𝑚𝑜𝑑 700 𝑠𝑐𝑟𝑖𝑝𝑡.𝑠ℎ
 𝑐ℎ𝑚𝑜𝑑 644 𝑠𝑐𝑟𝑖𝑝𝑡.𝑠ℎ
+𝑐ℎ𝑚𝑜𝑑 777 𝑠𝑐𝑟𝑖𝑝𝑡.𝑠ℎ
 ```
+
 ## Editor de script
 
 * [Visual Studio Code](https://code.visualstudio.com/)
