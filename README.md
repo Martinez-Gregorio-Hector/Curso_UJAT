@@ -22,7 +22,7 @@ Este repositorio proporciona a los participantes los materiales de consulta, com
 
 Los materiales del curso se encuentran organizados de la siguiente manera:
 
-**Técnicas de secuenciación masiva y Aplicaciones de la secuenciación masiva - 30 de noviembre 2026**
+**[Técnicas de secuenciación masiva y Aplicaciones de la secuenciación masiva](https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/tree/main/Presentaci%C3%B3nDiapositivas) - 30 de noviembre 2026**
 
 **[01_Introducción_a_linux.md](01_Introducción_a_linux.md) - 2 de diciembre 2026**
 
@@ -38,7 +38,7 @@ Aprenderás los fundamentos del lenguaje de programación R, desde el manejo de 
 Aprenderás a utilizar QIIME 2 para desarrollar flujos de trabajo bioinformáticos (pipelines) orientados al análisis del microbioma, desde el procesamiento y control de calidad de secuencias hasta la identificación taxonómica, el análisis de diversidad microbiana y la interpretación de resultados.
 
 
-**[04_pipeline_microeco.md](04_pipeline_microeco.md) - 79 de diciembre 2026**
+**[04_pipeline_microeco.md](04_pipeline_microeco.md) - 9 de diciembre 2026**
 
 Aprenderás a utilizar el paquete microeco en R para el análisis ecológico del microbioma, explorando herramientas para evaluar la diversidad microbiana, identificar microorganismos diferencialmente abundantes, analizar patrones de composición y estructura de comunidades microbianas, e interpretar sus relaciones con variables ambientales o clínicas.
 
