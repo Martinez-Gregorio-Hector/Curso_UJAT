@@ -22,25 +22,27 @@ Este repositorio proporciona a los participantes los materiales de consulta, com
 
 Los materiales del curso se encuentran organizados de la siguiente manera:
 
-**[01_Introducción_a_linux.md](01_Introducción_a_linux.md) - 30 de noviembre 2026**
+**Técnicas de secuenciación masiva y Aplicaciones de la secuenciación masiva - 30 de noviembre 2026**
+
+**[01_Introducción_a_linux.md](01_Introducción_a_linux.md) - 2 de diciembre 2026**
 
 Desarrollarás habilidades básicas para utilizar la terminal de Linux, gestionar archivos y directorios y ejecutar comandos fundamentales
 
 
-**[02_Introducción_a_R.md](02_Introducción_a_R.md) - 2 de diciembre 2026**
+**[02_Introducción_a_R.md](02_Introducción_a_R.md) - 4 de diciembre 2026**
 
 Aprenderás los fundamentos del lenguaje de programación R, desde el manejo de datos y la utilización de funciones y paquetes hasta la generación de análisis estadísticos y visualizaciones para la interpretación de datos biológicos.
 
-**[03_pipeline_QIIME2.md](03_pipeline_QIIME2.md) - 4 de diciembre 2026**
+**[03_pipeline_QIIME2.md](03_pipeline_QIIME2.md) - 7 de diciembre 2026**
 
 Aprenderás a utilizar QIIME 2 para desarrollar flujos de trabajo bioinformáticos (pipelines) orientados al análisis del microbioma, desde el procesamiento y control de calidad de secuencias hasta la identificación taxonómica, el análisis de diversidad microbiana y la interpretación de resultados.
 
 
-**[04_pipeline_microeco.md](04_pipeline_microeco.md) - 7 de diciembre 2026**
+**[04_pipeline_microeco.md](04_pipeline_microeco.md) - 79 de diciembre 2026**
 
 Aprenderás a utilizar el paquete microeco en R para el análisis ecológico del microbioma, explorando herramientas para evaluar la diversidad microbiana, identificar microorganismos diferencialmente abundantes, analizar patrones de composición y estructura de comunidades microbianas, e interpretar sus relaciones con variables ambientales o clínicas.
 
-**[05_bonus.md](05_bonus.md) - 9 de diciembre 2026**
+**[05_bonus.md](05_bonus.md)**
 
 ## Que necesitamos para este curso
 
