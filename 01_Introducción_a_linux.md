@@ -783,12 +783,7 @@ con las posiciones U|G|O, define los modos:
 𝑐ℎ𝑚𝑜𝑑 777 𝑠𝑐𝑟𝑖𝑝𝑡.𝑠ℎ
 ```
 
-## Editor de script
-
-* [Visual Studio Code](https://code.visualstudio.com/)
-* [Atom](https://atom-editor.cc/)
-
-# Editor de texto vim
+### Editor de texto vim
 
 El editor **vi** fue el editor original utilizado en sistemas Unix. Utilizaba el modo gráfico de consola para emular una ventana de edición de texto, lo que permitía ver las líneas de un archivo, navegar por él e insertar, editar y reemplazar texto.
 
