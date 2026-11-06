@@ -1153,6 +1153,8 @@ Haz un script y realiza el análisis de la calidad de los archivos que están en
 
 
 
+https://sxh1136.quarto.pub/amrflows-metagenomic-data-analysis-course/6.%20Installing%20tools%20with%20Conda.html
+
 # Evaluación de la calidad
 
 ## Archivos fasta o formato de Pearson
