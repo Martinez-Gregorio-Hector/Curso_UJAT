@@ -24,6 +24,8 @@ Los materiales del curso se encuentran organizados de la siguiente manera:
 
 **[00_Técnicas de secuenciación masiva y Aplicaciones de la secuenciación masiva](https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/tree/main/Presentaci%C3%B3nDiapositivas) - 30 de noviembre 2026**
 
+Conocerás las técnicas moleculares que se usan en la preparación de bibliotecas, las diferentes tecnologías que se usan para la secuenciación masiva y sus principales aplicaciones
+
 **[01_Introducción_a_linux.md](01_Introducción_a_linux.md) - 2 de diciembre 2026**
 
 Desarrollarás habilidades básicas para utilizar la terminal de Linux, gestionar archivos y directorios y ejecutar comandos fundamentales
