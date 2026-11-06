@@ -2,13 +2,15 @@
 
 Este curso forma parte de la colaboración entre el [**Laboratorio Nacional en  Salud de la Facultad de Estudios Superiores Iztacala, UNAM**](https://labnalsalud-fes.iztacala.unam.mx/) con la **Universidad Juárez Autónoma de Tabasco**. Es un curso teórico-práctico orientado a la adquisición de herramientas bioinformáticas - linux y R - para el análisis del microbioma.
 
-Instructores:
+## Instructores:
 
 **Dr. Héctor Martínez Gregorio**, Profesor Asociado de la FES Iztacala, UNAM
 
 **Dra. Clara Estela Días Velásquez**, Técnico Académico de la FES Iztacala, UNAM
 
 **Dr. Felipe Vaca Paniagua**, Profesor Titular C de la FES Iztacala, UNAM
+
+**Biól. Julieta Aurora Morales Valdés**
 
 ## Objetivo del curso
 
