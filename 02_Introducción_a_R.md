@@ -1,10 +1,6 @@
-# R
+# Introducción a R
 
-## Objetivo
-
-Aprender comandos básicos de R para aplicarlos en análisis genómico y estadístico.
-
-## Inicio
+### Descarga de R
 
 Para poder usar RStudio tenemos que tener instalado R en nuestras máquinas. Si aún no lo has instalado lo puedes descargar desde el siguiente link https://cran.itam.mx. Descargar la versión más reciente.
 
