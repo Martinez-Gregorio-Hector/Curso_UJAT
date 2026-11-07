@@ -12,7 +12,7 @@ Este curso forma parte de la colaboración entre el [**Laboratorio Nacional en  
 
 **Biól. Julieta Aurora Morales Valdés**
 
-**Biól. Luis **
+**Biól. Luis**
 
 ## Objetivo del curso
 
