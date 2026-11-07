@@ -12,6 +12,8 @@ Este curso forma parte de la colaboración entre el [**Laboratorio Nacional en  
 
 **Biól. Julieta Aurora Morales Valdés**
 
+**Biól. Luis **
+
 ## Objetivo del curso
 
 Adquirir habilidades en el uso de comandos de Linux y R para implementar flujos de trabajos bioinformáticos orientado al análisis de datos de microbioma. 
