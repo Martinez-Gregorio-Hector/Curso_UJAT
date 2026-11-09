@@ -10,9 +10,9 @@ Este curso forma parte de la colaboración entre el [**Laboratorio Nacional en  
 
 **Dr. Felipe Vaca Paniagua**, Profesor Titular C de la FES Iztacala, UNAM
 
-**Biól. Julieta Aurora Morales Valdés**
+**Biól. Julieta Aurora Morales Valdez**
 
-**Biól. Luis**
+**Biól. Luis Romero**
 
 ## Objetivo del curso
 
