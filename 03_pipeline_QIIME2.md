@@ -1,3 +1,217 @@
+###########
+
+# Instalación de programas
+
+## Brevemente vamos a poner un ejemplo de como instalar un programa
+
+Para este fin vamos a usar [muscle](https://github.com/rcedgar/muscle?tab=readme-ov-file) para el alineamiento de múltiples secuencias biólogicas. Podemos usar el repositorio de github o conda (si esta instalado python).
+
+1. Instalando con [muscle_github](https://github.com/rcedgar/muscle?tab=readme-ov-file)
+
+Una vez que estamos en la página, hay que descargar el archivo, descromprimirlo e instalarlo. Sigue las instrucciones
+
+```
+## Descargar el algoritmo
+wget https://github.com/rcedgar/muscle/archive/refs/tags/v5.3.zip
+## Descomprimir
+unzip v5.3.zip
+## Cambiar al archivo src
+cd src
+## Construir el archivo
+bash build_linux.bash
+```
+
+Otra base página donde se especifica como instalar [muscle](https://apolo-docs.readthedocs.io/en/latest/software/applications/MUSCLE/3.8.1551/index.html)
+
+
+Otro ejemplo [bcftools en github](https://github.com/samtools/bcftools) y [bcftools en otra página
+](https://www.htslib.org/download/)
+
+```
+## Descargar el algorirtmo
+wget https://github.com/samtools/bcftools/releases/download/1.22/bcftools-1.22.tar.bz2
+## Descomprimir
+tar -xvjf bcftools-1.22.tar.bz2
+## 
+./configure --prefix=/where/to/install
+./bcftools
+
+## Exportar
+export PATH=/home/lab13/Documents/MAGH/bcftools-1.22:$PATH    # for sh or bash users
+```
+
+2. Instalando con [muscle_conda](https://anaconda.org/bioconda/muscle)
+
+Si tienes instalado pythn se puede usar conda para instalar
+
+```
+## Antes de instalar con conda hay que ver que si tenemos instalado python
+python --version
+conda install bioconda::muscle
+conda install bioconda/label/cf201901::muscle
+```
+
+3. Instalando desde linux
+
+Para ver que tipo de distribución tienes instalado ejecuta el comando 
+
+```
+neofetch
+```
+
+Puedes usar yum (centos), algo de información lo puedes encontrar en esta [liga](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/6/html/deployment_guide/sec-installing)
+
+## Instalación de paquetes individuales
+
+Para instalar un solo paquete y todas sus dependencias no instaladas, introduzca un comando con el siguiente formato:
+
+```
+yum install package_name
+```
+
+También puedes instalar varios paquetes simultáneamente agregando sus nombres como argumentos:
+
+```
+yum install package_name package_name
+```
+
+Hay que checar que tipo distribución tienes instalado en tu servicor para que puedas usar el comando adecuado para la instalación, checa esta [liga](https://www.maketecheasier.com/install-software-in-various-linux-distros/)
+
+
+# Instalando un programa en un ambiente de conda
+
+Antes de crear un ambiente en conda, vamos a ver si tenemos instalado conda o miniconda
+
+```
+conda info
+
+```
+
+Para actualizar o instalar conda solo sigue los siguientes pasos
+
+```
+# Descargamos una version de miniconda
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+# Ejecutamos el script con bash
+bash Miniconda3-latest-Linux-x86_64.sh
+```
+
+Para que quede un poco más claro, dejo la página donde puedes descargar [anaconda](https://www.anaconda.com/docs/getting-started/anaconda/install#macos-graphical-installer) 
+
+Antes de hacer un ambiente en python, veamos la siguiente [explicación](https://codigofacilito.com/articulos/entornos-virtuales-python)
+
+## Vamos a instalar los programas FASTQC, HISAT2 y SAMtools.
+
+Vamos a crear un ambiente en python, ya checamos la version de python pero podemos usar el siguiente comando para ver que versiones tenemos
+
+```
+ls /usr/bin/python3*
+```
+
+Creamos un ambiente en version 3.9 con el siguiente comando 
+
+```
+conda create --name python_NombreApellido python=3.9
+```
+
+Para ver y activar tu ambiente con la version de phyton que usaste, ejecuta el siguiente comando
+
+```
+## Para enviar que ambientes tengo
+conda env list
+## Para activar el ambiente de python
+conda activate python_NombreApellido
+## Para desactivar el ambiente de python
+conda deactivate
+```
+
+Activamos el ambiente de conda y ejecutamos o instalamos los programas que necesitamos usar para nuestros análisis. En esta dirección puedes buscar los programas disponibles en conda [https://anaconda.org/bioconda](https://anaconda.org/bioconda)
+
+```
+## Para activar el ambiente de python
+conda activate python_NombreApellido
+# Instalando los programas
+conda install bioconda::fastqc
+conda install bioconda::hisat2
+conda install bioconda::samtools
+```
+
+Checamos las versiones que se instalaron
+
+```
+fastqc --version
+hisat2 --version
+samtools --version
+```
+
+Haz un script y realiza el análisis de la calidad de los archivos que están en esta dirección:
+
+```
+/home/lab13/Documents/Ecologia_AnalisisGenomico/HectorMartinez/FASTQ
+```
+
+
+
+https://sxh1136.quarto.pub/amrflows-metagenomic-data-analysis-course/6.%20Installing%20tools%20with%20Conda.html
+
+# Evaluación de la calidad
+
+## Archivos fasta o formato de Pearson
+Antes de entender y analizar los archivos de la secuenciación masiva, vamos a revisar primero el formato **[fasta o Person](https://www.bioinformatics.nl/tools/crab_fasta.html)**
+
+<p align="center">  
+  <img src="Figuras/fasta.png? raw=true" alt="shell" width="1000" height="600">
+</p>
+
+## Características del archivo fastq
+
+<p align="center">  
+  <img src="Figuras/Fastq1.png? raw=true" alt="shell" width="1000" height="600">
+</p>
+
+<p align="center">  
+  <img src="Figuras/Fastq2.png? raw=true" alt="shell" width="1000" height="600">
+</p>
+
+## Encabezado del archivo fastq
+
+<p align="center">  
+  <img src="Figuras/EncabezadoFastq.png? raw=true" alt="shell" width="1000" height="600">
+</p>
+
+## Información de la calidad de las lecturas crudas
+
+<p align="center">  
+  <img src="Figuras/ASCII.png? raw=true" alt="shell" width="1000" height="600">
+</p>
+
+## Nivel de calidad Phred 
+
+<p align="center">  
+  <img src="Figuras/Phred.png? raw=true" alt="shell" width="1000" height="600">
+</p>
+
+## Diagrama de cajas y bigotes
+
+<p align="center">  
+  <img src="Figuras/BoxPlot.svg? raw=true" alt="shell" width="600" height="600">
+</p>
+
+## Revisión de resultado FastQC y multiQC
+
+**[FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)**
+
+* **[FastQC_bueno](https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/tree/main/PresentacionesEnClase_Bioinformatica/FastQC_MultiQC/good_sequence_short_fastqc.html)**
+* **[FastQC_malo](https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/tree/main/PresentacionesEnClase_Bioinformatica/FastQC_MultiQC/bad_sequence_fastqc.html)**
+
+**[MultiQC](https://github.com/MultiQC/MultiQC)**
+
+* **[MultiQC](https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/tree/main/PresentacionesEnClase_Bioinformatica/FastQC_MultiQC/multiqc_report_despues.html)**
+
+
+
+
+
 # Pipeline bioinformático
 
 En esta sección describiremos los algoritmos y pipelines que se usarán para la identificación taxonómica de las bacterias de interés ecológico y clínico de las muestras que se prepararon en la primera parte del curso de ecología.
