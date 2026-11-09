@@ -2,7 +2,6 @@
 
 ## 1. Linux
 
-
 Un sistema operativo (SO) es un conjunto de órdenes y programas que controlan los procesos básicos de una computadora y permiten el funcionamiento de otros programas.
 
 Linux es un SO diseñado por cientos de programadores de todo el planeta. El principal responsable del proyecto es [Linus Torvalds](https://www.cisinformatica.cat/es/quien-es-linus-torvalds-el-padre-de-linux/).
