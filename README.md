@@ -1,6 +1,6 @@
 # Introducción a la bioinformática con un enfoque al análisis del microbioma
 
-Este curso forma parte de la colaboración entre el [**Laboratorio Nacional en  Salud de la Facultad de Estudios Superiores Iztacala, UNAM**](https://labnalsalud-fes.iztacala.unam.mx/) con la **Universidad Juárez Autónoma de Tabasco**. Es un curso teórico-práctico orientado a la adquisición de herramientas bioinformáticas - linux y R - para el análisis del microbioma.
+Este curso forma parte de la colaboración entre el [**Laboratorio Nacional en  Salud de la Facultad de Estudios Superiores Iztacala, UNAM**](https://labnalsalud-fes.iztacala.unam.mx/) con la **Universidad Juárez Autónoma de Tabasco**. Es un curso teórico-práctico orientado a la adquisición de herramientas bioinformáticas - Linux y R - para el análisis del microbioma.
 
 ## Instructores:
 
@@ -10,9 +10,9 @@ Este curso forma parte de la colaboración entre el [**Laboratorio Nacional en  
 
 **Dr. Felipe Vaca Paniagua**, Profesor Titular C de la FES Iztacala, UNAM
 
-**Biól. Julieta Aurora Morales Valdez**
+**Biól. Julieta Aurora Morales Valdez**, Estudiante de Maestría 
 
-**Biól. Luis Romero**
+**Biól. Luis Enrique Romero Cruz**, Estudiante de Doctorado
 
 ## Objetivo del curso
 
@@ -24,7 +24,9 @@ Este repositorio proporciona a los participantes los materiales de consulta, com
 
 Los materiales del curso se encuentran organizados de la siguiente manera:
 
-**[00_Técnicas de secuenciación masiva y Aplicaciones de la secuenciación masiva](https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/tree/main/Presentaci%C3%B3nDiapositivas) - 30 de noviembre 2026**
+**[00_Técnicas de secuenciación masiva y Aplicaciones de la secuenciación masiva](https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/tree/main/Presentaci%C3%B3nDiapositivas)**
+
+**30 de noviembre 2026. Dra Clara Estela Díaz Velásques y Dr. Felipe Vaca Paniagua**
 
 Conocerás las técnicas moleculares que se usan en la preparación de bibliotecas, las diferentes tecnologías que se usan para la secuenciación masiva y sus principales aplicaciones
 
