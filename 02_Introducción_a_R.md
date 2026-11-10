@@ -10,7 +10,7 @@ También necesitas descargar la versión más reciente de RStudio [Desktop](http
 
 “La misión de RStudio es crear software gratuito y de código abierto para ciencia de datos, investigación científica y comunicación técnica. Hacemos esto para mejorar la producción y el consumo de conocimiento por parte de todos, independientemente de los medios económicos, y para facilitar la colaboración y la investigación reproducible, las cuales son críticas”
 
-## Primeros consejos para iniciar
+### Primeros consejos para iniciar
 
 Al abrir RStudio la consola nos arroja el mensaje que se muestra a continuación en la imagen. En este mensaje nos indica la versión de R que tenemos instalada y la plataforma en la que estamos trabajando. 
 
@@ -22,7 +22,7 @@ R y RStudio están diseñados para que muchas personas puedan aprenderlo desde c
   <img src="https://github.com/Martinez-Gregorio-Hector/AnalisisGenomico-EcologiaFESIztacala/blob/main/Unidad2/FigurasUnidad2/RStudio1.png? raw=true" alt="shell" width="600" height="400">
 </p>
 
-## La interfaz gráfica de RStudio
+### La interfaz gráfica de RStudio
 
 RStudio es un entorno de desarrollo integrado (IDE) para R. Su interfaz gráfica incluye 3 paneles principales:
 
@@ -34,7 +34,7 @@ RStudio es un entorno de desarrollo integrado (IDE) para R. Su interfaz gráfica
   <img src="https://github.com/Martinez-Gregorio-Hector/AnalisisGenomico-EcologiaFESIztacala/blob/main/Unidad2/FigurasUnidad2/RStudio2.png? raw=true" alt="shell" width="600" height="300">
 </p>
 
-## Opciones globales
+### Opciones globales
 
 Las opciones globales (Global Options…) nos permitirán cambiar aspectos visuales de la organización de la interfaz gráfica. Para acceder a estas opciones debemos ir a **Tools > Global Options**.
 
@@ -42,7 +42,7 @@ Las opciones globales (Global Options…) nos permitirán cambiar aspectos visua
 
 1. Explora el menú de **Global Options**
 
-## Archivos de RStudio
+### Archivos de RStudio
 
 En RStudio podemos generar todos los archivos enlístados en “New File”. El archivo más usado para desarrollar código en R es **R Script**. Aún así RStudio nos permite hacer reportes de nuestros código con **R Notebook** y **R Markdown**, aplicaciones web con **Shiny Web App**, generar APIs con **Plumber API**, editar código en **HTML**, **C**, **C++**, **Python**, **CSS**, **JavaScript**, **Shell**, entre otros.
 
@@ -50,7 +50,7 @@ En RStudio podemos generar todos los archivos enlístados en “New File”. El 
   <img src="https://github.com/Martinez-Gregorio-Hector/AnalisisGenomico-EcologiaFESIztacala/blob/main/Unidad2/FigurasUnidad2/RStudio3.png? raw=true" alt="shell" width="600" height="300">
 </p>
 
-## Instalación de librerías
+### Instalación de librerías
 
 Revisamos que la mayoría de los paquetes de R se almacenan en la Red Integral de Archivos de R (CRAN), el repositorio oficial de paquetes de R. Para instalar un paquete desde CRAN, utilizamos la función **install.packages()**:
 
@@ -66,7 +66,7 @@ También puede instalar varios paquetes a la vez pasando un vector de caracteres
 install.packages(c("readr", "ggplot2", "tidyr"))
 
 ```
-## Actividad
+### Actividad
 
 * Crear un **R scripts**. 
 * En un script ejecuta el siguiente código:
@@ -84,7 +84,7 @@ table(cats$Sex)
 ¿Qué sucede al ejecutar data(cats) y View(cats)?
 
 
-## Actividad
+### Actividad
 
 * Ejecuta el siguiente código:
 
@@ -97,7 +97,7 @@ ggplot(cats, aes(x = Sex)) +
 
 ```
 
-## Installing R Packages from GitHub
+### Installing R Packages from GitHub
 
 
 Algunos paquetes de R no están en CRAN, pero sí están disponibles en GitHub. Estos paquetes suelen estar en desarrollo o ofrecen funciones que aún no están disponibles en CRAN.
@@ -110,7 +110,7 @@ remotes::install_github("rstudio/shiny")
 
 ```
 
-## Instalación de paquetes R desde un archivo local
+### Instalación de paquetes R desde un archivo local
 
 Si has descargado un paquete a tu ordenador, puedes instalarlo así:
 
@@ -119,7 +119,7 @@ install.packages(/Users/YourName/Downloads/abc_2.1.zip", repos = NULL, type = "s
 
 ```
 
-## Instalación de paquetes desde bioconductor
+### Instalación de paquetes desde bioconductor
 
 Puedes descargar una librería desde [bioconductor](https://www.bioconductor.org/)
 
