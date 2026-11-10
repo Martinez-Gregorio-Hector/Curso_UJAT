@@ -93,18 +93,21 @@ Figura 3.
 
 ## 3. Descarga de archivos y análisis de calidad
 
-#### Pipeline bioinformático
+### Pipeline bioinformático
 
-En esta sección describiremos los algoritmos y pipelines que se usarán para la identificación taxonómica de las bacterias de interés ecológico y clínico de las muestras que se prepararon en la primera parte del curso de ecología.
+Antes de descargar los datos de secuenciación masiva e instalación de programas, describiremos brevemente los algoritmos y pipelines que se usarán para la identificación taxonómica de las bacterias presentes en los tumores colorrectales.
+
 
 <p align="center">  
-  <img src="Figuras/AlgoritmoPipeline.png? raw=true" alt="shell" width="1000" height="600">
+  <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/tree/main/PresentacionesEnClase_Bioinformatica/Figuras/AlgoritmoPipeline.png? raw=true" alt="shell" width="1000" height="600">
 </p>
 
 
 <p align="center">  
-  <img src="Figuras/AlgoritmoPipeline2.png? raw=true" alt="shell" width="1000" height="600">
+  <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/tree/main/PresentacionesEnClase_Bioinformatica/Figuras/AlgoritmoPipeline2.png? raw=true" alt="shell" width="1000" height="600">
 </p>
+
+
 
 ### Algoritmos que se usarán para el análisis del microbioma
 
