@@ -1,13 +1,13 @@
-# Pipeline QIIME2
-   1. Estructura de un archivo fastq
+# Pipeline bioinformático para la identificación taxonómica de bacterias mediante QIIME 2
+   1. Estructura de los archivos fastq
    2. Evaluación de la calidad
    3. Creación de un ambiente en conda
    4. QIIME2
    5. Visualización de datos con [qiime2 view](https://view.qiime2.org/)
       
-## Evaluación de la calidad
+## 1. Estructura de los archivos fastq
 
-## Archivos fasta o formato de Pearson
+### Archivos fasta o formato de Pearson
 Antes de entender y analizar los archivos de la secuenciación masiva, vamos a revisar primero el formato **[fasta o Person](https://www.bioinformatics.nl/tools/crab_fasta.html)**
 
 <p align="center">  
