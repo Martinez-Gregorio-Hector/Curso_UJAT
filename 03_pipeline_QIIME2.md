@@ -1,7 +1,7 @@
 # Pipeline bioinformático para la identificación taxonómica de bacterias mediante QIIME 2
    1. Estructura de los archivos fastq y calidad de las lecturas de secuenciación
    2. Objeto de estudio - Cáncer colorrectal
-   3. Descarga de archivos y análisis de calidad
+   3. Descarga de archivos, análisis de calidad y ensamblado de lecturas
    4. Creación de un ambiente en conda para QIIME2
    5. Análisis con QIIME2
    6. Visualización de datos con QIIME2 View
@@ -84,7 +84,7 @@ Antes de entender y analizar los archivos de la secuenciación masiva, vamos a r
   <img src="https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/blob/main/MaterialDeApoyo/FigurasRepositorio/12967_2021_3154_Fig3_HTML.webp? raw=true" alt="shell" width="1000" height="600">
 </p>
 
-## 3. Descarga de archivos y análisis de calidad
+## 3. Descarga de archivos, análisis de calidad y ensamblado de lecturas
 
 ### Pipeline bioinformático
 
