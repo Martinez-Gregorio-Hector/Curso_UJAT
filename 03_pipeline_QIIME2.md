@@ -1,11 +1,10 @@
 # Pipeline bioinformático para la identificación taxonómica de bacterias mediante QIIME 2
-   1. Estructura de los archivos fastq
-   2. Evaluación de la calidad
+   1. Estructura de los archivos fastq y calidad de las lecturas de secuenciación
    3. Creación de un ambiente en conda
    4. QIIME2
    5. Visualización de datos con [qiime2 view](https://view.qiime2.org/)
       
-## 1. Estructura de los archivos fastq
+## 1. Estructura de los archivos fastq y calidad de las lecturas de secuenciación
 
 ### Archivos fasta o formato de Pearson
 Antes de entender y analizar los archivos de la secuenciación masiva, vamos a revisar primero el formato **[fasta o Person](https://www.bioinformatics.nl/tools/crab_fasta.html)**
@@ -14,7 +13,7 @@ Antes de entender y analizar los archivos de la secuenciación masiva, vamos a r
   <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/fasta.png? raw=true" alt="shell" width="1000" height="600">
 </p>
 
-## Características del archivo fastq
+### Características del archivo fastq
 
 <p align="center">  
   <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/Fastq1.png? raw=true" alt="shell" width="1000" height="600">
@@ -24,31 +23,31 @@ Antes de entender y analizar los archivos de la secuenciación masiva, vamos a r
   <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/Fastq2.png? raw=true" alt="shell" width="1000" height="600">
 </p>
 
-## Encabezado del archivo fastq
+### Encabezado del archivo fastq
 
 <p align="center">  
   <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/EncabezadoFastq.png? raw=true" alt="shell" width="1000" height="600">
 </p>
 
-## Información de la calidad de las lecturas crudas
+### Información de la calidad de las lecturas crudas
 
 <p align="center">  
   <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/ASCII.png? raw=true" alt="shell" width="1000" height="600">
 </p>
 
-## Nivel de calidad Phred 
+### Nivel de calidad Phred 
 
 <p align="center">  
   <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/Phred.png? raw=true" alt="shell" width="1000" height="600">
 </p>
 
-## Diagrama de cajas y bigotes
+### Diagrama de cajas y bigotes
 
 <p align="center">  
   <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/BoxPlot.svg? raw=true" alt="shell" width="600" height="600">
 </p>
 
-## Revisión de resultado FastQC y multiQC
+### Revisión de resultado FastQC y multiQC
 
 **[FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)**
 
