@@ -133,7 +133,7 @@ BiocManager::install("MutationalPatterns")
 
 ```
 
-## Flujos de trabajo con proyectos de RStudio
+### Flujos de trabajo con proyectos de RStudio
 
 Es un archivo especial de R, compatible con RStudio, que al ejecutarlo hará 3 cosas:
 
@@ -163,7 +163,7 @@ Crea tres directorio en la carpeta que acabas de crear: **script**, **data**, y 
   <img src="https://github.com/Martinez-Gregorio-Hector/AnalisisGenomico-EcologiaFESIztacala/blob/main/Unidad2/FigurasUnidad2/OrganizacionDirectorio.png? raw=true" alt="shell" >
 </p>
 
-# Nombre de archivos
+### Nombre de archivos
 
 Los nombres importan:
 
@@ -177,7 +177,7 @@ Los nombres importan:
   <img src="https://github.com/Martinez-Gregorio-Hector/AnalisisGenomico-EcologiaFESIztacala/blob/main/Unidad2/FigurasUnidad2/NombreDeLosArchivos.png? raw=true" alt="shell" >
 </p>
 
-## Amigable para computadoras (no sólo R)
+### Amigable para computadoras (no sólo R)
 
 ## Es fácil usar expresiones regulares y globbing
 
