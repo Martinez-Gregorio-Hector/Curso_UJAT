@@ -1,4 +1,10 @@
-###########
+1. Temario
+   1. Archivo fastqc
+   2. Calidad
+   3. Creación de ambiente
+   4. QIIME2
+
+3. 
 
 # Instalación de programas
 
