@@ -93,7 +93,7 @@ Figura 3.
 
 ## 3. Descarga de archivos y análisis de calidad
 
-# Pipeline bioinformático
+#### Pipeline bioinformático
 
 En esta sección describiremos los algoritmos y pipelines que se usarán para la identificación taxonómica de las bacterias de interés ecológico y clínico de las muestras que se prepararon en la primera parte del curso de ecología.
 
@@ -106,7 +106,7 @@ En esta sección describiremos los algoritmos y pipelines que se usarán para la
   <img src="Figuras/AlgoritmoPipeline2.png? raw=true" alt="shell" width="1000" height="600">
 </p>
 
-## Algoritmos que se usarán para el análisis del microbioma
+### Algoritmos que se usarán para el análisis del microbioma
 
 <p align="center">  
   <img src="Figuras/PipelineBioinformatico.svg? raw=true" alt="shell" width="1000" height="600">
@@ -117,6 +117,13 @@ En esta sección describiremos los algoritmos y pipelines que se usarán para la
 2. Ensamble de lecturas pareadas: **[PEAR](https://cme.h-its.org/exelixis/web/software/pear/doc.html)**
 
 3. Identificación taxonómica: **[QIIME2](https://qiime2.org/)**
+
+### Instalación 
+
+XXXXX
+XXXXX
+XXXXX
+
 
 ## 1. Evaluación de la calidad del llamado de bases antes del ensamblado
 
