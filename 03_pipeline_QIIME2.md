@@ -63,18 +63,28 @@ Antes de entender y analizar los archivos de la secuenciación masiva, vamos a r
 
 ## 2. Objeto de estudio - Cáncer colorrectal
 
+Objetivo del estduio:
+
+Estrategia experimetal:
+
+Pipeline bioinformático
+
+
 <p align="center">  
   <img src="https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/blob/main/MaterialDeApoyo/PaperBioinformatica/12967_2021_3154_Fig1_HTML.webp? raw=true" alt="shell" width="1000" height="600">
 </p>
-
+Figura 1. 
 
 <p align="center">  
   <img src="https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/blob/main/MaterialDeApoyo/PaperBioinformatica/12967_2021_3154_Fig2_HTML.webp? raw=true" alt="shell" width="1000" height="600">
 </p>
 
+Figura 2.
+
 <p align="center">  
   <img src="https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/blob/main/MaterialDeApoyo/PaperBioinformatica/12967_2021_3154_Fig3_HTML.webp? raw=true" alt="shell" width="1000" height="600">
 </p>
+Figura 3. 
 
 ## 3. Descarga de archivos y análisis de calidad
 
