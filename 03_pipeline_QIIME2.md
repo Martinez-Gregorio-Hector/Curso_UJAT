@@ -1,8 +1,10 @@
 # Pipeline bioinformático para la identificación taxonómica de bacterias mediante QIIME 2
    1. Estructura de los archivos fastq y calidad de las lecturas de secuenciación
-   3. Creación de un ambiente en conda
-   4. QIIME2
-   5. Visualización de datos con [qiime2 view](https://view.qiime2.org/)
+   2. Objeto de estudio - Cáncer colorrectal
+   3. Análisis de calidad
+   4. Creación de un ambiente en conda para QIIME2
+   5. Análisis con QIIME2
+   6. Visualización de datos con [qiime2 view](https://view.qiime2.org/)
       
 ## 1. Estructura de los archivos fastq y calidad de las lecturas de secuenciación
 
