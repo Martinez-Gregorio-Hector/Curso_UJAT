@@ -50,21 +50,6 @@ En RStudio podemos generar todos los archivos enlístados en “New File”. El 
   <img src="https://github.com/Martinez-Gregorio-Hector/AnalisisGenomico-EcologiaFESIztacala/blob/main/Unidad2/FigurasUnidad2/RStudio3.png? raw=true" alt="shell" width="600" height="300">
 </p>
 
-## Actividad
-
-* Ejecuta el siguiente código:
-
-```
-install.packages("ggThemeAssist", dependencies=TRUE)
-
-g <- ggplot(cats, aes(x = Sex)) + 
-    geom_bar(fill = "orange", color = "black") + theme_classic() +
-    xlab("Sexo") + ylab("Número de Gatos") + ggtitle("Gatos")
-
-g
-```
-A continuación selecciona **g**, ve a **Addins** y da click en **ggplot Theme Assistant**. Explora los arreglos de las gráficas que puedes hacer.
-
 ## Instalación de librerías
 
 Revisamos que la mayoría de los paquetes de R se almacenan en la Red Integral de Archivos de R (CRAN), el repositorio oficial de paquetes de R. Para instalar un paquete desde CRAN, utilizamos la función **install.packages()**:
