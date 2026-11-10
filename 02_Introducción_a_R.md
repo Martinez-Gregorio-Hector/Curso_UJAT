@@ -300,6 +300,11 @@ Los valores perdidos constituyen una clase particular de dato, que se codifica s
 
 
 
+# minicurso_dic2020 > estructuras_de_datos > estructuras_de_datos.r
+# minicurso_feb_2021 > ggplot2_RMB 
+# https://rkabacoff.github.io/datavis/IntroGGPLOT.html cápitulo3-6
+# Cosas que se tiene que ver, como guardar plots, importar y exportar archivos
+
 
 
 
