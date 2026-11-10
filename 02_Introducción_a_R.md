@@ -1,5 +1,7 @@
 # Introducción a R
 
+## 1. Instalación de R, paqueterías y recomendaciones globales
+
 ### Descarga de R
 
 Para poder usar RStudio tenemos que tener instalado R en nuestras máquinas. Si aún no lo has instalado lo puedes descargar desde el siguiente link https://cran.itam.mx. Descargar la versión más reciente.
@@ -212,13 +214,7 @@ Usa el estándar ISO 8601 para fechas: aaaa-mm-dd
 * aaaa-mm-dd o algun componente numérico que facilite ordenar
 
 
-  ---
-title: "TipoDeDatosObjetos"
-output:
-  html_document: default
-  pdf_document: default
-date: "2025-08-31"
----
+## 2. Variables y diferentes tipos de datos
 
 En términos generales, todos los elementos que maneja R son objetos: un valor numérico es un objeto, una variable es un objeto, un vector es un objeto, una función es un objeto, una base de datos es un objeto, un gráfico es un objeto, ...
 
