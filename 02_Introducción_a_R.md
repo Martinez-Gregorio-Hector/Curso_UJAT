@@ -214,11 +214,11 @@ Usa el estándar ISO 8601 para fechas: aaaa-mm-dd
 * aaaa-mm-dd o algun componente numérico que facilite ordenar
 
 
-## 2. Variables y diferentes tipos de datos
+## 2. Variables y tipos de datos
 
 En términos generales, todos los elementos que maneja R son objetos: un valor numérico es un objeto, una variable es un objeto, un vector es un objeto, una función es un objeto, una base de datos es un objeto, un gráfico es un objeto, ...
 
-## Variables
+### Variables
 
 Las variables son localidades de memoria a las que les asignamos un nombre para almacenar un valor que puede cambiar en el transcurso de un programa. 
 
@@ -236,7 +236,6 @@ A
 B
 Y
 ```
-
 
 Si una operación no es asignada a una variable, la operación se realizará y su resultado sólo se desplegará en la pantalla, pero no quedará almacenada.
 
@@ -256,12 +255,6 @@ Al momento de definir el nombre de una variable debemos tomar en consideración 
 2. No deben contener espacios en blanco
 3. No deben contener símbolos especiales, excepto guión bajo ( _ ) o punto( . ).
 
-```{r}
-# Factor de cambio = 2
-# 1x <- 32.5
-# gen-reprimido <- "catB"
-```
-
 Algunos ejemplos de nombres válidos son:
 
 ```{r}
@@ -275,7 +268,7 @@ condicion <- "WT"; curso2020 <-"IntroR"; x<-25
 separados por “;”.
 Si al escribir un comando damos enter y el comando queda incompleto, entonces, de manera automática R colocará un símbolo de más (+) indicando que el comando se encuentra incompleto y permitiendo completarlo. Mientras no se complete el comando, seguirá apareciendo el símbolo +, cada vez que demos enter.
 
-## R es sensible a mayúsculas y minúsculas en los nombres de objetos
+### R es sensible a mayúsculas y minúsculas en los nombres de objetos
 
 Si bien es cierto que los nombres de variables pueden contener mayúsculas y minúsculas, es importante mencionar que, R distingue entre mayúsculas y minúsculas.
 
@@ -288,7 +281,7 @@ GeNoMa <-"Geobacter"
 
 Todas las definiciones anteriores son variables diferentes.
 
-## Tipos de datos
+### Tipos de datos
 
 En **R** (como en otros lenguajes de programación) hay diferentes tipos de datos; dentro de los más utilizados estan los **numéricos**, **lógicos** y **alfanuméricos** (o cadenas, strings en inglés).
 
@@ -304,23 +297,10 @@ geneName = "CRP"      # Valor alfanumérico (caracter)
 ## Valores perdidos
 
 Los valores perdidos constituyen una clase particular de dato, que se codifica siempre como NA (Not Available), independientemente de que la variable sea numérica o alfanumérica. Estos valores sirven, por ejemplo, cuando se registran datos y no es posible obtener la información de algunas variables para determinados casos. Con carácter general cualquier operación que involucre a un valor perdido dará como resultado también NA.
-Una segunda clase de valores “perdidos” en R corresponden a cálculos numéricos cuyos resultados son indefinidos o infinitos, como por ejemplo, log(−1) o $\frac{5}{0}$ . En el caso de los valores indefinidos, el resultado que devuelve R es NaN (Not a Number), y para los valores infinitos puede devolver Inf o -Inf. 
-
-```{r}
--3/0    # Valor Infinito
-log(-4) # Valor indefinido
-```
 
 
-**Ejercicio 1**
-¿Cuáles de las siguientes definiciones son correctas?
-```{r}
-# varible.Uno <- 10
-# 25 <- "curso R"
-# Sqrt25 <- 5
-# nombre-25 <- 50
-# resultado <- 10/0
-```
+
+
 
 
 ## Operadores aritméticos, relacionales y lógicos
