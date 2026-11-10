@@ -133,7 +133,7 @@ BiocManager::install("MutationalPatterns")
 
 ```
 
-# Flujos de trabajo con proyectos de RStudio
+## Flujos de trabajo con proyectos de RStudio
 
 Es un archivo especial de R, compatible con RStudio, que al ejecutarlo hará 3 cosas:
 
@@ -143,7 +143,7 @@ Es un archivo especial de R, compatible con RStudio, que al ejecutarlo hará 3 c
   
 * Establecerá la ubicación del proyecto como la raíz de los archivos.
 
-## ¿Cómo generamos un proyecto de RStudio?
+### ¿Cómo generamos un proyecto de RStudio?
 
 Creando un proyecto en un directorio nuevo.
 
