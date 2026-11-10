@@ -116,9 +116,13 @@ Antes de descargar los datos de secuenciación masiva e instalación de programa
 
 5. Análisis de vías funcionales: **[Picrust](https://picrust.github.io/picrust/install.html)**
 
-### Descargar base de datos con SRA Toolkit
+### 1. Descargar base de datos con SRA Toolkit
 
+Vamos a descargar los archivos fastq que usaremos para trabajar con nuestro
 
+con SraAccList.txt 
+
+Generar una archivo c
 
 XXXXX
 XXXXX
