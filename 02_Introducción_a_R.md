@@ -183,37 +183,17 @@ Los nombres importan:
 
 * Evitar espacios, puntuación, acentos, caracteres especiales, uso de mayúsculas y minúsculas.
 
-## Es fácil operar sobre ellos
+### Es fácil operar sobre ellos
 
 * Usar delimitadores pensando que vamos a extraer componentes (guión bajo _)
 
-## globbing
-
-<p align="center">  
-  <img src="https://github.com/Martinez-Gregorio-Hector/AnalisisGenomico-EcologiaFESIztacala/blob/main/Unidad2/FigurasUnidad2/globbing.png? raw=true" alt="shell" >
-</p>
-
-## Expresiones regulares
-
-<p align="center">  
-  <img src="https://github.com/Martinez-Gregorio-Hector/AnalisisGenomico-EcologiaFESIztacala/blob/main/Unidad2/FigurasUnidad2/ExpresionesRegulares.png? raw=true" alt="shell" >
-</p>
-
-## Es fácil operar sobre ellos 
-
-<p align="center">  
-  <img src="https://github.com/Martinez-Gregorio-Hector/AnalisisGenomico-EcologiaFESIztacala/blob/main/Unidad2/FigurasUnidad2/ExpresionesRegulares2.png? raw=true" alt="shell" >
-</p>
-
-## Amigables para humanos
+### Amigables para humanos
 
 Los nombres contienen información
 
 Los nombres dan contexto
 
-Mismo concepto que el slug en los URLs amigables al usuarion
-
-##  Se ordenan convenientemente
+###  Se ordenan convenientemente
 
 Incluye un componente numérica
 
@@ -221,7 +201,7 @@ Incluye ceros para tener una longitud constante, un orden ventajoso
 
 Usa el estándar ISO 8601 para fechas: aaaa-mm-dd
 
-## Guías
+### Guías
 
 * Evitar espacios, puntuación, acentos, caracteres especiales, uso de mayúsculas y minúsculas
 
