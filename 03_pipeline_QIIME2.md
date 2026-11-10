@@ -63,6 +63,8 @@ Antes de entender y analizar los archivos de la secuenciación masiva, vamos a r
 
 ## 2. Objeto de estudio - Cáncer colorrectal
 
+[Sukjung_Choi_2021](https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/blob/main/MaterialDeApoyo/PaperBioinformatica/Sukjung_Choi_2021.pdf)
+
 Objetivo del estduio:
 
 Estrategia experimetal:
