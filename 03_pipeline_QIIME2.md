@@ -61,8 +61,10 @@ Antes de entender y analizar los archivos de la secuenciación masiva, vamos a r
 * **[MultiQC](https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/tree/main/PresentacionesEnClase_Bioinformatica/FastQC_MultiQC/multiqc_report_despues.html)**
 
 
+## 2. Objeto de estudio - Cáncer colorrectal
 
 
+## 3. Descarga de archivos y análisis de calidad
 
 # Pipeline bioinformático
 
