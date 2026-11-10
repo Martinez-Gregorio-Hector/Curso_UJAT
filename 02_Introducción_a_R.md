@@ -83,7 +83,6 @@ table(cats$Sex)
 ```
 ¿Qué sucede al ejecutar data(cats) y View(cats)?
 
-¿Qué formas hay desde la interfaz gráfica para importar datos?
 
 ## Actividad
 
@@ -97,10 +96,6 @@ ggplot(cats, aes(x = Sex)) +
     geom_bar(fill = "orange", color = "black") + theme_classic() 
 
 ```
-¿Cómo podemos exportar el gráfico?
-
-Revisar este [link](https://bookdown.org/ndphillips/YaRrr/saving-plots-to-a-file-with-pdf-jpeg-and-png.html)
-
 
 ## Installing R Packages from GitHub
 
