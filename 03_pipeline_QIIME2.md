@@ -11,7 +11,7 @@
 Antes de entender y analizar los archivos de la secuenciación masiva, vamos a revisar primero el formato **[fasta o Person](https://www.bioinformatics.nl/tools/crab_fasta.html)**
 
 <p align="center">  
-  <img src="Figuras/fasta.png? raw=true" alt="shell" width="1000" height="600">
+  <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/tree/main/PresentacionesEnClase_Bioinformatica/Figuras/fasta.png? raw=true" alt="shell" width="1000" height="600">
 </p>
 
 ## Características del archivo fastq
