@@ -67,23 +67,22 @@ Antes de entender y analizar los archivos de la secuenciación masiva, vamos a r
 
 
 **Diversidad bacteriana de tejidos normales y tejido tumoral en pacientes con cáncer colorrectal**
+
 <p align="center">  
   <img src="https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/blob/main/MaterialDeApoyo/FigurasRepositorio/12967_2021_3154_Fig1_HTML.webp? raw=true" alt="shell" width="1000" height="600">
 </p>
 
 
 **Composición bacteriana asociado al cáncer colorrectal**
+
 <p align="center">  
   <img src="https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/blob/main/MaterialDeApoyo/FigurasRepositorio/12967_2021_3154_Fig2_HTML.webp? raw=true" alt="shell" width="1000" height="600">
 </p>
-Figura 2.
 
-
-
+**Vías funcionales predichas a partir de bacterias enriquecidas en tejido tumoral y en tejido normal**
 <p align="center">  
   <img src="https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/blob/main/MaterialDeApoyo/FigurasRepositorio/12967_2021_3154_Fig3_HTML.webp? raw=true" alt="shell" width="1000" height="600">
 </p>
-Figura 3. 
 
 ## 3. Descarga de archivos y análisis de calidad
 
@@ -100,8 +99,6 @@ Antes de descargar los datos de secuenciación masiva e instalación de programa
 <p align="center">  
   <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/AlgoritmoPipeline2.png? raw=true" alt="shell" width="1000" height="600">
 </p>
-
-
 
 ### Algoritmos que se usarán para el análisis del microbioma
 
