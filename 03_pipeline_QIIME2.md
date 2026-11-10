@@ -99,12 +99,12 @@ Antes de descargar los datos de secuenciación masiva e instalación de programa
 
 
 <p align="center">  
-  <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/tree/main/PresentacionesEnClase_Bioinformatica/Figuras/AlgoritmoPipeline.png? raw=true" alt="shell" width="1000" height="600">
+  <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/AlgoritmoPipeline.png? raw=true" alt="shell" width="1000" height="600">
 </p>
 
 
 <p align="center">  
-  <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/tree/main/PresentacionesEnClase_Bioinformatica/Figuras/AlgoritmoPipeline2.png? raw=true" alt="shell" width="1000" height="600">
+  <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/AlgoritmoPipeline2.png? raw=true" alt="shell" width="1000" height="600">
 </p>
 
 
