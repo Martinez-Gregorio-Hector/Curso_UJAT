@@ -106,11 +106,15 @@ Antes de descargar los datos de secuenciación masiva e instalación de programa
   <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/PipelineBioinformatico.svg? raw=true" alt="shell" width="1000" height="600">
 </p>
 
-1. Evaluación de la calidad del llamado de bases: **[fastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)** y **[Multiqc](https://github.com/MultiQC/MultiQC)**
+1. Descargar base de datos: **[SRA Toolki](https://github.com/ncbi/sra-tools/wiki/02.-Installing-SRA-Toolkit)**
+   
+2. Evaluación de la calidad del llamado de bases: **[fastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)** y **[Multiqc](https://github.com/MultiQC/MultiQC)**
 
-2. Ensamble de lecturas pareadas: **[PEAR](https://cme.h-its.org/exelixis/web/software/pear/doc.html)**
+3. Ensamble de lecturas pareadas: **[PEAR](https://cme.h-its.org/exelixis/web/software/pear/doc.html)**
 
-3. Identificación taxonómica: **[QIIME2](https://qiime2.org/)**
+4. Identificación taxonómica: **[QIIME2](https://qiime2.org/)**
+
+5. Análisis de vías funcionales: **[Picrust](https://picrust.github.io/picrust/install.html)**
 
 ### Instalación 
 
