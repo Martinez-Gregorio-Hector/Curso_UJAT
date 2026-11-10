@@ -112,7 +112,7 @@ Antes de descargar los datos de secuenciación masiva e instalación de programa
 ### Algoritmos que se usarán para el análisis del microbioma
 
 <p align="center">  
-  <img src="Figuras/PipelineBioinformatico.svg? raw=true" alt="shell" width="1000" height="600">
+  <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/PipelineBioinformatico.svg? raw=true" alt="shell" width="1000" height="600">
 </p>
 
 1. Evaluación de la calidad del llamado de bases: **[fastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)** y **[Multiqc](https://github.com/MultiQC/MultiQC)**
