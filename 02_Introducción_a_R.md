@@ -50,44 +50,7 @@ En RStudio podemos generar todos los archivos enlístados en “New File”. El 
   <img src="https://github.com/Martinez-Gregorio-Hector/AnalisisGenomico-EcologiaFESIztacala/blob/main/Unidad2/FigurasUnidad2/RStudio3.png? raw=true" alt="shell" width="600" height="300">
 </p>
 
-## Trabajando con environment
-
-## Primera actividad
-
-* Crear un **R scripts**. 
-* En un script ejecuta el siguiente código:
-
-```
-install.packages("MASS", dependencies=TRUE)
-
-library(MASS)
-
-data(cats)
-View(cats)
-
-table(cats$Sex)
-```
-¿Qué sucede al ejecutar data(cats) y View(cats)?
-
-¿Qué formas hay desde la interfaz gráfica para importar datos?
-
-## Segunda actividad
-
-* Ejecuta el siguiente código:
-
-```
-install.packages("ggplot2", dependencies=TRUE)
-library(ggplot2)
-
-ggplot(cats, aes(x = Sex)) + 
-    geom_bar(fill = "orange", color = "black") + theme_classic() 
-
-```
-¿Cómo podemos exportar el gráfico?
-
-Revisar este [link](https://bookdown.org/ndphillips/YaRrr/saving-plots-to-a-file-with-pdf-jpeg-and-png.html)
-
-## Tercera Actividad
+## Actividad
 
 * Ejecuta el siguiente código:
 
@@ -107,7 +70,7 @@ A continuación selecciona **g**, ve a **Addins** y da click en **ggplot Theme A
 Revisamos que la mayoría de los paquetes de R se almacenan en la Red Integral de Archivos de R (CRAN), el repositorio oficial de paquetes de R. Para instalar un paquete desde CRAN, utilizamos la función **install.packages()**:
 
 ```
-install.packages("readr")
+install.packages("readr", dependencies=TRUE)
 ```
 
 Este comando instala el paquete **readr**, que permite leer archivos CSV y otros formatos de archivo planos. Asegúrese de escribir el nombre del paquete entre comillas.
@@ -118,6 +81,41 @@ También puede instalar varios paquetes a la vez pasando un vector de caracteres
 install.packages(c("readr", "ggplot2", "tidyr"))
 
 ```
+## Actividad
+
+* Crear un **R scripts**. 
+* En un script ejecuta el siguiente código:
+
+```
+install.packages("MASS", dependencies=TRUE)
+
+library(MASS)
+
+data(cats)
+View(cats)
+
+table(cats$Sex)
+```
+¿Qué sucede al ejecutar data(cats) y View(cats)?
+
+¿Qué formas hay desde la interfaz gráfica para importar datos?
+
+## Actividad
+
+* Ejecuta el siguiente código:
+
+```
+install.packages("ggplot2", dependencies=TRUE)
+library(ggplot2)
+
+ggplot(cats, aes(x = Sex)) + 
+    geom_bar(fill = "orange", color = "black") + theme_classic() 
+
+```
+¿Cómo podemos exportar el gráfico?
+
+Revisar este [link](https://bookdown.org/ndphillips/YaRrr/saving-plots-to-a-file-with-pdf-jpeg-and-png.html)
+
 
 ## Installing R Packages from GitHub
 
