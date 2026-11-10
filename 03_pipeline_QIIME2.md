@@ -63,22 +63,16 @@ Antes de entender y analizar los archivos de la secuenciación masiva, vamos a r
 
 ## 2. Objeto de estudio - Cáncer colorrectal
 
-[Sukjung_Choi_2021](https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/blob/main/MaterialDeApoyo/PaperBioinformatica/Sukjung_Choi_2021.pdf)
-
-Objetivo del estduio:
-
-Estrategia experimetal:
-
-Pipeline bioinformático
+**Objetivo del estudio**: [Sukjung_Choi_2021](https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/blob/main/MaterialDeApoyo/PaperBioinformatica/Sukjung_Choi_2021.pdf) analizan el microbioma de 51 pacientes con cáncer colorrectal - muestra tumoral y tejido adyacente - usando la región V3-V4 del *gen 16S rRNA* para caracterizar y comparar la composición taxonómica de las comunidades bacterianas presentes en ambos tipos de tejido.
 
 
+**Diversidad bacteriana de tejidos normales y tejido tumoral en pacientes con cáncer colorrectal**
 <p align="center">  
   <img src="https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/blob/main/MaterialDeApoyo/FigurasRepositorio/12967_2021_3154_Fig1_HTML.webp? raw=true" alt="shell" width="1000" height="600">
 </p>
-Figura 1. 
 
 
-
+**Composición bacteriana asociado al cáncer colorrectal**
 <p align="center">  
   <img src="https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/blob/main/MaterialDeApoyo/FigurasRepositorio/12967_2021_3154_Fig2_HTML.webp? raw=true" alt="shell" width="1000" height="600">
 </p>
