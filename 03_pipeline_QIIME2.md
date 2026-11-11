@@ -189,16 +189,60 @@ ls -lh raw_data/
 
 Si no tienes descargados estos programas, puedes seguir esta liga para su descarga: [FastQC](https://github.com/s-andrews/FastQC/tree/master) y [MultiQC](https://github.com/MultiQC/MultiQC)
 
-Vamos a crear un bash scripting para realizar la evaluación de la calidad del llamado de bases
+Vamos a crear un bash scripting para realizar la evaluación de la calidad del llamado de bases **Calidad1.sh**. Antes de correr los programas verificamos si están instalados en el servidor.
 
 ```
+fastqc --help
 
+##            FastQC - A high throughput sequence QC analysis tool
+
+## SYNOPSIS
+
+##	fastqc seqfile1 seqfile2 .. seqfileN
+
+##    fastqc [-o output dir] [--(no)extract] [-f fastq|bam|sam] 
+#"#           [-c contaminant file] seqfile1 .. seqfileN
+
+
+multiqc --help
+                                                                                              
+## /// MultiQC 🔍 v1.35                                                                         
+                                                                                              
+## Usage: multiqc [OPTIONS] [ANALYSIS DIRECTORY]                                                
+                                                                                              
+## MultiQC aggregates results from bioinformatics analyses across many samples into a single    
+## report.                          
+```
+
+Hacemos el bash scripting con **vim** o **nano** y hacerlo ejecutable
+
+```
+#!/bin/bash 
+mkdir QC_AntesDelEnsamble
+
+### Correr FastQC
+fastqc raw_data/* -o QC_AntesDelEnsamble/
+
+### Correr MultiQC
+multiqc QC_AntesDelEnsamble/ -o QC_AntesDelEnsamble/
+```
+
+Descarga los archivos **multiqc_report.html** que esta en la carpeta de QC_AntesDelEnsamble usando línea de comandos o con mobaxterm
+
+```
+# Entrar a la carpeta de raw_data
+cd QC_AntesDelEnsamble/
+
+# Ver el directorio de trabajo
+pwd
+/home/lab13/Documents/Curso_UJAT/MAGH/QC_AntesDelEnsamble
+
+# Abrir una terminal nueva para
+ssh lab13@XXX.XXXX.XXX.XXXX:/home/lab13/Documents/Curso_UJAT/MAGH/QC_AntesDelEnsamble/multiqc_report.html .
 ```
 
 
-
-
-## 2a. Ensambale de lecturas pareadas
+### 2. Ensambale de lecturas pareadas
 
 <p align="center">  
   <img src="Figuras/Ensamble.jpg? raw=true" alt="shell" width="1000" height="600">
