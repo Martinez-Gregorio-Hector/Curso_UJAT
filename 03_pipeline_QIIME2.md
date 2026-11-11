@@ -412,51 +412,22 @@ fastqc ensamblados/* -o QC_DespuesDelEnsamble/
 multiqc QC_DespuesDelEnsamble/ -o QC_DespuesDelEnsamble/
 ```
 
-
 ## 4. Análisis con QIIME2
 
-
-
-
-
-
-
-
-## 3. Identificación taxonómica
-
 <p align="center">  
-  <img src="Figuras/qiime.png? raw=true" alt="shell" width="1000" height="600">
+  <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/qiime.png? raw=true" alt="shell" width="1000" height="600">
 </p>
 
 **[Bolyen et al., 2019](https://www.nature.com/articles/s41587-019-0209-9)**
 
-## ¿Cómo se almacena la información en qiime2?
+### Formatos de salida de QIIME2
 
-El algoritmo de **qiime2** proporciona dos tipos de datos **qza** y **qzv**. **[QIIME 2 View](https://view.qiime2.org/)** permite visualizar archivos **qza** y **qzv** directamente en un navegador.
+El algoritmo de **qiime2** proporciona dos tipos de datos **qza** (almacenamiento de información) y **qzv** (visualización). 
 
-**qza** son los archivos de datos procesados que se usan como entrada en los siguientes pasos
-  
-- **demux.qza** → Secuencias importadas
-- **table.qza** → Tabla de abundancia (ASVs/OTUs)
-- **rep-seqs.qza** → Secuencias representativas
-- **taxonomy.qza** → Clasificación taxonómica
-- **rooted-tree.qza** → Árbol filogenético
-
-  
-**qzv** son archivos para visualizar resultados
-
-- **demux.qzv** → Calidad de secuencias
-- **table.qzv** → Resumen de tabla
-- **taxonomy.qzv** → Resultados taxonómicos
-- **alpha-rarefaction.qzv** → Curvas de rarefacción
-- **barplot.qzv** → Gráficos de abundancia taxonómica
-
-En el tutorial de qiime2 podemos ver las características de estos **[archivos](https://docs.qiime2.org/2023.7/tutorials/pd-mice/)**
-
-## Niveles taxonómicos
+### Niveles taxonómicos
 
 <p align="center">  
-  <img src="Figuras/Taxonomic_Rank_Graph.svg? raw=true" alt="shell" width="1000" height="600">
+  <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/Taxonomic_Rank_Graph.svg? raw=true" alt="shell" width="1000" height="600">
 </p>
 
 ## Métodos para el estudio del microbioma
