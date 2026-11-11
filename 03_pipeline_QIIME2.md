@@ -433,11 +433,11 @@ El algoritmo de **qiime2** proporciona dos tipos de datos **qza** (almacenamient
 ## Métodos para el estudio del microbioma
 
 <p align="center">  
-  <img src="Figuras/TecnicasBacterias.svg? raw=true" alt="shell" width="1000" height="600">
+  <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/TecnicasBacterias.svg? raw=true" alt="shell" width="1000" height="600">
 </p>
 
 <p align="center">  
-  <img src="Figuras/IlluminaOxford.jpg? raw=true" alt="shell" width="800" height="600">
+  <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/IlluminaOxford.jpg? raw=true" alt="shell" width="800" height="600">
 </p>
 
 ## 3.1 Qiime2 
