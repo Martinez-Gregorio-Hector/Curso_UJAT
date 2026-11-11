@@ -123,7 +123,9 @@ Antes de empezar a empezar a trabajar con QIIME2 vamos a descargar los archivos 
 
 Para descargar los archivos fastq vamos a seguir este página [SRA](https://www.ncbi.nlm.nih.gov/sra/docs/sradownload/). 
 
-El instructor te proporcionara la dirección IP del servidor y la contraseña para que puedas ingresar. Solamente está permitido ingresar el servidor durante el curso. Vas a trabajar en el siguiente directorio: **/home/lab13/Documents/Curso_UJAT**. Crear una carpeta con tu nombre, por ejemplo, HectorMartinez
+El instructor te proporcionara la dirección IP del servidor y la contraseña para que puedas ingresar. Solamente está permitido ingresar al servidor durante el curso. Vas a trabajar en el siguiente directorio: **/home/lab13/Documents/Curso_UJAT**. 
+
+Crear una carpeta con tu nombre, por ejemplo, HectorMartinez
 
 **Primer paso**
 
@@ -183,18 +185,18 @@ ls -lh raw_data/
 ## -rw-rw-r-- 1 lab13 lab13 115M Nov 10 21:18 SRR15018642_2.fastq
 ```
 
-
-
-
 ### 2. Evaluación de la calidad del llamado de bases: fastQC y Multiqc
 
-La descarga de estos programas 
+Si no tienes descargados estos programas, puedes seguir esta liga para su descarga: [FastQC](https://github.com/s-andrews/FastQC/tree/master) y [MultiQC](https://github.com/MultiQC/MultiQC)
+
+Vamos a crear un bash scripting para realizar la evaluación de la calidad del llamado de bases
+
+```
+
+```
 
 
 
-<p align="center">  
-  <img src="Figuras/MultiQC2.svg? raw=true" alt="shell" width="1000" height="600">
-</p>
 
 ## 2a. Ensambale de lecturas pareadas
 
