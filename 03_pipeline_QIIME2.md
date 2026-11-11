@@ -172,7 +172,7 @@ Ejecuta tu script con
 ./download.sh 
 ```
 
-Puedes ver el contenido de raw_data con el comando ls -lh
+Puedes ver el contenido de **raw_data** con el comando **ls -lh**
 
 ```
 ls -lh raw_data/
@@ -242,32 +242,150 @@ ssh lab13@XXX.XXXX.XXX.XXXX:/home/lab13/Documents/Curso_UJAT/MAGH/QC_AntesDelEns
 ```
 
 
-### 2. Ensambale de lecturas pareadas
+### 3. Ensambale de lecturas pareadas
 
-<p align="center">  
-  <img src="Figuras/Ensamble.jpg? raw=true" alt="shell" width="1000" height="600">
-</p>
+Una vez que evaluamos la calidad del llamado de bases de nuestros datos de secuenciación masiva. El siguiente paso es ensamblar la lectura sentido y antisentido antes de correr en QIIME2 y lo hacemos con el programa [PEAR](https://academic.oup.com/bioinformatics/article/30/5/614/247231). Para descargar PEAR, consulta la siguiente [liga_de_descarga_pear](https://www.h-its.org/research/cme/software/#).
 
-i) generar un solo archivo fastq 
-ii) dejar aquellas bases con una calidad arriba de 20
+Vamos a comprobar si PEAR esta instalado en nuestro servidor 
 
 ```
-pear -f [lectura_forward] –r [lectura_reverse] -o ensamblado.fastq -j 10 -q 20
+pear --help
+
+ ____  _____    _    ____ 
+|  _ \| ____|  / \  |  _ \
+| |_) |  _|   / _ \ | |_) |
+|  __/| |___ / ___ \|  _ <
+|_|   |_____/_/   \_\_| \_\
+## PEAR v0.9.11 [Nov 5, 2017]  - [+bzlib +zlib]
+
+## Citation - PEAR: a fast and accurate Illumina Paired-End reAd mergeR
+## Zhang et al (2014) Bioinformatics 30(5): 614-620 | doi:10.1093/bioinformatics/btt593
+
+## License: Creative Commons Licence
+## Bug-reports and requests to: Tomas.Flouri@h-its.org and Jiajie.Zhang@h-its.org
+
+## Usage: pear <options>
+## Standard (mandatory):
+##  -f, --forward-fastq         <str>     Forward paired-end FASTQ file.
+##  -r, --reverse-fastq         <str>     Reverse paired-end FASTQ file.
+##  -o, --output                <str>     Output filename.
+## Optional:
+##  -p, --p-value               <float>   Specify  a p-value for the statistical test. If the computed
+
+```
+
+Para ensamblar nuestras secuencias hacemos un bash scripting llamado **ensamblaje.sh**
+
+
+```
+#!/bin/bash
+
+# Creamos un directorio para guardar las lecturas ensambladas y no ensambladas
+mkdir ensamblaje
+
+# Ejecutamos el siguiente comando 
+fastq=($(ls raw_data/*.fastq))
+tLen=${#fastq[@]}
+for (( i=0; i<${tLen}; i=i+2));
+do
+x=${fastq[$i]##*/}
+pear -f ${fastq[$i]} -r ${fastq[$i+1]} -o ensamblaje/${x%_*} -j 2 -q 20
+done
+
+# Hacer un directorio solo para las lecturas ensambladas
+mkdir ensamblados
+
+# Mover las lecturas ensambladas en la carpeta de ensamblados 
+mv ensamblaje/*assembled.fastq ensamblados
+```
+
+Hacer el script ejecutable y ejecutarlo
+
+```
+chmod u+x ensamblaje.sh 
 ```
 
 Por cada muestra se generan tres archivos:
 
-* Assembled, las lecturas que pudo ensamblar (un archivo).
-* Discarded, lecturas descartadas (un archivo).
-* Unassambled, lecturas que no ensambló por que no se traslaparon (dos archivos).
+- **Assembled**: las lecturas que pudo ensamblar (un archivo).
 
-## 2b. Evaluación de la calidad del llamado de bases después del ensamblado
+- **Discarded**: lecturas descartadas (un archivo).
+- 
+- **Unassambled**: lecturas que no ensambló por que no se traslaparon (dos archivos).
+
+
+
+### 3. Evaluación de la calidad del llamado de bases después del ensamblado
 
 <p align="center">  
   <img src="Figuras/MultiQC.svg? raw=true" alt="shell" width="1000" height="600">
 </p>
 
 Las primeras(20 pb) y las últimas lecturas (a partir de 410 pb) son eliminadas más adelante con el programa de **qiime2**, en la sección de denoising.
+
+
+### Puedes correr la calidad del llamado de bases y el ensamble de las lecturas usando sólamente un bash scripting, puedes g
+
+
+```
+#!/bin/bash
+
+########################### DESCARGA DE ARCHIVOS ###########################
+# Descargamos la secuencia en formato sra
+prefetch --option-file SraAccList.txt
+
+# Convertir sra en formato fastq
+fasterq-dump --split-files SRR*
+
+# Hacer un director
+mkdir raw_data
+
+# Mover los archivos fastq a raw_data
+mv *fastq raw_data
+
+# Eliminar los archivos SRR para liberar espacio en el servidor
+rm -rf SRR*
+
+########################### EVALUACION DE LA CALIDAD ###########################
+#!/bin/bash 
+mkdir QC_AntesDelEnsamble
+
+### Correr FastQC
+fastqc raw_data/* -o QC_AntesDelEnsamble/
+
+### Correr MultiQC
+multiqc QC_AntesDelEnsamble/ -o QC_AntesDelEnsamble/
+
+########################### ENSAMBLE CON PEAR ###########################
+
+# Creamos un directorio para guardar las lecturas ensambladas y no ensambladas
+mkdir ensamblaje
+
+# Ejecutamos el siguiente comando 
+fastq=($(ls raw_data/*.fastq))
+tLen=${#fastq[@]}
+for (( i=0; i<${tLen}; i=i+2));
+do
+x=${fastq[$i]##*/}
+pear -f ${fastq[$i]} -r ${fastq[$i+1]} -o ensamblaje/${x%_*} -j 2 -q 20
+done
+
+# Hacer un directorio solo para las lecturas ensambladas
+mkdir ensamblados
+
+# Mover las lecturas ensambladas en la carpeta de ensamblados 
+mv ensamblaje/*assembled.fastq ensamblados
+```
+
+
+
+
+
+
+
+
+
+
 
 ## 3. Identificación taxonómica
 
