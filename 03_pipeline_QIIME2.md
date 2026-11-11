@@ -137,7 +137,7 @@ SRR15018642
 
 **Segundo paso**
 
-Una vez que termines de crear el archivo **SraAccList.txt** vamos a crear un bash scripting para descargar estas secuencias 
+Una vez que termines de crear el archivo **SraAccList.txt** vamos a crear un bash scripting para descargar estas secuencias con el nombre de **download.sh**
 
 ```
 #!/bin/bash
@@ -157,6 +157,34 @@ mv *fastq a raw_data
 # Eliminar los archivos SRR para liberar espacio en el servidor
 rm -rf SRR*
 ```
+
+Dale permiso a tu bash scripting usando 
+
+```
+chmod u+x download.sh
+```
+
+Ejecuta tu script con  
+
+```
+./download.sh 
+```
+
+Puedes ver el contenido de raw_data con el comando ls -lh
+
+```
+ls -lh raw_data/
+
+## -rw-rw-r-- 1 lab13 lab13  94M Nov 10 21:18 SRR15018640_1.fastq
+## -rw-rw-r-- 1 lab13 lab13  94M Nov 10 21:18 SRR15018640_2.fastq
+## -rw-rw-r-- 1 lab13 lab13 108M Nov 10 21:18 SRR15018641_1.fastq
+## -rw-rw-r-- 1 lab13 lab13 108M Nov 10 21:18 SRR15018641_2.fastq
+## -rw-rw-r-- 1 lab13 lab13 114M Nov 10 21:18 SRR15018642_1.fastq
+## -rw-rw-r-- 1 lab13 lab13 115M Nov 10 21:18 SRR15018642_2.fastq
+```
+
+
+
 
 ### 2. Evaluación de la calidad del llamado de bases: fastQC y Multiqc
 
