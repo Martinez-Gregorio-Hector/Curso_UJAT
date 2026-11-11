@@ -123,7 +123,9 @@ Antes de empezar a empezar a trabajar con QIIME2 vamos a descargar los archivos 
 
 Para descargar los archivos fastq vamos a seguir este página [SRA](https://www.ncbi.nlm.nih.gov/sra/docs/sradownload/). 
 
-Primer paso: tenemos que generar un archivo con el nombre de **SraAccList.txt** usando el comando de **vim** o **nano**.
+**Primer paso**
+
+Tenemos que generar un archivo con el nombre de **SraAccList.txt** usando el comando de **vim** o **nano**.
 
 ```
 SRR15018640
@@ -131,7 +133,9 @@ SRR15018641
 SRR15018642
 ```
 
-Segundo paso: Una vez que termines de crear el archivo **SraAccList.txt** vamos a crear un bash scripting para descargar estas secuencias 
+**Segundo paso**
+
+Una vez que termines de crear el archivo **SraAccList.txt** vamos a crear un bash scripting para descargar estas secuencias 
 
 ```
 #!/bin/bash
@@ -152,9 +156,7 @@ mv *fastq a raw_data
 rm -rf SRR*
 ```
 
-
-
-## 1. Evaluación de la calidad del llamado de bases antes del ensamblado
+### 2. Evaluación de la calidad del llamado de bases: **[fastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)** y **[Multiqc](https://github.com/MultiQC/MultiQC)**
 
 <p align="center">  
   <img src="Figuras/MultiQC2.svg? raw=true" alt="shell" width="1000" height="600">
