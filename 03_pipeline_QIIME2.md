@@ -440,7 +440,10 @@ El algoritmo de **qiime2** proporciona dos tipos de datos **qza** (almacenamient
   <img src="https://github.com/Martinez-Gregorio-Hector/MetodosDeInvestigacionLabII_EcologiaFESIztacalaUNAM_2026/blob/main/PresentacionesEnClase_Bioinformatica/Figuras/IlluminaOxford.jpg? raw=true" alt="shell" width="800" height="600">
 </p>
 
-## 3.1 Qiime2 
+### Instalación de QIIME2
+
+La importancia de crear ambientes en (conda)[liga](https://sxh1136.quarto.pub/amrflows-metagenomic-data-analysis-course/6.%20Installing%20tools%20with%20Conda.html). Para instalar QIIME2 sigue los siguientes (instrucciones)[qiime2_instalación](https://docs.qiime2.org/2024.10/tutorials/index.html)
+
 
 **a) Importación de datos**
 
