@@ -310,7 +310,7 @@ Por cada muestra se generan tres archivos:
 - **Assembled**: las lecturas que pudo ensamblar (un archivo).
 
 - **Discarded**: lecturas descartadas (un archivo).
-- 
+  
 - **Unassambled**: lecturas que no ensambló por que no se traslaparon (dos archivos).
 
 
@@ -341,10 +341,20 @@ ls -lh ensamblados/
 
 ## 3. Evaluación de la calidad del llamado de bases después del ensamblado
 
+Creamos un segundo bash scripting **Calidad2.sh**
 
+```
+#!/bin/bash 
+mkdir QC_DespuesDelEnsamble
 
+### Correr FastQC
+fastqc ensamblados/* -o QC_DespuesDelEnsamble/
 
+### Correr MultiQC
+multiqc QC_DespuesDelEnsamble/ -o QC_DespuesDelEnsamble/
+```
 
+### Si quisieramos ejecutar el pipeline desde la descarga de las muestras hasta el análisis de la calidad del ensemblado podemos ejecutar el siguiente script
 
 ```
 #!/bin/bash
@@ -366,7 +376,6 @@ mv *fastq raw_data
 rm -rf SRR*
 
 ########################### EVALUACION DE LA CALIDAD ###########################
-#!/bin/bash 
 mkdir QC_AntesDelEnsamble
 
 ### Correr FastQC
@@ -376,7 +385,6 @@ fastqc raw_data/* -o QC_AntesDelEnsamble/
 multiqc QC_AntesDelEnsamble/ -o QC_AntesDelEnsamble/
 
 ########################### ENSAMBLE CON PEAR ###########################
-
 # Creamos un directorio para guardar las lecturas ensambladas y no ensambladas
 mkdir ensamblaje
 
@@ -394,6 +402,15 @@ mkdir ensamblados
 
 # Mover las lecturas ensambladas en la carpeta de ensamblados 
 mv ensamblaje/*assembled.fastq ensamblados
+
+########################### CALIDAD DESPUES DEL ENSAMBLADO ###########################
+mkdir QC_DespuesDelEnsamble
+
+### Correr FastQC
+fastqc ensamblados/* -o QC_DespuesDelEnsamble/
+
+### Correr MultiQC
+multiqc QC_DespuesDelEnsamble/ -o QC_DespuesDelEnsamble/
 ```
 
 
