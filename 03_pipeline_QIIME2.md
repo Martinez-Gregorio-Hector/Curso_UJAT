@@ -115,7 +115,7 @@ Antes de descargar los datos de secuenciación masiva e instalación de programa
 
 5. Análisis de vías funcionales: **[Picrust](https://picrust.github.io/picrust/install.html)**
 
-### 1. Descargar base de datos con SRA Toolkit
+### Descargar base de datos con SRA Toolkit
 
 Antes de empezar a empezar a trabajar con QIIME2 vamos a descargar los archivos que usaremos en este curso. Revisa el artículo de [Sukjung_Choi_2021](https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/blob/main/MaterialDeApoyo/PaperBioinformatica/Sukjung_Choi_2021.pdf) y encontrarás antes de las referencias una sección que se llama **Availability of data and materials**. En esta sección puedes encontrar el número de acceso **PRJNA743150** para descargar las secuencias en la base de datos de [NCBI](https://www.ncbi.nlm.nih.gov/). La mayoría de los programas que vas a utilizar ya vienen instalados en el servidor del laboratorio nacional, si alguien quiere instalarlo en su computadora lo puede hacer siguiendo las instrucciones de como instalar [SRA Toolkit](https://github.com/ncbi/sra-tools/wiki/02.-Installing-SRA-Toolkit).
 
@@ -184,7 +184,7 @@ ls -lh raw_data/
 ## -rw-rw-r-- 1 lab13 lab13 115M Nov 10 21:18 SRR15018642_2.fastq
 ```
 
-### 2. Evaluación de la calidad del llamado de bases: fastQC y Multiqc
+### Evaluación de la calidad del llamado de bases: fastQC y Multiqc
 
 Si no tienes descargados estos programas, puedes seguir esta liga para su descarga: [FastQC](https://github.com/s-andrews/FastQC/tree/master) y [MultiQC](https://github.com/MultiQC/MultiQC)
 
@@ -241,7 +241,7 @@ ssh lab13@XXX.XXXX.XXX.XXXX:/home/lab13/Documents/Curso_UJAT/MAGH/QC_AntesDelEns
 ```
 
 
-### 3. Ensambale de lecturas pareadas
+### Ensambale de lecturas pareadas
 
 Una vez que evaluamos la calidad del llamado de bases de nuestros datos de secuenciación masiva. El siguiente paso es ensamblar la lectura sentido y antisentido antes de correr en QIIME2 y lo hacemos con el programa [PEAR](https://academic.oup.com/bioinformatics/article/30/5/614/247231). Para descargar PEAR, consulta la siguiente [liga_de_descarga_pear](https://www.h-its.org/research/cme/software/#).
 
@@ -338,7 +338,7 @@ ls -lh ensamblados/
 ## -rw-rw-r-- 1 lab13 lab13 104M Nov 11 16:02 SRR15018642.assembled.fastq
 ```
 
-## 3. Evaluación de la calidad del llamado de bases después del ensamblado
+### Evaluación de la calidad del llamado de bases después del ensamblado
 
 Creamos un segundo bash scripting **Calidad2.sh**
 
@@ -442,49 +442,39 @@ El algoritmo de **qiime2** proporciona dos tipos de datos **qza** (almacenamient
 
 ### Instalación de QIIME2
 
-La importancia de crear ambientes en [conda](https://sxh1136.quarto.pub/amrflows-metagenomic-data-analysis-course/6.%20Installing%20tools%20with%20Conda.html). Para instalar QIIME2 sigue las siguientes [instrucciones](https://docs.qiime2.org/2024.10/tutorials/index.html)
+La importancia de crear ambientes en [conda](https://sxh1136.quarto.pub/amrflows-metagenomic-data-analysis-course/6.%20Installing%20tools%20with%20Conda.html). Para instalar QIIME2 sigue las siguientes [instrucciones](https://library.qiime2.org/quickstart/qiime2).
 
-
-**a) Importación de datos**
-
-
-Se tiene que generar un archivo “manifest.tsv” (Un archivo con dos columnas: **sample-id** (nombre de la muestra) y **absolute-ﬁlepath** (la ruta donde estan los archivos fastq).
+Primeramente vemos si tenemos conda instalado
 
 ```
-sample-id	absolute-filepath
-12802.UB6-0001.assembled.fastq	/home/lab13/Documents/DraEcheagaray/ensamblados/UB6-0001.assembled.fastq
-12802.UB6-0002.assembled.fastq	/home/lab13/Documents/DraEcheagaray/ensamblados/UB6-0002.assembled.fastq
-12802.UB6-0003.assembled.fastq	/home/lab13/Documents/DraEcheagaray/ensamblados/UB6-0003.assembled.fastq
-12802.UB6-0004.assembled.fastq	/home/lab13/Documents/DraEcheagaray/ensamblados/UB6-0004.assembled.fastq
-12802.UB6-0005.assembled.fastq	/home/lab13/Documents/DraEcheagaray/ensamblados/UB6-0005.assembled.fastq
-12802.UB6-0006.assembled.fastq	/home/lab13/Documents/DraEcheagaray/ensamblados/UB6-0006.assembled.fastq
-12802.UB6-0007.assembled.fastq	/home/lab13/Documents/DraEcheagaray/ensamblados/UB6-0007.assembled.fastq
-12802.UB6-0008.assembled.fastq	/home/lab13/Documents/DraEcheagaray/ensamblados/UB6-0008.assembled.fastq
-12802.UB6-0009.assembled.fastq	/home/lab13/Documents/DraEcheagaray/ensamblados/UB6-0009.assembled.fastq
+conda --help
+## usage: conda [-h] [-v] [--no-plugins] [-V] COMMAND ...
+
+## conda is a tool for managing and deploying applications, environments and packages.
+
+## options:
+##  -h, --help            Show this help message and exit.
+##  -v, --verbose         Can be used multiple times. Once for detailed output, twice for INFO logging, thrice for DEBUG
+##                        logging, four times for TRACE logging.
+##  --no-plugins          Disable all plugins that are not built into conda.
+##  -V, --version         Show the conda version number and exit.
 ```
 
-**b) Denosing**
+Actualizar conda
 
-<p align="center">  
-  <img src="Figuras/Denoising.png? raw=true" alt="shell" width="800" height="600">
-</p>
+```
+conda update conda
+```
 
-**c) Alpha rarefaction**
+Instalar QIIME2 con conda
 
-<p align="center">  
-  <img src="Figuras/AlphaRarefaction.png? raw=true" alt="shell" width="800" height="600">
-</p>
+```
+conda env create \
+  --name rachis-qiime2-2026.10 \
+  --file https://raw.githubusercontent.com/qiime2/distributions/refs/heads/dev/2026.10/qiime2/released/rachis-qiime2-linux-64-conda.yml
+```
 
-[Alpha_rarefaction](https://en.wikipedia.org/wiki/Rarefaction_(ecology))
-
-**d) Taxa Barplot**
-
-<p align="center">  
-  <img src="Figuras/TaxaBarplot.png? raw=true" alt="shell" width="800" height="600">
-</p>
-
-
-
+Una vez que se ha instalado QIIME2, podemos verlo con el siguiente comando **env list**
 
 ```
 conda env list
@@ -493,143 +483,32 @@ conda env list
 #
 # * -> active
 # + -> frozen
-#                         /home/lab13/anaconda3
-#                         /home/lab13/anaconda3/envs/qiime2-amplicon-2023.9
-# base                 *   /home/lab13/miniconda3
-# fastqc_Miriam            /home/lab13/miniconda3/envs/fastqc_Miriam
-# ipyrad_envArely          /home/lab13/miniconda3/envs/ipyrad_envArely
-# ipyrad_envNestor         /home/lab13/miniconda3/envs/ipyrad_envNestor
-# ipyrad_envPicazo         /home/lab13/miniconda3/envs/ipyrad_envPicazo
+base                     /home/lab13/anaconda3
+rachis-qiime2-2026.10 *   /home/lab13/anaconda3/envs/rachis-qiime2-2026.10
 ```
 
-Activamos el ambiente hecha en python **fastqc_Miriam** usando el siguiente comando
+Para activar y desactivar el ambiente **rachis-qiime2-2026.10** usamos los siguientes comandos:
 
 ```
-conda activate fastqc_Miriam
+## Para activar
+(base) lab13@lab13-PowerEdge-R730:~/Documents/Curso_UJAT/HectorMartinez$ **conda activate rachis-qiime2-2026.10
+(rachis-qiime2-2026.10) lab13@lab13-PowerEdge-R730:~/Documents/Curso_UJAT/HectorMartinez$
 
-#### # Van a observar que del usuario base se a activar al ambiente especificado
-# (base) [lab13@host-132 Equipo11]$ conda activate fastqc_Miriam
-# (fastqc_Miriam) [lab13@host-132 Equipo11]$
-
+## Para desactivar
+(rachis-qiime2-2026.10) lab13@lab13-PowerEdge-R730:~/Documents/Curso_UJAT/HectorMartinez$ conda deactivate
+(base) lab13@lab13-PowerEdge-R730:~/Documents/Curso_UJAT/HectorMartinez$ 
 ```
 
 
-```
-conda deactivate
-```
+### Generación de archivo manifest.tsv y sample-metadata.txt
 
-## 2a. Ensamblaje de lecturas
+Antes de correr QIIME2 hay que generar un carpeta donde almacenaremos nuestros datos: 
 
-Crear un directorio donde se almacenaran los archivos ensamblados
-
-```
-mkdir ensamblaje
-```
-
-Hacer un script para correr el ensamblaje de las lecturas con el editor de vim
-
-```
-vim ensamblaje.sh
-```
-
-Copiar el siguiente código para hacer el ensamble de las lecturas
-
-```
-#!/bin/bash
-
-fastq=($(ls raw_data/*.gz))
-tLen=${#fastq[@]}
-for (( i=0; i<${tLen}; i=i+2));
-do
-x=${fastq[$i]##*/}
-pear -f ${fastq[$i]} -r ${fastq[$i+1]} -o ensamblaje/${x%_L*} -j 2 -q 20
-done
-wait
-echo done
-```
-
-Dar permiso a nuestro script y posteriormente realizar la ejecición
-
-```
-# Darle permiso
-sudo chmod u+x ensamblaje.sh
-
-# Ejecutar el script
-bash ensamblaje.sh
-```
-
-Una vez que se termina de ejecutar el script, usar el comando ls para ver los archivos que se generaron del programa de pear
-
-```
-ls -lh ensamblaje
-
-# -rw-r--r--. 1 lab13 lab13 42M Apr 30 09:55 MBC1_S1.assembled.fastq
-# -rw-r--r--. 1 lab13 lab13   0 Apr 30 09:54 MBC1_S1.discarded.fastq
-# -rw-r--r--. 1 lab13 lab13 42K Apr 30 09:55 MBC1_S1.unassembled.forward.fastq
-# -rw-r--r--. 1 lab13 lab13 14K Apr 30 09:55 MBC1_S1.unassembled.reverse.fastq
-# -rw-r--r--. 1 lab13 lab13 50M Apr 30 09:56 MBC2_S2.assembled.fastq
-# -rw-r--r--. 1 lab13 lab13   0 Apr 30 09:55 MBC2_S2.discarded.fastq
-# -rw-r--r--. 1 lab13 lab13 61K Apr 30 09:56 MBC2_S2.unassembled.forward.fastq
-# -rw-r--r--. 1 lab13 lab13 18K Apr 30 09:56 MBC2_S2.unassembled.reverse.fastq
-```
+* i) manifest.tsv
+  
+* ii) sample-metadata.txt
 
 
-El siguiente paso es hacer una carpeta para guardar sólo las lecturas ensambladas 
-
-```
-# Hacer directorio
-mkdir ensamblados
-
-# Mover las lecturas ensambladas en la carpeta creada
-mv ensamblaje/*assembled.fastq ensamblados
-
-# Ver el contenido de la carpeta ensablados
-
-ls -lh ensamblados/
-
-# total 137M
-# -rw-r--r--. 1 lab13 lab13 42M Apr 30 09:55 MBC1_S1.assembled.fastq
-# -rw-r--r--. 1 lab13 lab13 50M Apr 30 09:56 MBC2_S2.assembled.fastq
-# -rw-r--r--. 1 lab13 lab13 46M Apr 30 09:57 MBC3_S3.assembled.fastq
-```
-
-## 2b. Evaluación de la calidad después del ensamble
-
-Vamos a seguir el mismas instrucciones que en el paso 1
-
-```
-# Activamos el ambiente de conda
-conda activate fastqc_Miriam
-
-# Crear una carpeta donde almacenaremos el análisis de calidad
-mkdir QC_DespuesDelEnsamble
-
-# Correr FastQC
-fastqc ensamblados/* -o QC_DespuesDelEnsamble/
-
-# Ver los archivos que se generaron 
-ls -lh QC_DespuesDelEnsamble/
-
-# Realizar el análisis de MultiQc
-multiqc QC_DespuesDelEnsamble/ -o QC_DespuesDelEnsamble/
-
-# Ver el reporte final de multiqc
-ls -lh QC_DespuesDelEnsamble
-
-```
-
-Descar de archivos con mobaxterm
-
-Posteriormente desactivamos el ambiente de conda con el siguiente comando
-
-```
-conda deactivate
-
-```
-
-## 3. QIIME2
-
-Antes de correr QIIME2 vamos hacer un carpeta donde almacenaremos nuestros datos: i) manifest.tsv y ii) sample-metadata.txt
 
 ```
 # Hacer una carpeta
@@ -668,6 +547,29 @@ less data/sample-metadata.txt
 # MBC2_S2.assembled.fastq MBC2_S2.assembled.fastq Ecologia2026
 # MBC3_S3.assembled.fastq MBC3_S3.assembled.fastq Ecologia2026
 ```
+
+
+
+
+Se tiene que generar un archivo “manifest.tsv” (Un archivo con dos columnas: **sample-id** (nombre de la muestra) y **absolute-ﬁlepath** (la ruta donde estan los archivos fastq).
+
+```
+sample-id	absolute-filepath
+12802.UB6-0001.assembled.fastq	/home/lab13/Documents/DraEcheagaray/ensamblados/UB6-0001.assembled.fastq
+12802.UB6-0002.assembled.fastq	/home/lab13/Documents/DraEcheagaray/ensamblados/UB6-0002.assembled.fastq
+12802.UB6-0003.assembled.fastq	/home/lab13/Documents/DraEcheagaray/ensamblados/UB6-0003.assembled.fastq
+12802.UB6-0004.assembled.fastq	/home/lab13/Documents/DraEcheagaray/ensamblados/UB6-0004.assembled.fastq
+12802.UB6-0005.assembled.fastq	/home/lab13/Documents/DraEcheagaray/ensamblados/UB6-0005.assembled.fastq
+12802.UB6-0006.assembled.fastq	/home/lab13/Documents/DraEcheagaray/ensamblados/UB6-0006.assembled.fastq
+12802.UB6-0007.assembled.fastq	/home/lab13/Documents/DraEcheagaray/ensamblados/UB6-0007.assembled.fastq
+12802.UB6-0008.assembled.fastq	/home/lab13/Documents/DraEcheagaray/ensamblados/UB6-0008.assembled.fastq
+12802.UB6-0009.assembled.fastq	/home/lab13/Documents/DraEcheagaray/ensamblados/UB6-0009.assembled.fastq
+```
+
+
+
+## 3. QIIME2
+
 
 
 Hacer un script para correr QIIME2 con el editor de vim
