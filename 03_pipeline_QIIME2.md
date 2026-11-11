@@ -152,7 +152,7 @@ fasterq-dump --split-files SRR*
 mkdir raw_data
 
 # Mover los archivos fastq a raw_data
-mv *fastq a raw_data
+mv *fastq raw_data
 
 # Eliminar los archivos SRR para liberar espacio en el servidor
 rm -rf SRR*
