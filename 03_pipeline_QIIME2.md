@@ -118,7 +118,13 @@ Antes de descargar los datos de secuenciación masiva e instalación de programa
 
 ### 1. Descargar base de datos con SRA Toolkit
 
+Antes de empezar a empezar a trabajar con QIIME2 vamos a descargar los archivos que usaremos en este curso. Revisa el artículo de [Sukjung_Choi_2021](https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/blob/main/MaterialDeApoyo/PaperBioinformatica/Sukjung_Choi_2021.pdf) y encontrarás antes de las referencias una sección que se llama **Availability of data and materials**. En esta sección puedes encontrar el número de acceso **PRJNA743150** para descargar las secuencias en la base de datos de [NCBI](https://www.ncbi.nlm.nih.gov/). La mayoría de los programas que vas a utilizar ya vienen instalados en el servidor del laboratorio nacional, si alguien quiere instalarlo en su computadora lo puede hacer siguiendo las instrucciones de como instalar [SRA Toolkit](https://github.com/ncbi/sra-tools/wiki/02.-Installing-SRA-Toolkit).
+
+
 Vamos a descargar los archivos fastq que usaremos para trabajar con nuestro
+
+/home/lab13/Documents/Curso_UJAT
+
 
 con SraAccList.txt 
 
