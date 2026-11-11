@@ -314,17 +314,36 @@ Por cada muestra se generan tres archivos:
 - **Unassambled**: lecturas que no ensambló por que no se traslaparon (dos archivos).
 
 
+Revisa cada una de las carpetas creadas **ensamblaje** y **ensamblados**
 
-### 3. Evaluación de la calidad del llamado de bases después del ensamblado
+```
+ls -lh ensamblaje/
 
-<p align="center">  
-  <img src="Figuras/MultiQC.svg? raw=true" alt="shell" width="1000" height="600">
-</p>
+## total 41M
+## -rw-rw-r-- 1 lab13 lab13 186K Nov 11 15:58 SRR15018640.discarded.fastq
+## -rw-rw-r-- 1 lab13 lab13 7.9M Nov 11 15:58 SRR15018640.unassembled.forward.fastq
+## -rw-rw-r-- 1 lab13 lab13 5.1M Nov 11 15:58 SRR15018640.unassembled.reverse.fastq
+## -rw-rw-r-- 1 lab13 lab13 219K Nov 11 16:00 SRR15018641.discarded.fastq
+## -rw-rw-r-- 1 lab13 lab13 5.0M Nov 11 16:00 SRR15018641.unassembled.forward.fastq
+## -rw-rw-r-- 1 lab13 lab13 3.0M Nov 11 16:00 SRR15018641.unassembled.reverse.fastq
+## -rw-rw-r-- 1 lab13 lab13 266K Nov 11 16:02 SRR15018642.discarded.fastq
+## -rw-rw-r-- 1 lab13 lab13  12M Nov 11 16:02 SRR15018642.unassembled.forward.fastq
+## -rw-rw-r-- 1 lab13 lab13 7.7M Nov 11 16:02 SRR15018642.unassembled.reverse.fastq
 
-Las primeras(20 pb) y las últimas lecturas (a partir de 410 pb) son eliminadas más adelante con el programa de **qiime2**, en la sección de denoising.
+
+ls -lh ensamblados/
+
+## total 334M
+## -rw-rw-r-- 1 lab13 lab13  97M Nov 11 15:58 SRR15018640.assembled.fastq
+## -rw-rw-r-- 1 lab13 lab13 134M Nov 11 16:00 SRR15018641.assembled.fastq
+## -rw-rw-r-- 1 lab13 lab13 104M Nov 11 16:02 SRR15018642.assembled.fastq
+```
+
+## 3. Evaluación de la calidad del llamado de bases después del ensamblado
 
 
-### Puedes correr la calidad del llamado de bases y el ensamble de las lecturas usando sólamente un bash scripting, puedes g
+
+
 
 
 ```
