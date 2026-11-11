@@ -123,6 +123,8 @@ Antes de empezar a empezar a trabajar con QIIME2 vamos a descargar los archivos 
 
 Para descargar los archivos fastq vamos a seguir este página [SRA](https://www.ncbi.nlm.nih.gov/sra/docs/sradownload/). 
 
+El instructor te proporcionara la dirección IP del servidor y la contraseña para que puedas ingresar. Solamente está permitido ingresar el servidor durante el curso. Vas a trabajar en el siguiente directorio: **/home/lab13/Documents/Curso_UJAT**. Crear una carpeta con tu nombre, por ejemplo, HectorMartinez
+
 **Primer paso**
 
 Tenemos que generar un archivo con el nombre de **SraAccList.txt** usando el comando de **vim** o **nano**.
@@ -156,7 +158,11 @@ mv *fastq a raw_data
 rm -rf SRR*
 ```
 
-### 2. Evaluación de la calidad del llamado de bases: **[fastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)** y **[Multiqc](https://github.com/MultiQC/MultiQC)**
+### 2. Evaluación de la calidad del llamado de bases: fastQC y Multiqc
+
+La descarga de estos programas 
+
+
 
 <p align="center">  
   <img src="Figuras/MultiQC2.svg? raw=true" alt="shell" width="1000" height="600">
