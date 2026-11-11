@@ -121,18 +121,37 @@ Antes de descargar los datos de secuenciación masiva e instalación de programa
 Antes de empezar a empezar a trabajar con QIIME2 vamos a descargar los archivos que usaremos en este curso. Revisa el artículo de [Sukjung_Choi_2021](https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/blob/main/MaterialDeApoyo/PaperBioinformatica/Sukjung_Choi_2021.pdf) y encontrarás antes de las referencias una sección que se llama **Availability of data and materials**. En esta sección puedes encontrar el número de acceso **PRJNA743150** para descargar las secuencias en la base de datos de [NCBI](https://www.ncbi.nlm.nih.gov/). La mayoría de los programas que vas a utilizar ya vienen instalados en el servidor del laboratorio nacional, si alguien quiere instalarlo en su computadora lo puede hacer siguiendo las instrucciones de como instalar [SRA Toolkit](https://github.com/ncbi/sra-tools/wiki/02.-Installing-SRA-Toolkit).
 
 
-Vamos a descargar los archivos fastq que usaremos para trabajar con nuestro
+Para descargar los archivos fastq vamos a seguir este página [SRA](https://www.ncbi.nlm.nih.gov/sra/docs/sradownload/). 
 
-/home/lab13/Documents/Curso_UJAT
+Primer paso: tenemos que generar un archivo con el nombre de **SraAccList.txt** usando el comando de **vim** o **nano**.
 
+```
+SRR15018640
+SRR15018641
+SRR15018642
+```
 
-con SraAccList.txt 
+Segundo paso: Una vez que termines de crear el archivo **SraAccList.txt** vamos a crear un bash scripting para descargar estas secuencias 
 
-Generar una archivo c
+```
+#!/bin/bash
 
-XXXXX
-XXXXX
-XXXXX
+# Descargamos la secuencia en formato sra
+prefetch --option-file SraAccList.txt
+
+# Convertir sra en formato fastq
+fasterq-dump --split-files SRR*
+
+# Hacer un director
+mkdir raw_data
+
+# Mover los archivos fastq a raw_data
+mv *fastq a raw_data
+
+# Eliminar los archivos SRR para liberar espacio en el servidor
+rm -rf SRR*
+```
+
 
 
 ## 1. Evaluación de la calidad del llamado de bases antes del ensamblado
