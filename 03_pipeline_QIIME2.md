@@ -442,7 +442,7 @@ El algoritmo de **qiime2** proporciona dos tipos de datos **qza** (almacenamient
 
 ### Instalación de QIIME2
 
-La importancia de crear ambientes en (conda)[liga](https://sxh1136.quarto.pub/amrflows-metagenomic-data-analysis-course/6.%20Installing%20tools%20with%20Conda.html). Para instalar QIIME2 sigue los siguientes (instrucciones)[qiime2_instalación](https://docs.qiime2.org/2024.10/tutorials/index.html)
+La importancia de crear ambientes en [conda](https://sxh1136.quarto.pub/amrflows-metagenomic-data-analysis-course/6.%20Installing%20tools%20with%20Conda.html). Para instalar QIIME2 sigue las siguientes [instrucciones](https://docs.qiime2.org/2024.10/tutorials/index.html)
 
 
 **a) Importación de datos**
@@ -485,10 +485,6 @@ sample-id	absolute-filepath
 
 
 
-
-## 1. Análisis de calidad
-
-De acuerdo con nuestro pipeline bioinformático, el primer paso para el análisis de nuestros datos es laevaluación de la calidad con **[fastqc](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)** y **[multiqc](https://github.com/MultiQC/MultiQC)**. Para hacer esta actividad vamos a activar un ambiente en python. Para listar que ambientes hay en python usar el siguiente comando
 
 ```
 conda env list
