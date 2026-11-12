@@ -723,8 +723,7 @@ Para monitorear nuestros script podemos usar los siguientes comandos
 tail -f qiime2.out
 ```
 
-Vamos ir analizando paso a paso cada comando
-
+### Vamos ir analizando paso a paso cada comando
 
 **Importar datos**
 
