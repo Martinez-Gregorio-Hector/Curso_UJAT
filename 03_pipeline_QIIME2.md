@@ -595,20 +595,20 @@ sample-id	absolute-filepath
 
 [Tutoriales](https://docs.qiime2.org/2024.10/tutorials/pd-mice/) para QIIME2
 
-Hacer un bash scripting para correr QIIME2 con el editor de **vim qiime2.sh**, dentro del script copiar estos comandos
+Hacer un bash scripting para correr QIIME2 con el editor de **vim qiime2.sh**, dentro del script copiar estos comandos.
 
 ```
 #!/bin/bash
 
-start=`date +%s`
+start=$(date +%s)
 
 mkdir -p qiime2/qzv qiime2/qza
 
-# Inicializar conda
-source /home/lab13/anaconda3/etc/profile.d/conda.sh
+# Inicializar Conda
+source "$(conda info --base)/etc/profile.d/conda.sh"
 
 # Activar entorno
-conda activate qiime2-amplicon-2023.9
+conda activate rachis-qiime2-2026.10
 
 # Importar datos
 qiime tools import \
@@ -616,6 +616,11 @@ qiime tools import \
 --type 'SampleData[SequencesWithQuality]' \
 --input-format SingleEndFastqManifestPhred33V2 \
 --output-path qiime2/qza/Fastqs.qza
+
+
+
+
+
 
 # Resumen
 qiime demux summarize \
@@ -697,14 +702,14 @@ echo done ......
 
 ```
 
-Darle permiso a nuestro script
+Darle permiso a nuestro script y ejecutarlo en segundo plano
 
 ```
 # Darle permiso
-sudo chmod u+x qiime2.sh
+chmod u+x qiime2.sh
 
 # Ejecutar el script en segundo plano
-nohup sh qiime2.sh > qiime2.out&
+nohup bash qiime2.sh > qiime2.out&
 ```
 
 Para monitorear nuestros script podemos usar los siguientes comandos
@@ -713,183 +718,31 @@ Para monitorear nuestros script podemos usar los siguientes comandos
 tail -f qiime2.out
 ```
 
-Bajamos los archivos **qzv** usando mobaxterm
+Vamos ir analizando paso a paso cada comando
 
 
-```
-#!/bin/bash
-
-for dir in /home/lab13/Documents/Ecologia2026/Equipo1*/; do
-    echo "Procesando $dir"
-
-    (cd "$dir" && bash qiime2.sh > run.log 2>&1) || {
-        echo "Error en $dir"
-        exit 1
-    }
-
-    echo "Finalizado $dir"
-done
-
-echo "Todo terminado"
-```
+**Importar datos**
 
 ```
-nohup bash run_all.sh > master.log 2>&1 &
-```
+mkdir -p qiime2/qzv qiime2/qza
 
+# Inicializar Conda
+source "$(conda info --base)/etc/profile.d/conda.sh"
 
-# Instalación de programas
+# Activar entorno
+conda activate rachis-qiime2-2026.10
 
-## Brevemente vamos a poner un ejemplo de como instalar un programa
-
-Para este fin vamos a usar [muscle](https://github.com/rcedgar/muscle?tab=readme-ov-file) para el alineamiento de múltiples secuencias biólogicas. Podemos usar el repositorio de github o conda (si esta instalado python).
-
-1. Instalando con [muscle_github](https://github.com/rcedgar/muscle?tab=readme-ov-file)
-
-Una vez que estamos en la página, hay que descargar el archivo, descromprimirlo e instalarlo. Sigue las instrucciones
-
-```
-## Descargar el algoritmo
-wget https://github.com/rcedgar/muscle/archive/refs/tags/v5.3.zip
-## Descomprimir
-unzip v5.3.zip
-## Cambiar al archivo src
-cd src
-## Construir el archivo
-bash build_linux.bash
-```
-
-Otra base página donde se especifica como instalar [muscle](https://apolo-docs.readthedocs.io/en/latest/software/applications/MUSCLE/3.8.1551/index.html)
-
-
-Otro ejemplo [bcftools en github](https://github.com/samtools/bcftools) y [bcftools en otra página
-](https://www.htslib.org/download/)
-
-```
-## Descargar el algorirtmo
-wget https://github.com/samtools/bcftools/releases/download/1.22/bcftools-1.22.tar.bz2
-## Descomprimir
-tar -xvjf bcftools-1.22.tar.bz2
-## 
-./configure --prefix=/where/to/install
-./bcftools
-
-## Exportar
-export PATH=/home/lab13/Documents/MAGH/bcftools-1.22:$PATH    # for sh or bash users
-```
-
-2. Instalando con [muscle_conda](https://anaconda.org/bioconda/muscle)
-
-Si tienes instalado pythn se puede usar conda para instalar
-
-```
-## Antes de instalar con conda hay que ver que si tenemos instalado python
-python --version
-conda install bioconda::muscle
-conda install bioconda/label/cf201901::muscle
-```
-
-3. Instalando desde linux
-
-Para ver que tipo de distribución tienes instalado ejecuta el comando 
-
-```
-neofetch
-```
-
-Puedes usar yum (centos), algo de información lo puedes encontrar en esta [liga](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/6/html/deployment_guide/sec-installing)
-
-## Instalación de paquetes individuales
-
-Para instalar un solo paquete y todas sus dependencias no instaladas, introduzca un comando con el siguiente formato:
-
-```
-yum install package_name
-```
-
-También puedes instalar varios paquetes simultáneamente agregando sus nombres como argumentos:
-
-```
-yum install package_name package_name
-```
-
-Hay que checar que tipo distribución tienes instalado en tu servicor para que puedas usar el comando adecuado para la instalación, checa esta [liga](https://www.maketecheasier.com/install-software-in-various-linux-distros/)
-
-
-# Instalando un programa en un ambiente de conda
-
-Antes de crear un ambiente en conda, vamos a ver si tenemos instalado conda o miniconda
-
-```
-conda info
-
-```
-
-Para actualizar o instalar conda solo sigue los siguientes pasos
-
-```
-# Descargamos una version de miniconda
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-# Ejecutamos el script con bash
-bash Miniconda3-latest-Linux-x86_64.sh
-```
-
-Para que quede un poco más claro, dejo la página donde puedes descargar [anaconda](https://www.anaconda.com/docs/getting-started/anaconda/install#macos-graphical-installer) 
-
-Antes de hacer un ambiente en python, veamos la siguiente [explicación](https://codigofacilito.com/articulos/entornos-virtuales-python)
-
-## Vamos a instalar los programas FASTQC, HISAT2 y SAMtools.
-
-Vamos a crear un ambiente en python, ya checamos la version de python pero podemos usar el siguiente comando para ver que versiones tenemos
-
-```
-ls /usr/bin/python3*
-```
-
-Creamos un ambiente en version 3.9 con el siguiente comando 
-
-```
-conda create --name python_NombreApellido python=3.9
-```
-
-Para ver y activar tu ambiente con la version de phyton que usaste, ejecuta el siguiente comando
-
-```
-## Para enviar que ambientes tengo
-conda env list
-## Para activar el ambiente de python
-conda activate python_NombreApellido
-## Para desactivar el ambiente de python
-conda deactivate
-```
-
-Activamos el ambiente de conda y ejecutamos o instalamos los programas que necesitamos usar para nuestros análisis. En esta dirección puedes buscar los programas disponibles en conda [https://anaconda.org/bioconda](https://anaconda.org/bioconda)
-
-```
-## Para activar el ambiente de python
-conda activate python_NombreApellido
-# Instalando los programas
-conda install bioconda::fastqc
-conda install bioconda::hisat2
-conda install bioconda::samtools
-```
-
-Checamos las versiones que se instalaron
-
-```
-fastqc --version
-hisat2 --version
-samtools --version
-```
-
-Haz un script y realiza el análisis de la calidad de los archivos que están en esta dirección:
-
-```
-/home/lab13/Documents/Ecologia_AnalisisGenomico/HectorMartinez/FASTQ
+# Importar datos
+qiime tools import \
+--input-path data/manifest.tsv \
+--type 'SampleData[SequencesWithQuality]' \
+--input-format SingleEndFastqManifestPhred33V2 \
+--output-path qiime2/qza/Fastqs.qza
 ```
 
 
 
-https://sxh1136.quarto.pub/amrflows-metagenomic-data-analysis-course/6.%20Installing%20tools%20with%20Conda.html
+
+
 
 
