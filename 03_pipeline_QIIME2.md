@@ -627,15 +627,19 @@ qiime demux summarize \
 --i-data qiime2/qza/demux_seqs.qza \
 --o-visualization qiime2/qzv/demux_seqs.qzv
 
-# Denoising
+# Control de calidad de las secuencias and feature table
 qiime dada2 denoise-single \
---i-demultiplexed-seqs qiime2/qza/Fastqs.qza \
---p-trim-left 20 \
---p-trunc-len 410 \
---p-n-threads 1 \
---o-denoising-stats qiime2/qza/stats-dada2.qza \
---o-representative-sequences qiime2/qza/seqs-dada2.qza \
---o-table qiime2/qza/table-dada2.qza
+  --i-demultiplexed-seqs qiime2/qza/demux_seqs.qza \
+  --p-trim-left 0 \
+  --p-trunc-len 0 \
+  --p-n-threads 20 \
+  --o-denoising-stats qiime2/qza/dada2_stats.qza \
+  --o-representative-sequences qiime2/qza/dada2_rep_set.qza \
+  --o-table qiime2/qza/dada2_table.qza \
+  --o-base-transition-stats qiime2/qza/base-transition-stats.qza
+
+
+
 
 # Visualización
 qiime feature-table tabulate-seqs \
@@ -753,7 +757,41 @@ qiime demux summarize \
 --o-visualization qiime2/qzv/demux_seqs.qzv
 ```
 
+**Control de calidad de las secuencias y feature table**
 
+QIIME 2 genera tres archivos principales:
 
+*   dada2_table.qza	
+
+Feature Table: abundancia de ASV por muestra.
+
+* dada2_rep_set.qza
+
+Secuencias representativas de cada ASV.
+
+* dada2_stats.qza
+
+Estadísticas del procesamiento y filtrado de lecturas.
+
+**¿Para qué sirve el Feature Table?**
+
+Es uno de los archivos más importantes del análisis de microbioma. Se utiliza para:
+- Calcular diversidad alfa (Shannon, Simpson, Observed ASVs).
+- Calcular diversidad beta (Bray-Curtis, UniFrac).
+- Comparar abundancias bacterianas entre grupos.
+- Identificar microorganismos diferenciales.
+- Realizar análisis de composición y abundancia relativa.
+
+```
+qiime dada2 denoise-single \
+  --i-demultiplexed-seqs qiime2/qza/demux_seqs.qza \
+  --p-trim-left 0 \
+  --p-trunc-len 0 \
+  --p-n-threads 20 \
+  --o-denoising-stats qiime2/qza/dada2_stats.qza \
+  --o-representative-sequences qiime2/qza/dada2_rep_set.qza \
+  --o-table qiime2/qza/dada2_table.qza \
+  --o-base-transition-stats qiime2/qza/base-transition-stats.qza
+```
 
 
