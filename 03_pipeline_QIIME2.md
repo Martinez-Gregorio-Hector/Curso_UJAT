@@ -638,6 +638,13 @@ qiime dada2 denoise-single \
   --o-table qiime2/qza/dada2_table.qza \
   --o-base-transition-stats qiime2/qza/base-transition-stats.qza
 
+# Para ver los datos filtrados (denoising)
+qiime metadata tabulate \
+  --m-input-file qiime2/qza/dada2_stats.qza  \
+  --o-visualization qiime2/qzv/dada2_stats.qzv
+
+
+
 
 
 
@@ -652,10 +659,7 @@ qiime feature-table summarize \
 --m-sample-metadata-file data/sample-metadata.txt \
 --o-visualization qiime2/qzv/table-dada2.qzv
 
-# Visualización de la limpieza de los datos
-qiime metadata tabulate \
---m-input-file qiime2/qza/stats-dada2.qza \
---o-visualization qiime2/qzv/denoising-stats.qzv
+
 
 # Filogenia
 qiime phylogeny align-to-tree-mafft-fasttree \
@@ -759,6 +763,8 @@ qiime demux summarize \
 
 ### Control de calidad de las secuencias y feature table
 
+**Tiempo de ejecución** : 249.9 minutos (4.16 horas)
+
 ```
 qiime dada2 denoise-single \
   --i-demultiplexed-seqs qiime2/qza/demux_seqs.qza \
@@ -807,6 +813,17 @@ Es uno de los archivos más importantes del análisis de microbioma. Se utiliza 
 - Identificar microorganismos diferenciales.
 - Realizar análisis de composición y abundancia relativa.
 
+**Visualización de los datos filtrados (denoising)**
+
+Descargar el archivo **dada2_stats.qzv** en la sección de [resultados](https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/tree/main/Resultados/qzv) y visualizar con  **qiime2 view**
+
+**Tiempo de ejecución** : 34 segundos
+
+```
+qiime metadata tabulate \
+  --m-input-file qiime2/qza/dada2_stats.qza  \
+  --o-visualization qiime2/qzv/dada2_stats.qzv
+```
 
 
 
