@@ -556,8 +556,9 @@ done >> data/manifest.tsv
 Vemos el contenido del archivo **manifest.tsv** con **head data/manifest.tsv**
 
 ```
-sample-id	absolute-filepath
+head data/manifest.tsv
 
+## sample-id	absolute-filepath
 ## SRR15018640	/home/lab13/Documents/Curso_UJAT/HectorMartinez/ensamblados/SRR15018640.assembled.fastq
 ## SRR15018641	/home/lab13/Documents/Curso_UJAT/HectorMartinez/ensamblados/SRR15018641.assembled.fastq
 ## SRR15018642	/home/lab13/Documents/Curso_UJAT/HectorMartinez/ensamblados/SRR15018642.assembled.fastq
@@ -566,30 +567,34 @@ sample-id	absolute-filepath
 ## SRR15018645	/home/lab13/Documents/Curso_UJAT/HectorMartinez/ensamblados/SRR15018645.assembled.fastq
 ```
 
-Vamos a generar el archivo **sample-metadata.txt**
+Vamos a generar el archivo **metadata.txt**. Este archivo puede contener el **sample-id**, **run_prefix**, **sample_type**.
 
-
-
-
-
-
-
-Se tiene que generar un archivo “manifest.tsv” (Un archivo con dos columnas: **sample-id** (nombre de la muestra) y **absolute-ﬁlepath** (la ruta donde estan los archivos fastq).
 
 ```
-sample-id	absolute-filepath
-12802.UB6-0001.assembled.fastq	/home/lab13/Documents/DraEcheagaray/ensamblados/UB6-0001.assembled.fastq
-12802.UB6-0002.assembled.fastq	/home/lab13/Documents/DraEcheagaray/ensamblados/UB6-0002.assembled.fastq
-12802.UB6-0003.assembled.fastq	/home/lab13/Documents/DraEcheagaray/ensamblados/UB6-0003.assembled.fastq
-12802.UB6-0004.assembled.fastq	/home/lab13/Documents/DraEcheagaray/ensamblados/UB6-0004.assembled.fastq
-12802.UB6-0005.assembled.fastq	/home/lab13/Documents/DraEcheagaray/ensamblados/UB6-0005.assembled.fastq
-12802.UB6-0006.assembled.fastq	/home/lab13/Documents/DraEcheagaray/ensamblados/UB6-0006.assembled.fastq
-12802.UB6-0007.assembled.fastq	/home/lab13/Documents/DraEcheagaray/ensamblados/UB6-0007.assembled.fastq
-12802.UB6-0008.assembled.fastq	/home/lab13/Documents/DraEcheagaray/ensamblados/UB6-0008.assembled.fastq
-12802.UB6-0009.assembled.fastq	/home/lab13/Documents/DraEcheagaray/ensamblados/UB6-0009.assembled.fastq
+#!/bin/bash
+
+# generamos un archivo con tres columnas
+echo -e "sample-id\trun_prefix\tsample_type" > data/metadata.txt
+
+# llenar el archivo con la información correcta
+for f in ensamblados/*fastq
+do
+    n=$(basename "$f" .assembled.fastq)
+    echo -e "${n}\t$(basename "$f")"
+done >> data/metadata.txt
+
+# Teniendo 
+
 ```
 
+Vemos el contenido del archivo **metadata.txt** con **head data/metadata.txt**
 
+```
+head data/manifest.tsv
+
+
+
+```
 
 ## 3. QIIME2
 
