@@ -511,15 +511,19 @@ wget https://www.arb-silva.de/fileadmin/silva_databases/release_144/QIIME2/2026.
 
 Significado de la base de datos:
 
-* SILVA_144   Versión 144 de la base de datos SILVA.
+* **SILVA_144**   Versión 144 de la base de datos SILVA.
 
-* SSURef      Small Subunit rRNA Reference, secuencias de referencia de ARN ribosomal de subunidad pequeña.
+* **SSURef**   Small Subunit rRNA Reference, secuencias de referencia de ARN ribosomal de subunidad pequeña.
   
-* NR99	Secuencias agrupadas al 99% de identidad.
-uniform_classifier	Clasificador entrenado con un procedimiento de entrenamiento uniforme.
-V3V4	Región variable 3 y 4 del gen 16S rRNA.
-341f-806r	Primers utilizados para amplificar esa región.
-.qza	Archivo de artefacto de QIIME 2.
+* **NR99**   Secuencias agrupadas al 99% de identidad.
+
+* **uniform_classifier**   Clasificador entrenado con un procedimiento de entrenamiento uniforme.
+
+* **V3V4**   Región variable 3 y 4 del gen 16S rRNA.
+
+* **341f-806r**   Primers utilizados para amplificar esa región.
+  
+* **.qza**   Archivo de artefacto de QIIME 2.
 
 ### Generación de archivo manifest.tsv y sample-metadata.txt
 
