@@ -506,10 +506,8 @@ Descargar la bases de datos de SILVA en la siguiente [liga](https://www.arb-silv
 Para este curso se descargó la base de datos **SILVA_144_SSURef_NR99_uniform_classifier_V3V4-341f-806r.qza**
 
 ```
-wget 
+wget https://www.arb-silva.de/fileadmin/silva_databases/release_144/QIIME2/2026.7/SSU/V3V4-341f-806r/uniform/SILVA_144_SSURef_NR99_uniform_classifier_V3V4-341f-806r.qza
 ```
-
-
 
 ### Generación de archivo manifest.tsv y sample-metadata.txt
 
