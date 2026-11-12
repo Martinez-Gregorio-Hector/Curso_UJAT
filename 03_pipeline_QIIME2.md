@@ -621,10 +621,11 @@ qiime tools import \
 --type 'SampleData[SequencesWithQuality]' \
 --input-format SingleEndFastqManifestPhred33V2 \
 --output-path qiime2/qza/demux_seqs.qza
-# Resumen
+
+# Para ver las lecturas y la calidad de los datos importados
 qiime demux summarize \
 --i-data qiime2/qza/demux_seqs.qza \
---o-visualization qiime2/qzv/demux_seqs.qza
+--o-visualization qiime2/qzv/demux_seqs.qzv
 
 # Denoising
 qiime dada2 denoise-single \
@@ -742,14 +743,14 @@ qiime tools import \
 --output-path qiime2/qza/demux_seqs.qza
 ```
 
-Una vez que importaron los datos, podemos examinar las secuencias y la profundidad mediante el comando **qiime demux summarize**. Este proporciona información sobre el número de secuencias en cada muestra  así como sobre la calidad de dichas secuencias. En la carpeta de [resultados](https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/tree/main/Resultados/qzv) podrás descargar el archivo **demux_seqs.qza** y visualizarlo con **qiime2 view**
+Una vez que importaron los datos, podemos examinar su profundidad y su calidad con el comando **qiime demux summarize**. En la carpeta de [resultados](https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/tree/main/Resultados/qzv) podrás descargar el archivo **demux_seqs.qza** y visualizarlo con **qiime2 view**
 
 **Tiempo de ejecución** : 3.7 minutos 
 
 ```
 qiime demux summarize \
 --i-data qiime2/qza/demux_seqs.qza \
---o-visualization qiime2/qzv/demux_seqs.qza
+--o-visualization qiime2/qzv/demux_seqs.qzv
 ```
 
 
