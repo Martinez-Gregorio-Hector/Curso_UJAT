@@ -724,7 +724,7 @@ tail -f qiime2.out
 
 ### Vamos ir analizando paso a paso cada comando
 
-**Importar datos**
+### Importar datos
 
 Consultar la importación de datos [adicionales](https://docs.qiime2.org/2024.10/tutorials/importing/#manifest-file)
 
@@ -757,6 +757,20 @@ qiime demux summarize \
 --o-visualization qiime2/qzv/demux_seqs.qzv
 ```
 
+### Control de calidad de las secuencias y feature table
+
+```
+qiime dada2 denoise-single \
+  --i-demultiplexed-seqs qiime2/qza/demux_seqs.qza \
+  --p-trim-left 0 \
+  --p-trunc-len 0 \
+  --p-n-threads 20 \
+  --o-denoising-stats qiime2/qza/dada2_stats.qza \
+  --o-representative-sequences qiime2/qza/dada2_rep_set.qza \
+  --o-table qiime2/qza/dada2_table.qza \
+  --o-base-transition-stats qiime2/qza/base-transition-stats.qza
+```
+
 Existen diversas formas de construir una tabla de características en QIIME 2. La primera decisión importante consiste en elegir entre trabajar con unidades taxonómicas operativas (OTU) o con variantes de secuencia de amplicones (ASV). Las OTU se han utilizado ampliamente en la investigación del microbioma desde mediados de la década de 2010; estas agrupan las secuencias en clústeres, ya sea mediante una base de datos de referencia o mediante un proceso *de novo*. 
 
 Las ASV representan un desarrollo más reciente y ofrecen una mayor resolución en la identificación de características que los métodos tradicionales basados ​​en OTU. Las ASV permiten distinguir características basándose en diferencias de un solo nucleótido en secuencias de 400 pb o más; un nivel de resolución que no es posible alcanzar ni siquiera mediante el agrupamiento de OTU con un 99 % de identidad. 
@@ -769,7 +783,6 @@ Las ASV representan un desarrollo más reciente y ofrecen una mayor resolución 
 | Resultado      | Variantes de secuencia          | Grupos de secuencias       |
 | Identificador  | ASV_1, ASV_2, etc.              | OTU_1, OTU_2, etc.         |
 
-**Control de calidad de las secuencias y feature table**
 
 QIIME 2 genera tres archivos principales:
 
@@ -794,16 +807,6 @@ Es uno de los archivos más importantes del análisis de microbioma. Se utiliza 
 - Identificar microorganismos diferenciales.
 - Realizar análisis de composición y abundancia relativa.
 
-```
-qiime dada2 denoise-single \
-  --i-demultiplexed-seqs qiime2/qza/demux_seqs.qza \
-  --p-trim-left 0 \
-  --p-trunc-len 0 \
-  --p-n-threads 20 \
-  --o-denoising-stats qiime2/qza/dada2_stats.qza \
-  --o-representative-sequences qiime2/qza/dada2_rep_set.qza \
-  --o-table qiime2/qza/dada2_table.qza \
-  --o-base-transition-stats qiime2/qza/base-transition-stats.qza
-```
+
 
 
