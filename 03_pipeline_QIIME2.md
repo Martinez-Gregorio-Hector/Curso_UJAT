@@ -643,21 +643,25 @@ qiime metadata tabulate \
   --m-input-file qiime2/qza/dada2_stats.qza  \
   --o-visualization qiime2/qzv/dada2_stats.qzv
 
+# Para ver el resumen de -Feature table-
+qiime feature-table summarize \
+--i-table qiime2/qza/dada2_table.qza \
+--m-sample-metadata-file data/metadata.txt \
+--o-visualization qiime2/qzv/dada2_table.qzv
 
 
 
 
 
-# Visualización
+
+
+
 qiime feature-table tabulate-seqs \
 --i-data qiime2/qza/seqs-dada2.qza \
 --o-visualization qiime2/qzv/rep-seqs-dada2.qzv
 
 # Para ver la profundidad maxima de los  datos
-qiime feature-table summarize \
---i-table qiime2/qza/table-dada2.qza \
---m-sample-metadata-file data/sample-metadata.txt \
---o-visualization qiime2/qzv/table-dada2.qzv
+
 
 
 
