@@ -829,5 +829,15 @@ qiime metadata tabulate \
   --o-visualization qiime2/qzv/dada2_stats.qzv
 ```
 
+**Visualización del feature table**
 
+Descargar el archivo **dada2_table.qzv** en la sección de [resultados](https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/tree/main/Resultados/qzv) y visualizar con  **qiime2 view**
 
+**Tiempo de ejecución** : 34 segundos
+
+```
+qiime feature-table summarize \
+--i-table qiime2/qza/dada2_table.qza \
+--m-sample-metadata-file data/metadata.txt \
+--o-visualization qiime2/qzv/dada2_table.qzv
+```
