@@ -645,7 +645,6 @@ qiime feature-table summarize \
     --i-table qiime2/qza/dada2_table.qza \
     --o-feature-frequencies qiime2/qza/feature-frequencies.qza \
     --o-sample-frequencies qiime2/qza/sample-frequencies.qza \
-    --m-sample-metadata-file data/metadata.txt \
     --o-summary qiime2/qzv/dada2_table.qzv
 
 # Secuencias representativas
@@ -667,27 +666,28 @@ qiime diversity alpha-rarefaction \
   --m-metadata-file data/metadata.txt \
   --o-visualization qiime2/qzv/alpha_rarefaction_curves.qzv \
   --p-min-depth 10 \
-  --p-max-depth 4250
+  --p-max-depth 90000
 
+# Clasificación taxonómica
+silva138=/home/lab13/Documents/Curso_UJAT/reference/SILVA_144_SSURef_NR99_uniform_classifier_V3V4-341f-806r.qza
 
-
-
-
-silva138=/home/lab13/Reference/Referencia_silva_138/silva-138-99-nb-classifier.qza
-
-# Taxonomia
 qiime feature-classifier classify-sklearn \
 --i-classifier $silva138 \
---i-reads qiime2/qza/seqs-dada2.qza \
+--i-reads qiime2/qza/dada2_rep_set.qza \
 --o-classification qiime2/qza/taxonomy.qza
+
+
+
+
+
+
+
 
 # Taxonomia para visualización
 qiime metadata tabulate \
 --m-input-file qiime2/qza/taxonomy.qza \
 --m-input-file qiime2/qza/seqs-dada2.qza \
 --o-visualization qiime2/qzv/taxonomy.qzv
-
-
 
 
 
@@ -835,7 +835,7 @@ qiime feature-table tabulate-seqs \
 
 **Visualización del feature table**
 
-Descargar el archivo **dada2_table.qzv** en la sección de [resultados](https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/tree/main/Resultados/qzv) y visualizar con  **qiime2 view**
+Descargar el archivo **dada2_table.qzv** en la sección de [resultados](https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/tree/main/Resultados/qzv) y visualizar con  **qiime2 view**. Nota: inspeccionar el archivo **dada2_table_v2.qzv**
 
 Tiempo de ejecución: 54 segundos
 
@@ -864,15 +864,13 @@ qiime fragment-insertion sepp \
 
 **Rarefacción  y selección de una profundidad de rarefacción**
 
-Ahora disponemos de una **feature table** (matriz de observaciones) de ASVs en cada muestra, junto con un árbol filogenético que representa dichos ASVs. Antes de realizar el análisis de diversidad microbiana tenemos que normalizar nuestros datos para compensar la disparidad en la profundidad de secuenciación entre las muestras.
+Ahora disponemos de una **feature table** (matriz de observaciones) de ASVs en cada muestra, junto con un árbol filogenético que representa dichos ASVs; por lo tanto, estamos casi listos para llevar a cabo diversos análisis de diversidad microbiana. Antes de realizar el análisis de diversidad microbiana tenemos que normalizar nuestros datos para compensar las diferencias en la profundidad de secuenciación entre las muestras.
 
 Aunque la profundidad de secuenciación en una muestra de microbioma no guarda una relación directa con la biomasa original de la comunidad, la profundidad de secuenciación relativa influye considerablemente en las comunidades observadas [Weiss et al., 2017](https://link.springer.com/article/10.1186/s40168-017-0237-y). Por consiguiente, para la mayoría de las métricas de diversidad, resulta necesario aplicar un método de normalización.
 
-La rarefacción es un método de normalización basado en el submuestreo sin reemplazo, utilizado habitualmente para abordar el problema de la disparidad en la profundidad de secuenciación. Este proceso consta de dos etapas: primero, se eliminan de la tabla de características aquellas muestras que presentan una profundidad inferior al umbral de rarefacción establecido. A continuación, se realiza un submuestreo sin reemplazo de todas las muestras restantes hasta alcanzar la profundidad de secuenciación especificada. Seleccionar un umbral de rarefacción adecuado para los análisis de diversidad es un paso importante, aunque a veces complejo. 
+La rarefacción es un método de normalización basado en el submuestreo sin reemplazo, utilizado habitualmente para abordar el problema de la diferencia en la profundidad de secuenciación. Este proceso consta de dos etapas: primero, se eliminan de la tabla de características aquellas muestras que presentan una profundidad inferior al umbral de rarefacción establecido. A continuación, se realiza un submuestreo sin reemplazo de todas las muestras restantes hasta alcanzar la profundidad de secuenciación especificada. Seleccionar un umbral de rarefacción adecuado para los análisis de diversidad es un paso importante, aunque a veces complejo. 
 
-Utilizaremos `qiime diversity alpha-rarefaction` para realizar submuestreos de la tabla de ASVs a distintas profundidades (comprendidas entre `--p-min-depth` y `--p-max-depth`) y calcular la diversidad alfa mediante una o varias métricas (`--p-metrics`). Al examinar la tabla de características, observamos que la muestra con menor número de secuencias en la tabla tras el proceso de eliminación de ruido (*denoising*) contiene 347 características, mientras que la muestra con mayor número presenta 4996. Nuestro objetivo es establecer una profundidad máxima cercana a este valor superior. Asimismo, sabemos que, al fijar una profundidad de secuenciación de aproximadamente 4250 secuencias por muestra, estaremos analizando información proveniente de 25 muestras. Por tanto, estableceremos este valor como nuestra profundidad de secuenciación máxima.
-
-Tiempo de ejecución: XX segundos
+Tiempo de ejecución: 3.2 minutos
 
 ```
 qiime diversity alpha-rarefaction \
@@ -880,5 +878,5 @@ qiime diversity alpha-rarefaction \
   --m-metadata-file data/metadata.txt \
   --o-visualization qiime2/qzv/alpha_rarefaction_curves.qzv \
   --p-min-depth 10 \
-  --p-max-depth 4250
+  --p-max-depth 90000
 ```
