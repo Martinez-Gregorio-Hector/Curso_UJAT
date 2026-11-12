@@ -727,6 +727,8 @@ tail -f qiime2.out
 
 **Importar datos**
 
+Consultar la importación de datos [adicionales](https://docs.qiime2.org/2024.10/tutorials/importing/#manifest-file)
+
 ```
 mkdir -p qiime2/qzv qiime2/qza
 
