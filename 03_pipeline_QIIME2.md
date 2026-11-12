@@ -723,7 +723,7 @@ tail -f qiime2.out
 
 Consultar la importación de datos [adicionales](https://docs.qiime2.org/2024.10/tutorials/importing/#manifest-file)
 
-**Paso tardo** : 93.3 minutos (en una computadora de 128 G de RAM y 20 núcleos)
+**Tiempo de ejecución** : 93.3 minutos (en una computadora de 128 G de RAM y 20 núcleos)
 
 ```
 mkdir -p qiime2/qzv qiime2/qza
@@ -743,6 +743,8 @@ qiime tools import \
 ```
 
 Una vez que importaron los datos, podemos examinar las secuencias y la profundidad mediante el comando **qiime demux summarize**. Este proporciona información sobre el número de secuencias en cada muestra  así como sobre la calidad de dichas secuencias. En la carpeta de [resultados](https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/tree/main/Resultados/qzv) podrás descargar el archivo **demux_seqs.qza** y visualizarlo con **qiime2 view**
+
+**Tiempo de ejecución** : 3.7 minutos 
 
 ```
 qiime demux summarize \
