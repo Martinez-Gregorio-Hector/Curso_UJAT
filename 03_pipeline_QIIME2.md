@@ -620,7 +620,7 @@ qiime tools import \
 --input-path data/manifest.tsv \
 --type 'SampleData[SequencesWithQuality]' \
 --input-format SingleEndFastqManifestPhred33V2 \
---output-path qiime2/qza/Fastqs.qza
+--output-path qiime2/qza/demux_seqs.qza
 
 
 
@@ -629,7 +629,7 @@ qiime tools import \
 
 # Resumen
 qiime demux summarize \
---i-data qiime2/qza/Fastqs.qza \
+--i-data qiime2/qza/demux_seqs.qza \
 --o-visualization qiime2/qzv/se-demux.qzv
 
 # Denoising
@@ -743,7 +743,7 @@ qiime tools import \
 --input-path data/manifest.tsv \
 --type 'SampleData[SequencesWithQuality]' \
 --input-format SingleEndFastqManifestPhred33V2 \
---output-path qiime2/qza/Fastqs.qza
+--output-path qiime2/qza/demux_seqs.qza
 ```
 
 
