@@ -645,18 +645,17 @@ qiime metadata tabulate \
 
 # Para ver el resumen de -Feature table- PENDIENTE
 qiime feature-table summarize \
---i-table qiime2/qza/dada2_table.qza \
---m-sample-metadata-file data/metadata.txt \
---o-visualization qiime2/qzv/dada2_table.qzv
+    --i-table qiime2/qza/dada2_table.qza \
+    --o-feature-frequencies qiime2/qza/feature-frequencies.qza \
+    --o-sample-frequencies qiime2/qza/sample-frequencies.qza \
+    --m-sample-metadata-file data/metadata.txt \
+    --o-summary qiime2/qzv/dada2_table.qzv
 
-# PENDIENTE
+# Secuencias representativas
 qiime feature-table tabulate-seqs \
 --i-data qiime2/qza/dada2_rep_set.qza \
 --o-visualization qiime2/qzv/dada2_rep_set.qzv
 
-
-
-# Para ver la profundidad maxima de los  datos
 
 
 
@@ -668,6 +667,10 @@ qiime phylogeny align-to-tree-mafft-fasttree \
 --o-masked-alignment qiime2/qza/masked-aligned-rep-seqs.qza \
 --o-tree qiime2/qza/unrooted-tree.qza \
 --o-rooted-tree qiime2/qza/rooted-tree.qza
+
+
+
+
 
 mkdir tmp
 export TMPDIR=tmp
@@ -825,7 +828,7 @@ qiime metadata tabulate \
   --o-visualization qiime2/qzv/dada2_stats.qzv
 ```
 
-**PENDIENTE**
+**Secuencias representativas**
 
 Descargar el archivo **dada2_rep_set.qzv** en la sección de [resultados](https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/tree/main/Resultados/qzv) y visualizar con  **qiime2 view**
 
@@ -841,11 +844,12 @@ qiime feature-table tabulate-seqs \
 
 Descargar el archivo **dada2_table.qzv** en la sección de [resultados](https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/tree/main/Resultados/qzv) y visualizar con  **qiime2 view**
 
-**Tiempo de ejecución** : 6 segundos
+**Tiempo de ejecución** : 54 segundos
 
 ```
 qiime feature-table summarize \
---i-table qiime2/qza/dada2_table.qza \
---m-sample-metadata-file data/metadata.txt \
---o-visualization qiime2/qzv/dada2_table.qzv
+    --i-table qiime2/qza/dada2_table.qza \
+    --o-feature-frequencies qiime2/qza/feature-frequencies.qza \
+    --o-sample-frequencies qiime2/qza/sample-frequencies.qza \
+    --o-summary qiime2/qzv/dada2_table.qzv
 ```
