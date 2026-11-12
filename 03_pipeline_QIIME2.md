@@ -555,6 +555,16 @@ done >> data/manifest.tsv
 
 Vemos el contenido del archivo **manifest.tsv** con **head data/manifest.tsv**
 
+```
+head data/manifest.tsv 
+sample-id	absolute-filepath
+SRR15018640.assembled.fastq	/home/lab13/Documents/Curso_UJAT/HectorMartinez/ensamblados/SRR15018640.assembled.fastq
+SRR15018641.assembled.fastq	/home/lab13/Documents/Curso_UJAT/HectorMartinez/ensamblados/SRR15018641.assembled.fastq
+SRR15018642.assembled.fastq	/home/lab13/Documents/Curso_UJAT/HectorMartinez/ensamblados/SRR15018642.assembled.fastq
+SRR15018643.assembled.fastq	/home/lab13/Documents/Curso_UJAT/HectorMartinez/ensamblados/SRR15018643.assembled.fastq
+SRR15018644.assembled.fastq	/home/lab13/Documents/Curso_UJAT/HectorMartinez/ensamblados/SRR15018644.assembled.fastq
+```
+
 Vamos a generar el archivo **sample-metadata.txt**
 
 
