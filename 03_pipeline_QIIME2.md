@@ -3,6 +3,7 @@
    2. Objeto de estudio - Cáncer colorrectal
    3. Descarga de archivos, análisis de calidad y ensamblado de lecturas
    4. Análisis con QIIME2
+   5. PICRUSt
       
 ## 1. Estructura de los archivos fastq y calidad de las lecturas de secuenciación
 
