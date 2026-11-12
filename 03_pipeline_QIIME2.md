@@ -499,6 +499,17 @@ Para activar y desactivar el ambiente **rachis-qiime2-2026.10** usamos los sigui
 (base) lab13@lab13-PowerEdge-R730:~/Documents/Curso_UJAT/HectorMartinez$ 
 ```
 
+### Descarga de bases de datos SILVA
+
+Descargar la bases de datos de SILVA en la siguiente [liga](https://www.arb-silva.de/). 
+
+Para este curso se descargó la base de datos **SILVA_144_SSURef_NR99_uniform_classifier_V3V4-341f-806r.qza**
+
+```
+wget 
+```
+
+
 
 ### Generación de archivo manifest.tsv y sample-metadata.txt
 
