@@ -533,7 +533,7 @@ Antes de correr QIIME2 hay que generar un carpeta donde almacenaremos nuestros d
   
 * ii) **sample-metadata.txt**
 
-Vamos a generar el archivo **manifest.tsv**
+Vamos a generar el archivo **manifest.tsv**. Este archivo tiene que tener dos columnas, en la primera columna tiene que ir el **sample-id** (el nombre de los archivos fastq) y en la segunda columna **absolute-filepath** (la ruta absoluta de los archivos fastq)
 
 ```
 #!/bin/bash
@@ -559,19 +559,6 @@ Vamos a generar el archivo **sample-metadata.txt**
 
 
 
-echo -e "sample-id\trun_prefix\tCurso" > data/sample-metadata.txt
-
-for f in `ls ensamblados/*fastq`; do n=`basename $f`; echo -e "${n%.fastq.gz}\t${n%.fastq.gz}\tEcologia2026"; done >> data/sample-metadata.txt
-
-# Vemos el contenido  de sample-metadata.txt
-
-less data/sample-metadata.txt
-
-# sample-id       run_prefix      Curso
-# MBC1_S1.assembled.fastq MBC1_S1.assembled.fastq Ecologia2026
-# MBC2_S2.assembled.fastq MBC2_S2.assembled.fastq Ecologia2026
-# MBC3_S3.assembled.fastq MBC3_S3.assembled.fastq Ecologia2026
-```
 
 
 
