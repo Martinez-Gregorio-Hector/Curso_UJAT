@@ -669,33 +669,24 @@ qiime diversity alpha-rarefaction \
   --p-max-depth 90000
 
 # Clasificación taxonómica
-silva138=/home/lab13/Documents/Curso_UJAT/reference/SILVA_144_SSURef_NR99_uniform_classifier_V3V4-341f-806r.qza
+silva144=/home/lab13/Documents/Curso_UJAT/reference/SILVA_144_SSURef_NR99_uniform_classifier_V3V4-341f-806r.qza
 
 qiime feature-classifier classify-sklearn \
---i-classifier $silva138 \
+--i-classifier $silva144 \
 --i-reads qiime2/qza/dada2_rep_set.qza \
 --o-classification qiime2/qza/taxonomy.qza
-
-
-
-
-
-
-
 
 # Taxonomia para visualización
 qiime metadata tabulate \
 --m-input-file qiime2/qza/taxonomy.qza \
---m-input-file qiime2/qza/seqs-dada2.qza \
+--m-input-file qiime2/qza/dada2_rep_set.qza \
 --o-visualization qiime2/qzv/taxonomy.qzv
-
-
 
 # Barra de clasificación taxonómica
 qiime taxa barplot \
-  --i-table qiime2/qza/table-dada2.qza \
+  --i-table qiime2/qza/dada2_table.qza \
   --i-taxonomy qiime2/qza/taxonomy.qza \
-  --m-metadata-file data/sample-metadata.txt \
+  --m-metadata-file data/metadata.txt \
   --o-visualization qiime2/qzv/taxa-bar-plots.qzv
 
 end=`date +%s`
@@ -851,7 +842,7 @@ qiime feature-table summarize \
 
 El análisis en QIIME 2 permite el uso de árboles filogenéticos para calcular métricas de diversidad, tales como la diversidad filogenética de Faith (Faith’s Phylogenetic Diversity) y la distancia UniFrac. 
 
-Tiempo de ejecución: XX segundos
+Tiempo de ejecución: 2.98 horas
 
 ```
 qiime fragment-insertion sepp \
@@ -879,4 +870,45 @@ qiime diversity alpha-rarefaction \
   --o-visualization qiime2/qzv/alpha_rarefaction_curves.qzv \
   --p-min-depth 10 \
   --p-max-depth 90000
+```
+
+
+**Clasificación taxonómica**
+
+Hasta ahora, hemos realizado análisis de diversidad  sobre los ASV; es decir, se ha evaluado la similitud entre muestras basándonos exclusivamente en las variantes de secuencia únicas observadas en cada una de ellas. En la mayoría de los experimentos, nos interesa conocer qué taxones microbianos están presentes —identificar los ASV y asignarles «nombres»—. 
+
+Para este análisis, se emplea un clasificador de aprendizaje automático (machine learning) de tipo «naive Bayes» previamente entrenado, diseñado para diferenciar los taxones presentes en el conjunto de referencia SILVA 144 (al 99 % de identidad). 
+
+Tiempo de ejecución: 3.7 minutos
+
+```
+silva144=/home/lab13/Documents/Curso_UJAT/reference/SILVA_144_SSURef_NR99_uniform_classifier_V3V4-341f-806r.qza
+
+qiime feature-classifier classify-sklearn \
+--i-classifier $silva144 \
+--i-reads qiime2/qza/dada2_rep_set.qza \
+--o-classification qiime2/qza/taxonomy.qza
+```
+
+**Taxonomía para visualización**
+
+Tiempo de ejecución: 48 segundos
+
+```
+qiime metadata tabulate \
+--m-input-file qiime2/qza/taxonomy.qza \
+--m-input-file qiime2/qza/dada2_rep_set.qza \
+--o-visualization qiime2/qzv/taxonomy.qzv
+```
+
+**Barra de clasificación taxonómica**
+
+Tiempo de ejecución: 65 segundos
+
+```
+qiime taxa barplot \
+  --i-table qiime2/qza/dada2_table.qza \
+  --i-taxonomy qiime2/qza/taxonomy.qza \
+  --m-metadata-file data/metadata.txt \
+  --o-visualization qiime2/qzv/taxa-bar-plots.qzv
 ```
