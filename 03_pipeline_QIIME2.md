@@ -533,7 +533,8 @@ Antes de correr QIIME2 hay que generar un carpeta donde almacenaremos nuestros d
   
 * ii) **sample-metadata.txt**
 
-Vamos a generar el archivo manifest.tsv
+Vamos a generar el archivo **manifest.tsv**
+
 ```
 #!/bin/bash
 
@@ -549,17 +550,14 @@ for f in ensamblados/*.fastq
 do
     n=$(basename "$f")
     echo -e "${n}\t$PWD/$f"
-done > data/manifest.tsv
-
+done >> data/manifest.tsv
 ```
 
-Vemos el contenido del archivo **manifest.tsv**
+Vemos el contenido del archivo **manifest.tsv** con **head data/manifest.tsv**
 
-```
-less 
+Vamos a generar el archivo **sample-metadata.txt**
 
-```
-# ii) metadata file
+
 
 echo -e "sample-id\trun_prefix\tCurso" > data/sample-metadata.txt
 
