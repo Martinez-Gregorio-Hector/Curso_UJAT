@@ -735,7 +735,7 @@ tail -f qiime2.out
 
 Consultar la importación de datos [adicionales](https://docs.qiime2.org/2024.10/tutorials/importing/#manifest-file)
 
-**Tiempo de ejecución** : 93.3 minutos (en una computadora de 128 G de RAM y 20 núcleos)
+Tiempo de ejecución: 93.3 minutos (en una computadora de 128 G de RAM y 20 núcleos)
 
 ```
 mkdir -p qiime2/qzv qiime2/qza
@@ -756,7 +756,7 @@ qiime tools import \
 
 Una vez que importaron los datos, podemos examinar su profundidad y su calidad con el comando **qiime demux summarize**. En la carpeta de [resultados](https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/tree/main/Resultados/qzv) podrás descargar el archivo **demux_seqs.qza** y visualizarlo con **qiime2 view**
 
-**Tiempo de ejecución** : 3.7 minutos 
+Tiempo de ejecución: 3.7 minutos 
 
 ```
 qiime demux summarize \
@@ -766,7 +766,7 @@ qiime demux summarize \
 
 ### Control de calidad de las secuencias y feature table
 
-**Tiempo de ejecución** : 249.9 minutos (4.16 horas)
+Tiempo de ejecución: 249.9 minutos (4.16 horas)
 
 ```
 qiime dada2 denoise-single \
@@ -820,7 +820,7 @@ Es uno de los archivos más importantes del análisis de microbioma. Se utiliza 
 
 Descargar el archivo **dada2_stats.qzv** en la sección de [resultados](https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/tree/main/Resultados/qzv) y visualizar con  **qiime2 view**
 
-**Tiempo de ejecución** : 34 segundos
+Tiempo de ejecución: 34 segundos
 
 ```
 qiime metadata tabulate \
@@ -832,7 +832,7 @@ qiime metadata tabulate \
 
 Descargar el archivo **dada2_rep_set.qzv** en la sección de [resultados](https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/tree/main/Resultados/qzv) y visualizar con  **qiime2 view**
 
-**Tiempo de ejecución** : 66 segundos
+Tiempo de ejecución: 66 segundos
 
 ```
 qiime feature-table tabulate-seqs \
@@ -844,7 +844,7 @@ qiime feature-table tabulate-seqs \
 
 Descargar el archivo **dada2_table.qzv** en la sección de [resultados](https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/tree/main/Resultados/qzv) y visualizar con  **qiime2 view**
 
-**Tiempo de ejecución** : 54 segundos
+Tiempo de ejecución: 54 segundos
 
 ```
 qiime feature-table summarize \
