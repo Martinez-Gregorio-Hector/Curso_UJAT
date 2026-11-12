@@ -757,6 +757,18 @@ qiime demux summarize \
 --o-visualization qiime2/qzv/demux_seqs.qzv
 ```
 
+Existen diversas formas de construir una tabla de características en QIIME 2. La primera decisión importante consiste en elegir entre trabajar con unidades taxonómicas operativas (OTU) o con variantes de secuencia de amplicones (ASV). Las OTU se han utilizado ampliamente en la investigación del microbioma desde mediados de la década de 2010; estas agrupan las secuencias en clústeres, ya sea mediante una base de datos de referencia o mediante un proceso *de novo*. 
+
+Las ASV representan un desarrollo más reciente y ofrecen una mayor resolución en la identificación de características que los métodos tradicionales basados ​​en OTU. Las ASV permiten distinguir características basándose en diferencias de un solo nucleótido en secuencias de 400 pb o más; un nivel de resolución que no es posible alcanzar ni siquiera mediante el agrupamiento de OTU con un 99 % de identidad. 
+
+| Característica |               ASV               |             OTU            |
+|:--------------:|:-------------------------------:|:--------------------------:|
+| Método         | DADA2                           | Agrupamiento por similitud |
+| Resolución     | Secuencia exacta                | Secuencias agrupadas       |
+| Umbral         | No requiere umbral de similitud | Frecuentemente 97%         |
+| Resultado      | Variantes de secuencia          | Grupos de secuencias       |
+| Identificador  | ASV_1, ASV_2, etc.              | OTU_1, OTU_2, etc.         |
+
 **Control de calidad de las secuencias y feature table**
 
 QIIME 2 genera tres archivos principales:
