@@ -529,32 +529,34 @@ Significado de la base de datos:
 
 Antes de correr QIIME2 hay que generar un carpeta donde almacenaremos nuestros datos: 
 
-* i) manifest.tsv
+* i) **manifest.tsv**
   
-* ii) sample-metadata.txt
+* ii) **sample-metadata.txt**
 
-
-
+Vamos a generar el archivo manifest.tsv
 ```
+#!/bin/bash
+
 # Hacer una carpeta
 mkdir data
 
-# i) Manifest file, generamos un archivo con dos columnas y posteriormente llenar el archivo con la información correcta
-
+# generamos un archivo con dos columnas
 echo -e "sample-id\tabsolute-filepath" > data/manifest.tsv
 
-for f in `ls ensamblados/*fastq`; do n=`basename $f`; echo -e "${n%.fastq.gz}\t$PWD/$f"; done >> data/manifest.tsv
+# llenar el archivo con la información correcta
 
-# Vemos el contenido del archivo manifest
-
-less data/manifest.tsv
-
-# sample-id       absolute-filepath
-# MBC1_S1.assembled.fastq /home/lab13/Documents/Ecologia2026/Equipo11/ensamblados/MBC1_S1.assembled.fastq
-# MBC2_S2.assembled.fastq /home/lab13/Documents/Ecologia2026/Equipo11/ensamblados/MBC2_S2.assembled.fastq
-# MBC3_S3.assembled.fastq /home/lab13/Documents/Ecologia2026/Equipo11/ensamblados/MBC3_S3.assembled.fastq
+for f in ensamblados/*.fastq
+do
+    n=$(basename "$f")
+    echo -e "${n}\t$PWD/$f"
+done > data/manifest.tsv
 
 ```
+
+Vemos el contenido del archivo **manifest.tsv**
+
+```
+less 
 
 ```
 # ii) metadata file
