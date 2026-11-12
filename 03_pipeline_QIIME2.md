@@ -590,10 +590,7 @@ done >> data/metadata.txt
 Vemos el contenido del archivo **metadata.txt** con **head data/metadata.txt**
 
 ```
-head data/manifest.tsv
-
-
-
+head data/metadata.txt
 ```
 
 ## 3. QIIME2
@@ -656,24 +653,25 @@ qiime feature-table tabulate-seqs \
 --i-data qiime2/qza/dada2_rep_set.qza \
 --o-visualization qiime2/qzv/dada2_rep_set.qzv
 
+# Generación de un árbol filogenético para el análisis de la diversidad
+qiime fragment-insertion sepp \
+  --i-representative-sequences qiime2/qza/dada2_rep_set.qza \
+  --i-reference-database /home/lab13/Documents/Curso_UJAT/reference/sepp-refs-gg-13-8.qza \
+  --o-tree qiime2/qza/tree.qza \
+  --o-placements qiime2/qzv/tree_placements.qza \
+  --p-threads 20
+
+# Rarefacción  y selección de una profundidad de rarefacción
+qiime diversity alpha-rarefaction \
+  --i-table qiime2/qza/dada2_table.qza \
+  --m-metadata-file data/metadata.txt \
+  --o-visualization qiime2/qzv/alpha_rarefaction_curves.qzv \
+  --p-min-depth 10 \
+  --p-max-depth 4250
 
 
 
 
-# Filogenia
-qiime phylogeny align-to-tree-mafft-fasttree \
---i-sequences qiime2/qza/seqs-dada2.qza \
---o-alignment qiime2/qza/aligned-rep-seqs.qza \
---o-masked-alignment qiime2/qza/masked-aligned-rep-seqs.qza \
---o-tree qiime2/qza/unrooted-tree.qza \
---o-rooted-tree qiime2/qza/rooted-tree.qza
-
-
-
-
-
-mkdir tmp
-export TMPDIR=tmp
 
 silva138=/home/lab13/Reference/Referencia_silva_138/silva-138-99-nb-classifier.qza
 
@@ -690,13 +688,8 @@ qiime metadata tabulate \
 --o-visualization qiime2/qzv/taxonomy.qzv
 
 
-# rarefaction
-qiime diversity alpha-rarefaction \
-  --i-table qiime2/qza/table-dada2.qza \
-  --i-phylogeny qiime2/qza/rooted-tree.qza \
-  --p-max-depth 21778 \
-  --m-metadata-file data/sample-metadata.txt \
-  --o-visualization qiime2/qzv/alpha-rarefaction.qzv
+
+
 
 # Barra de clasificación taxonómica
 qiime taxa barplot \
@@ -852,4 +845,40 @@ qiime feature-table summarize \
     --o-feature-frequencies qiime2/qza/feature-frequencies.qza \
     --o-sample-frequencies qiime2/qza/sample-frequencies.qza \
     --o-summary qiime2/qzv/dada2_table.qzv
+```
+
+**Generación de un árbol filogenético para el análisis de la diversidad**
+
+El análisis en QIIME 2 permite el uso de árboles filogenéticos para calcular métricas de diversidad, tales como la diversidad filogenética de Faith (Faith’s Phylogenetic Diversity) y la distancia UniFrac. 
+
+Tiempo de ejecución: XX segundos
+
+```
+qiime fragment-insertion sepp \
+  --i-representative-sequences qiime2/qza/dada2_rep_set.qza \
+  --i-reference-database /home/lab13/Documents/Curso_UJAT/reference/sepp-refs-gg-13-8.qza \
+  --o-tree qiime2/qza/tree.qza \
+  --o-placements qiime2/qzv/tree_placements.qza \
+  --p-threads 20
+```
+
+**Rarefacción  y selección de una profundidad de rarefacción**
+
+Ahora disponemos de una **feature table** (matriz de observaciones) de ASVs en cada muestra, junto con un árbol filogenético que representa dichos ASVs. Antes de realizar el análisis de diversidad microbiana tenemos que normalizar nuestros datos para compensar la disparidad en la profundidad de secuenciación entre las muestras.
+
+Aunque la profundidad de secuenciación en una muestra de microbioma no guarda una relación directa con la biomasa original de la comunidad, la profundidad de secuenciación relativa influye considerablemente en las comunidades observadas [Weiss et al., 2017](https://link.springer.com/article/10.1186/s40168-017-0237-y). Por consiguiente, para la mayoría de las métricas de diversidad, resulta necesario aplicar un método de normalización.
+
+La rarefacción es un método de normalización basado en el submuestreo sin reemplazo, utilizado habitualmente para abordar el problema de la disparidad en la profundidad de secuenciación. Este proceso consta de dos etapas: primero, se eliminan de la tabla de características aquellas muestras que presentan una profundidad inferior al umbral de rarefacción establecido. A continuación, se realiza un submuestreo sin reemplazo de todas las muestras restantes hasta alcanzar la profundidad de secuenciación especificada. Seleccionar un umbral de rarefacción adecuado para los análisis de diversidad es un paso importante, aunque a veces complejo. 
+
+Utilizaremos `qiime diversity alpha-rarefaction` para realizar submuestreos de la tabla de ASVs a distintas profundidades (comprendidas entre `--p-min-depth` y `--p-max-depth`) y calcular la diversidad alfa mediante una o varias métricas (`--p-metrics`). Al examinar la tabla de características, observamos que la muestra con menor número de secuencias en la tabla tras el proceso de eliminación de ruido (*denoising*) contiene 347 características, mientras que la muestra con mayor número presenta 4996. Nuestro objetivo es establecer una profundidad máxima cercana a este valor superior. Asimismo, sabemos que, al fijar una profundidad de secuenciación de aproximadamente 4250 secuencias por muestra, estaremos analizando información proveniente de 25 muestras. Por tanto, estableceremos este valor como nuestra profundidad de secuenciación máxima.
+
+Tiempo de ejecución: XX segundos
+
+```
+qiime diversity alpha-rarefaction \
+  --i-table qiime2/qza/dada2_table.qza \
+  --m-metadata-file data/metadata.txt \
+  --o-visualization qiime2/qzv/alpha_rarefaction_curves.qzv \
+  --p-min-depth 10 \
+  --p-max-depth 4250
 ```
