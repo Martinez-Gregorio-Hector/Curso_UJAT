@@ -742,7 +742,7 @@ qiime tools import \
 --output-path qiime2/qza/demux_seqs.qza
 ```
 
-Una vez que importaron los datos, podemos examinar las secuencias y la profundidad mediante el comando **qiime demux summarize**. Este proporciona información sobre el número de secuencias en cada muestra  así como sobre la calidad de dichas secuencias. En la carpeta 
+Una vez que importaron los datos, podemos examinar las secuencias y la profundidad mediante el comando **qiime demux summarize**. Este proporciona información sobre el número de secuencias en cada muestra  así como sobre la calidad de dichas secuencias. En la carpeta de [resultados](https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/tree/main/Resultados/qzv) podrás descargar el archivo **demux_seqs.qza** y visualizarlo con **qiime2 view**
 
 ```
 qiime demux summarize \
