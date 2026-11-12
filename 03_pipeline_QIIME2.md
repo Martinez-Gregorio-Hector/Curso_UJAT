@@ -621,16 +621,10 @@ qiime tools import \
 --type 'SampleData[SequencesWithQuality]' \
 --input-format SingleEndFastqManifestPhred33V2 \
 --output-path qiime2/qza/demux_seqs.qza
-
-
-
-
-
-
 # Resumen
 qiime demux summarize \
 --i-data qiime2/qza/demux_seqs.qza \
---o-visualization qiime2/qzv/se-demux.qzv
+--o-visualization qiime2/qzv/demux_seqs.qza
 
 # Denoising
 qiime dada2 denoise-single \
@@ -729,6 +723,8 @@ tail -f qiime2.out
 
 Consultar la importación de datos [adicionales](https://docs.qiime2.org/2024.10/tutorials/importing/#manifest-file)
 
+**Paso tardo** : 93.3 minutos (en una computadora de 128 G de RAM y 20 núcleos)
+
 ```
 mkdir -p qiime2/qzv qiime2/qza
 
@@ -746,7 +742,13 @@ qiime tools import \
 --output-path qiime2/qza/demux_seqs.qza
 ```
 
+Una vez que importaron los datos, podemos examinar las secuencias y la profundidad mediante el comando **qiime demux summarize**. Este proporciona información sobre el número de secuencias en cada muestra  así como sobre la calidad de dichas secuencias. En la carpeta 
 
+```
+qiime demux summarize \
+--i-data qiime2/qza/demux_seqs.qza \
+--o-visualization qiime2/qzv/demux_seqs.qza
+```
 
 
 
