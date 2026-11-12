@@ -3,7 +3,6 @@
    2. Objeto de estudio - Cáncer colorrectal
    3. Descarga de archivos, análisis de calidad y ensamblado de lecturas
    4. Análisis con QIIME2
-   5. Visualización de datos con QIIME2 View
       
 ## 1. Estructura de los archivos fastq y calidad de las lecturas de secuenciación
 
@@ -595,15 +594,9 @@ sample-id	absolute-filepath
 
 ## 3. QIIME2
 
+[Tutoriales](https://docs.qiime2.org/2024.10/tutorials/pd-mice/) para QIIME2
 
-
-Hacer un script para correr QIIME2 con el editor de vim
-
-```
-vim qiime2.sh
-```
-
-Dentro del script copiar estos comandos
+Hacer un bash scripting para correr QIIME2 con el editor de **vim qiime2.sh**, dentro del script copiar estos comandos
 
 ```
 #!/bin/bash
