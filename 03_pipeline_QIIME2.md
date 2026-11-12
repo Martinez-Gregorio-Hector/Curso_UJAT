@@ -643,22 +643,18 @@ qiime metadata tabulate \
   --m-input-file qiime2/qza/dada2_stats.qza  \
   --o-visualization qiime2/qzv/dada2_stats.qzv
 
-# Para ver el resumen de -Feature table-
+# Para ver el resumen de -Feature table- PENDIENTE
 qiime feature-table summarize \
 --i-table qiime2/qza/dada2_table.qza \
 --m-sample-metadata-file data/metadata.txt \
 --o-visualization qiime2/qzv/dada2_table.qzv
 
-
-
-
-
-
-
-
+# PENDIENTE
 qiime feature-table tabulate-seqs \
---i-data qiime2/qza/seqs-dada2.qza \
---o-visualization qiime2/qzv/rep-seqs-dada2.qzv
+--i-data qiime2/qza/dada2_rep_set.qza \
+--o-visualization qiime2/qzv/dada2_rep_set.qzv
+
+
 
 # Para ver la profundidad maxima de los  datos
 
@@ -827,6 +823,18 @@ Descargar el archivo **dada2_stats.qzv** en la sección de [resultados](https://
 qiime metadata tabulate \
   --m-input-file qiime2/qza/dada2_stats.qza  \
   --o-visualization qiime2/qzv/dada2_stats.qzv
+```
+
+**PENDIENTE**
+
+Descargar el archivo **dada2_rep_set.qzv** en la sección de [resultados](https://github.com/Martinez-Gregorio-Hector/Curso_UJAT/tree/main/Resultados/qzv) y visualizar con  **qiime2 view**
+
+**Tiempo de ejecución** : 66 segundos
+
+```
+qiime feature-table tabulate-seqs \
+--i-data qiime2/qza/dada2_rep_set.qza \
+--o-visualization qiime2/qzv/dada2_rep_set.qzv
 ```
 
 **Visualización del feature table**
