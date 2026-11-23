@@ -29,14 +29,14 @@ Los materiales del curso se encuentran organizados de la siguiente manera:
 
 **30 de noviembre 2026. Dra Clara Estela Díaz Velásques y Dr. Felipe Vaca Paniagua**
 
-Conocerás las técnicas moleculares que se usan en la preparación de bibliotecas, las diferentes tecnologías que se usan para la secuenciación masiva y sus principales aplicaciones
+Conocerás las técnicas moleculares que se usan en la preparación de bibliotecas, las diferentes tecnologías que se usan para la secuenciación masiva y sus principales aplicaciones.
 
 
 **[01_Introducción_a_linux.md](01_Introducción_a_linux.md)**
 
 **2 de diciembre 2026. Biól. Luis Enrique Romero Cruz**
 
-Desarrollarás habilidades básicas para utilizar la terminal de Linux, gestionar archivos y directorios y ejecutar comandos fundamentales
+Desarrollarás habilidades básicas para utilizar la terminal de Linux, gestionar archivos y directorios y ejecutar comandos fundamentales.
 
 
 
