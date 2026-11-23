@@ -20,7 +20,7 @@ Adquirir habilidades en el uso de comandos de Linux y R para implementar flujos 
 
 ## Estructura del repositorio
 
-Este repositorio proporciona a los participantes los materiales de consulta, comandos, scripts y recursos utilizados para el curso. 
+Este repositorio proporciona a los participantes materiales de consulta, comandos, scripts y recursos utilizados para el curso. 
 
 Los materiales del curso se encuentran organizados de la siguiente manera:
 
