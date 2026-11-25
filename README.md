@@ -36,7 +36,7 @@ Conocerás las técnicas moleculares que se usan en la preparación de bibliotec
 
 **2 de diciembre 2026. Biól. Luis Enrique Romero Cruz**
 
-Desarrollarás habilidades básicas para utilizar la terminal de Linux, gestionar archivos y directorios y ejecutar comandos fundamentales.
+Desarrollarás habilidades básicas para utilizar la terminal de Linux, gestionar archivos y directorios y ejecutar comandos básicos.
 
 
 
@@ -44,14 +44,14 @@ Desarrollarás habilidades básicas para utilizar la terminal de Linux, gestiona
 
 **4 de diciembre 2026, Biól. Julieta Aurora Morales Valdez**
 
-Aprenderás los fundamentos del lenguaje de programación R, desde el manejo de datos y la utilización de funciones y paquetes hasta la generación de análisis estadísticos y visualizaciones para la interpretación de datos biológicos.
+Aprenderás los fundamentos del lenguaje de programación R, desde el manejo de datos, la utilización de funciones y paquetes y visualizaciones para la interpretación de datos biológicos.
 
 
 **[03_pipeline_QIIME2.md](03_pipeline_QIIME2.md)** 
 
 **7 de diciembre 2026, Dr. Héctor Martínez Gregorio**
 
-Aprenderás a utilizar QIIME 2 para desarrollar flujos de trabajo bioinformáticos (pipelines) orientados al análisis del microbioma, desde el procesamiento y control de calidad de secuencias hasta la identificación taxonómica, el análisis de diversidad microbiana y la interpretación de resultados.
+Aprenderás a utilizar QIIME2 para desarrollar flujos de trabajo bioinformáticos (pipelines) orientados al análisis del microbioma, desde el procesamiento y control de calidad de secuencias hasta la identificación taxonómica, el análisis de diversidad microbiana y la interpretación de resultados.
 
 
 
@@ -65,7 +65,7 @@ Aprenderás a utilizar el paquete microeco en R para el análisis ecológico del
 
 1. El curso tiene un enfoque teórico-práctico, por lo que es indispensable contar con una computadora. Se recomienda utilizar un equipo con sistema operativo **macOS o GNU/Linux**.
 
-    Si cuentas con una computadora con **Windows** tienes que instalar [MobaXterm](https://mobaxterm.mobatek.net/download.html), una aplicación que proporciona un entorno de terminal compatible con herramientas de Linux. Además, integra un servidor gráfico X11, un cliente SSH para establecer conexiones remotas seguras y diversas herramientas de red que facilitan el trabajo en entornos de cómputo y servidores.
+    Si cuentas con una computadora con **Windows** tienes que instalar [MobaXterm](https://mobaxterm.mobatek.net/download.html), una aplicación que proporciona un entorno de terminal compatible con herramientas de Linux. Además, MobaXterm integra un servidor gráfico X11, un cliente SSH para establecer conexiones remotas seguras y diversas herramientas de red que facilitan el trabajo en entornos de cómputo y servidores.
 
 2. Editor de texto. Es necesario contar con un editor de texto para crear, modificar y guardar archivos de código y scripts durante las sesiones prácticas del curso.
 
