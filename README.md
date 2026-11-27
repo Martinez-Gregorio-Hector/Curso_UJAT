@@ -61,6 +61,10 @@ Aprenderás a utilizar QIIME2 para desarrollar flujos de trabajo bioinformático
 
 Aprenderás a utilizar el paquete microeco en R para el análisis ecológico del microbioma, explorando herramientas para evaluar la diversidad microbiana, identificar microorganismos diferencialmente abundantes, analizar patrones de composición y estructura de comunidades microbianas, e interpretar sus relaciones con variables ambientales o clínicas.
 
+**11 de diciembre 2026, Dr. Héctor Martínez Gregorio**
+
+Trabajo final por equipo
+
 ## Que necesitamos para este curso
 
 1. El curso tiene un enfoque teórico-práctico, por lo que es indispensable contar con una computadora. Se recomienda utilizar un equipo con sistema operativo **macOS o GNU/Linux**.
