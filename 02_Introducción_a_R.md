@@ -4,9 +4,13 @@
 
 ### Descarga de R
 
-Para poder usar RStudio tenemos que tener instalado R en nuestras máquinas. Si aún no lo has instalado lo puedes descargar desde el siguiente link https://cran.itam.mx. Descargar la versión más reciente.
+R es el motor; RStudio es el tablero donde lo manejas. Necesitas los dos, y en ese orden: **primero R, después RStudio**. Si instalas RStudio sin R, no va a encontrar el motor.
 
-También necesitas descargar la versión más reciente de RStudio [Desktop](https://posit.co/download/rstudio-desktop/).
+- R (versión más reciente): https://cran.itam.mx
+                          : https://cran.r-project.org/mirrors.html
+- RStudio Desktop (versión más reciente): https://posit.co/download/rstudio-desktop/
+
+NOTA: De preferencia llegar a la sesión con R y RStudio instalados. 
 
 ### Misión de R
 
@@ -26,78 +30,177 @@ R y RStudio están diseñados para que muchas personas puedan aprenderlo desde c
 
 ### La interfaz gráfica de RStudio
 
-RStudio es un entorno de desarrollo integrado (IDE) para R. Su interfaz gráfica incluye 3 paneles principales:
+RStudio es un entorno de desarrollo integrado (IDE) para R. Su interfaz gráfica incluye 4 paneles principales:
 
-* Consola de R
-* Datos en el ambiente, Historial, Conecciones remotas, Git.
-* Gráficos, Archivos, Ayuda, Paqueterías
+1. **Editor de scripts** (arriba izquierda): donde escribes y guardas tu código (.R).
+2. **Consola** (abajo izquierda): donde corre el código.
+3. **Environment / History / Connections / Git** (arriba derecha): el Environment lista las variables que tienes guardadas. 
+4. **Files / Plots / Packages / Help / Viewer** (abajo derecha): archivos, gráficas, paquetes instalados y ayuda.
 
 <p align="center">
-  <img src="https://github.com/Martinez-Gregorio-Hector/AnalisisGenomico-EcologiaFESIztacala/blob/main/Unidad2/FigurasUnidad2/RStudio2.png? raw=true" alt="shell" width="600" height="300">
+ <img width="1917" height="1140" alt="Captura de pantalla 2026-11-27 002000" src="https://github.com/user-attachments/assets/15e36a18-02f2-4ea9-8c43-d19fc64799e3" />
 </p>
 
 ### Opciones globales
 
 Las opciones globales (Global Options…) nos permitirán cambiar aspectos visuales de la organización de la interfaz gráfica. Para acceder a estas opciones debemos ir a **Tools > Global Options**.
 
-### Actividades
+### Actividad (1 min)
 
-1. Explora el menú de **Global Options**
+> Explora el menú de **Global Options**
+> Entra a Tools > Global Options > Appearance,
+> Sube el tamaño de letra a 14 y cierra. Todos deberíamos ver lo mismo.
+
+<p align="center">
+  <img width="1917" height="1135" alt="image" src="https://github.com/user-attachments/assets/6f0cea20-8070-43dc-8ad6-ff930337323f" />
+</p>
 
 ### Archivos de RStudio
 
-En RStudio podemos generar todos los archivos enlístados en “New File”. El archivo más usado para desarrollar código en R es **R Script**. Aún así RStudio nos permite hacer reportes de nuestros código con **R Notebook** y **R Markdown**, aplicaciones web con **Shiny Web App**, generar APIs con **Plumber API**, editar código en **HTML**, **C**, **C++**, **Python**, **CSS**, **JavaScript**, **Shell**, entre otros.
+File > New File muestra todo lo que RStudio puede crear. El archivo más usado para desarrollar código en R es **R Script**. Aún así RStudio nos permite hacer reportes de nuestros código con **R Notebook** y **R Markdown**.
+
+RStudio también hace apps web con **Shiny Web App**, generar APIs con **Plumber API**, editar código en **HTML**, **C**, **C++**, **Python**, **CSS**, **JavaScript**, **Shell**, entre otros. 
 
 <p align="center">
-  <img src="https://github.com/Martinez-Gregorio-Hector/AnalisisGenomico-EcologiaFESIztacala/blob/main/Unidad2/FigurasUnidad2/RStudio3.png? raw=true" alt="shell" width="600" height="300">
+  <img width="1916" height="1132" alt="image" src="https://github.com/user-attachments/assets/46429768-7574-47b9-94df-28a70a7f46fd" />
 </p>
+
+### Actividad (3 min)
+
+> File > New File > R Script. Escribe estas tres líneas,
+> guarda el archivo como `prueba.R` en la carpeta `script/` y corre cada línea
+> con `Ctrl + Enter`:
+> ```r
+> # Mi primer script
+> 2 + 2
+> "Hola, R"
+> ```
+
+<p align="center">
+  <img width="1012" height="1128" alt="Captura de pantalla 2026-11-27 120910" src="https://github.com/user-attachments/assets/ae0acf6f-5eb6-4eeb-848a-e5380809bcd3" />
+</p>
+
+> **Pregunta:** ¿Qué diferencia hay entre lo que ves en el editor y lo que ves en la consola?
+> El editor es donde escribes y guardas; la consola es donde R responde, se ejecuta al instante y no se guarda al cerrar.
 
 ### Instalación de librerías
 
-Revisamos que la mayoría de los paquetes de R se almacenan en la Red Integral de Archivos de R (CRAN), el repositorio oficial de paquetes de R. Para instalar un paquete desde CRAN, utilizamos la función **install.packages()**:
+Un paquete es código que alguien más ya escribió.
+La mayoría vive en CRAN (Red Integral de Archivos de R), el repositorio oficial de R.
+**Instalar NO es lo mismo que cargar.**
+Para instalar un paquete desde CRAN, utilizamos la función **install.packages()**:
+
+- `install.packages("readr")` — se hace **una sola vez** en la vida de tu computadora. Es como comprar el libro.
+- `library(readr)` — se hace **cada vez** que abres RStudio. Es como abrir el libro para leerlo.
+
+```r
+install.packages("readr")          # una vez
+library(readr)                     # cada sesión
+```
+
+Este comando instala el paquete **readr**, que permite leer archivos CSV y otros formatos de archivo planos. Asegúrese de escribir el nombre del paquete entre comillas.
 
 ```
 install.packages("readr", dependencies=TRUE)
 ```
 
-Este comando instala el paquete **readr**, que permite leer archivos CSV y otros formatos de archivo planos. Asegúrese de escribir el nombre del paquete entre comillas.
-
 También puede instalar varios paquetes a la vez pasando un vector de caracteres **(c())**:
 
 ```
 install.packages(c("readr", "ggplot2", "tidyr"))
-
 ```
-### Actividad
 
-* Crear un **R scripts**. 
-* En un script ejecuta el siguiente código:
+**NOTA:** Al instalar, R imprime mucho texto (descarga, dependencias, "DONE"). No es un error. Y ggplot2 puede tardar 2-3 minutos: no cierres RStudio.
 
-```
-install.packages("MASS", dependencies=TRUE)
+### Actividad (5 min)
 
-library(MASS)
+> Corre esto en tu script y observa cada paso.
 
-data(cats)
-View(cats)
+> ``` r
+> install.packages("MASS", dependencies=TRUE)
+> library(MASS)
+> data(cats)
+> View(cats)
+> table(cats$Sex)
+> str (cats)
+> ```
 
-table(cats$Sex)
-```
-¿Qué sucede al ejecutar data(cats) y View(cats)?
+¿Qué hace cada línea?:
 
+1. Instala el paquete (una vez).
+<p align="center">
+  <img width="1901" height="1126" alt="Captura de pantalla 2026-11-27 124804" src="https://github.com/user-attachments/assets/651b172d-1e28-4299-9adf-171abf53d52c" />
+</p>
 
-### Actividad
+2. Lo carga en esta sesión.
+<p align="center">
+  <img width="1916" height="1132" alt="Captura de pantalla 2026-11-27 125320" src="https://github.com/user-attachments/assets/c070981a-e6c1-4903-807f-ecc73570ba56" />
+</p>
 
-* Ejecuta el siguiente código:
+3. Carga el dataset `cats`: peso corporal y del corazón de 144 gatos.
 
-```
-install.packages("ggplot2", dependencies=TRUE)
-library(ggplot2)
+4. Lo abre como hoja de cálculo.
+   Ojo: `View()` abre la pestaña arriba a la izquierda, donde estaba tu script. No se perdió, está en otra pestaña.
 
-ggplot(cats, aes(x = Sex)) + 
-    geom_bar(fill = "orange", color = "black") + theme_classic() 
+<p align="center">
+  <img width="1917" height="1131" alt="Captura de pantalla 2026-11-27 125607" src="https://github.com/user-attachments/assets/c3884cee-4672-455b-a0bd-8ebfabd73485" />
+</p>
 
-```
+5. Cuenta cuántos gatos hay de cada sexo. El `$` significa "la columna `Sex` del objeto `cats`".
+
+<p align="center">
+  <img width="1912" height="1140" alt="Captura de pantalla 2026-11-26 171602" src="https://github.com/user-attachments/assets/54a10a7e-aab1-4309-97a1-2f036ce007e5" />
+</p>
+
+6. `str()` te dice qué tipo de objeto es y qué columnas tiene.
+
+<p align="center">
+  <img width="1912" height="1135" alt="Captura de pantalla 2026-11-27 184322" src="https://github.com/user-attachments/assets/6f59d8b2-d29a-4068-96c9-80dfbdc46292" />
+</p>
+
+> **Preguntas:**
+> ¿Qué sucede al ejecutar data(cats) y View(cats)?
+> ¿Cuántas filas y columnas tiene `cats`?
+> ¿Qué tipo de objeto es?
+
+### Actividad (5 min)
+
+> Hagamos una gráfica.
+
+> ``` r 
+> install.packages("ggplot2", dependencies=TRUE)
+> library(ggplot2)
+> ggplot(cats, aes(x = Sex)) + 
+>    geom_bar(fill = "orange", color = "black") + theme_classic() 
+> ```
+
+<p align="center">
+  <img width="1907" height="1131" alt="image" src="https://github.com/user-attachments/assets/9e5dbcf0-d7a7-42d4-86d3-5bea3d37f391" />
+</p>
+
+Si quisiéramos que cada barra tenga un color distinto:
+
+> ``` r 
+> install.packages("ggplot2", dependencies=TRUE)
+> library(ggplot2)
+> ggplot(cats, aes(x = Sex, fill = Sex)) + 
+>    geom_bar(color = "black") +
+>    scale_fill_manual (values = c("orange", "blue")) +
+>    theme_classic() 
+> ```
+<p align="center">
+  <img width="1916" height="1132" alt="image" src="https://github.com/user-attachments/assets/130b3c33-2976-4bee-9fcf-4a5c6da0bc3f" />
+</p>
+
+### Actividad (2 min)
+
+> 1. Session > Restart R.
+> 2. Corre solo `data(cats)`. **¿Qué pasó?** R no encuentra `cats`.
+> 3. Ahora corre `library(MASS)` y vuelve a correr `data(cats)`. **¿Por qué ahora sí funciona?**
+
+<p align="center">
+  <img width="1007" height="1135" alt="Captura de pantalla 2026-11-27 191726" src="https://github.com/user-attachments/assets/ac6a0579-116d-434f-87ec-99870038bfc9" />
+</p>
 
 ### Installing R Packages from GitHub
 
@@ -106,197 +209,296 @@ Algunos paquetes de R no están en CRAN, pero sí están disponibles en GitHub. 
 
 Para instalar un paquete desde GitHub, use el paquete **{remotes}**:
 
-```
-install.packages("remotes")
-remotes::install_github("rstudio/shiny")
-
-```
+> ``` r
+> install.packages("remotes")
+> remotes::install_github("r-lib/here")
+> library(here)
+> ```
 
 ### Instalación de paquetes R desde un archivo local
 
 Si has descargado un paquete a tu ordenador, puedes instalarlo así:
 
-```
-install.packages(/Users/YourName/Downloads/abc_2.1.zip", repos = NULL, type = "source")
+> ``` r
+> install.packages(/Users/YourName/Downloads/abc_2.1.zip", repos = NULL, type = "source")
+> ```
 
-```
+En Mac o Linux la ruta se ve distinta (/Users/tu_nombre/...). Lo importante es que la ruta vaya entre comillas y que repos = NULL le diga a R que no busque en internet.
 
-### Instalación de paquetes desde bioconductor
+### Instalación de paquetes desde Bioconductor
 
-Puedes descargar una librería desde [bioconductor](https://www.bioconductor.org/)
+Bioconductor es un repositorio especializado en análisis de datos biológicos: genómica, transcriptómica, secuenciación.
 
 Ejemplo de instalación de [MutationalPattern](https://www.bioconductor.org/packages/release/bioc/html/MutationalPatterns.html)
 
-```
-if (!require("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
+> ``` r
+> if (!require("BiocManager", quietly = TRUE))
+>    install.packages("BiocManager")
+> BiocManager::install("MutationalPatterns")
+> ```
 
-BiocManager::install("MutationalPatterns")
-
-```
+**NOTA:** Los paquetes de Bioconductor tardan mucho más que los de CRAN (a veces 10 minutos o más). **NO** instalar en vivo durante la clase.
 
 ### Flujos de trabajo con proyectos de RStudio
 
-Es un archivo especial de R, compatible con RStudio, que al ejecutarlo hará 3 cosas:
+Un proyecto de RStudio es una carpeta con un archivo `.Rproj` adentro. Al ejecutarlo hará 3 cosas:
 
-* Abrirá una nueva sesión de RStudio.
-  
-* Establecerá la ubicación del proyecto como tu directorio de trabajo.
-  
-* Establecerá la ubicación del proyecto como la raíz de los archivos.
+1. Se abre RStudio en una sesión nueva.
+2. La carpeta del proyecto se vuelve tu **directorio de trabajo**.
+3. Todos los archivos se leen y guardan relativos a esa carpeta.
+
+**¿Para qué sirve?** Para que tus rutas funcionen en cualquier computadora. Si usas rutas relativas (data/cats.csv) en vez de absolutas (C:/Users/YourUser/...), tu script funciona igual en tu laptop y en la de tu compañero, sin cambiar nada.
 
 ### ¿Cómo generamos un proyecto de RStudio?
 
 Creando un proyecto en un directorio nuevo.
 
-En las opciones de RStudio Ve a **File > New project > New Directory > New Project**.
+**File > New project > New Directory > New Project**.
 
-* Asigna un nombre a tu proyecto, sin espacios y sin caracteres especiales.
+1. Asigna un nombre a tu proyecto, sin espacios y sin caracteres especiales.
+2. Selecciona la ubicación donde crearás el nuevo directorio.
+3. Selecciona la opción **Open in New Session**.
+4. Oprime **Create Project**.
 
-* Selecciona la ubicación donde crearás el nuevo directorio.
+### Actividad (5 min)
 
-* Selecciona la opción Open in New Session.
-  
-* Oprime Create Project.
-
-Crea tres directorio en la carpeta que acabas de crear: **script**, **data**, y **plot**
+> 1. Crea un proyecto llamado `curso_r` con los pasos de arriba.
 
 <p align="center">  
-  <img src="https://github.com/Martinez-Gregorio-Hector/AnalisisGenomico-EcologiaFESIztacala/blob/main/Unidad2/FigurasUnidad2/OrganizacionDirectorio.png? raw=true" alt="shell" >
+  <img width="771" height="866" alt="image" src="https://github.com/user-attachments/assets/eb5d60ca-b8c5-461e-857a-ad04efc614db" />
 </p>
+
+> 2. En el panel Files (abajo a la derecha), crea tres carpetas: **`script`**, **`data`** y **`plot`**.
+
+<p align="center">  
+  <img width="1910" height="1135" alt="Captura de pantalla 2026-11-27 194255" src="https://github.com/user-attachments/assets/901ee19d-5bd6-4c7c-bdc8-373cf355966d" />
+</p>
+
+> 3. Guarda tu prueba.R dentro de script/.
+
+**Verificar:** Arriba de la consola debe decir curso_r. Si dice otra cosa, no estás dentro del proyecto.
 
 ### Nombre de archivos
 
-Los nombres importan:
+Los nombres importan. Un buen nombre es:
 
-* Amigables para computadoras
-
-* Amigables para humanos
-
-* Se ordenan convenientemente
-
-<p align="center">  
-  <img src="https://github.com/Martinez-Gregorio-Hector/AnalisisGenomico-EcologiaFESIztacala/blob/main/Unidad2/FigurasUnidad2/NombreDeLosArchivos.png? raw=true" alt="shell" >
-</p>
+- Amigables para computadoras.
+- Amigables para humanos.
+- Se ordenan convenientemente.
 
 ### Amigable para computadoras (no sólo R)
 
 ## Es fácil usar expresiones regulares y globbing
 
-* Evitar espacios, puntuación, acentos, caracteres especiales, uso de mayúsculas y minúsculas.
+- Evitar espacios, puntuación, acentos, caracteres especiales, uso de mayúsculas y minúsculas.
 
 ### Es fácil operar sobre ellos
 
-* Usar delimitadores pensando que vamos a extraer componentes (guión bajo _)
+- Usa guiones bajos (_) para separar metadatos que puedas extraer después.
+- Usa guiones medios (-) dentro de una palabra para que se lea fácil.
 
 ### Amigables para humanos
 
-Los nombres contienen información
-
-Los nombres dan contexto
+- Los nombres contienen información.
+- Los nombres dan contexto.
 
 ###  Se ordenan convenientemente
 
-Incluye un componente numérica
+- Incluye un componente numérico.
+- Usa ceros para tener una longitud constante, un orden ventajoso:
+  `muestra_01`, `muestra_02`, `...`, `muestra_10`.
 
-Incluye ceros para tener una longitud constante, un orden ventajoso
-
-Usa el estándar ISO 8601 para fechas: aaaa-mm-dd
-
-### Guías
-
-* Evitar espacios, puntuación, acentos, caracteres especiales, uso de mayúsculas y minúsculas
-
-* Usar guiones bajos _ para separar metadatos que podré extraer después
-
-* Usar guiones altos para delimitar palabras y que sean fácil de leer
-
-* aaaa-mm-dd o algun componente numérico que facilite ordenar
+- Usa el estándar **ISO 8601** para fechas: `aaa-mm-dd`.
+  
+### Ejemplo
+<p align="center">  
+  <img width="1212" height="337" alt="image" src="https://github.com/user-attachments/assets/fed7576b-03fd-4ee9-b3e6-1153ac98d646" />
+</p>
 
 
 ## 2. Variables y tipos de datos
 
-En términos generales, todos los elementos que maneja R son objetos: un valor numérico es un objeto, una variable es un objeto, un vector es un objeto, una función es un objeto, una base de datos es un objeto, un gráfico es un objeto, ...
+En R, todo lo que existe en tu sesión es un **objeto**: un número, una variable, un vector, una función, una base de datos, una gráfica. El panel **Environment** es la lista de los objetos que tienes vivos en este momento.
 
 ### Variables
 
-Las variables son localidades de memoria a las que les asignamos un nombre para almacenar un valor que puede cambiar en el transcurso de un programa. 
+Una variable es un espacio en memoria al que le damos un nombre para guardar un
+valor que puede cambiar durante el programa.
 
-En R existen 3 maneras de hacer asignaciones de valores a las variables, utilizando los símbolos: **<-, ->, =**.
+**La forma estándar de asignar en R es `<-`.**
 
-**NOTA**: podemos agregar comentarios a nuestro código utilizando el caracter **#**. Es muy útil documentar el código, ya que lo hace más entendible
+> ```r
+> A <- 3
+> B <- 125
+> Y <- 8
+> ```
 
-```{r}
-# Asignación de variables
-A=3
-B <- 125 
-8 -> Y
-# Ver que se guardó en esas variables
-A
-B
-Y
-```
+Existen otras dos formas:
+- = Funciona, pero se reserva para argumentos de funciones: mean(x, na.rm = TRUE).
+- -> Existe, pero casi nadie la usa.
+
+**Cuidado:** **= asigna, == compara.** 
+> A = 3 guarda el 3 en A; A == 3 pregunta "¿A es igual a 3?". Si escribes if (A = 3), R te marca error.
+
+**NOTA**: Todo lo que va después de `#` es para humanos, R lo ignora. Documentar el código lo hace entendible aún si lo revisas de nuevo tiempo después.
+
+### Actividad (3 min)
+
+> ```r
+> # Asignación de variables
+> A <- 3
+> B <- 125 
+> Y <- 8
+> # Ver que se guardó en esas variables
+> ```
+
+<p align="center"> 
+  <img width="1912" height="1132" alt="Captura de pantalla 2026-11-27 202251" src="https://github.com/user-attachments/assets/6b793bf2-79ee-48a2-8da9-a3fd5327c9b7" />
+</p>
 
 Si una operación no es asignada a una variable, la operación se realizará y su resultado sólo se desplegará en la pantalla, pero no quedará almacenada.
 
-```{r}
-# Ejemplo donde no se asigna una variable
-3 + 5
-# Ejemplo de asignación de variable
-var1 = 4 + 6
-var1
-```
+### Actividad (3 min)
 
-Reglas para nombres de variables
+> Corre el código.
+
+> ```r
+> # Ejemplo donde no se asigna una variable
+> 3 + 5            # se muestra 8, pero no queda guardado
+> # Ejemplo de asignación de variable
+> var1 = 4 + 6     # ahora sí queda guardado
+> var1
+> ```
+
+<p align="center"> 
+  <img width="1916" height="1133" alt="Captura de pantalla 2026-11-27 203029" src="https://github.com/user-attachments/assets/2c3f2f15-fd2d-409b-b4d7-62f614318195" />
+</p>
+
+> **Pregunta:** Después de correr A + B, ¿Aparece una nueva variable en el Environment? ¿Por qué?
+
+### Reglas para nombres de variables
 
 Al momento de definir el nombre de una variable debemos tomar en consideración las siguientes reglas:
 
 1. No deben comenzar con un número
 2. No deben contener espacios en blanco
 3. No deben contener símbolos especiales, excepto guión bajo ( _ ) o punto( . ).
+4. **No uses nombres de funciones que ya existen en R.** Si llamas `data <- 5`, luego `data(cats)` va a fallar.
 
-Algunos ejemplos de nombres válidos son:
+### Actividad (3 min)
 
-```{r}
-Factor_de_cambio = 2
-x1 <- 32.5
-gen_reprimido = "catB"
-condicion <- "WT"; curso2020 <-"IntroR"; x<-25
-```
+> Algunos ejemplos de nombres válidos son:
 
-**NOTAS**. Cada comando puede estar en una línea o varios comandos por línea
-separados por “;”.
-Si al escribir un comando damos enter y el comando queda incompleto, entonces, de manera automática R colocará un símbolo de más (+) indicando que el comando se encuentra incompleto y permitiendo completarlo. Mientras no se complete el comando, seguirá apareciendo el símbolo +, cada vez que demos enter.
+> ```r
+> Factor_de_cambio <- 2
+> x1 <- 32.5
+> gen_reprimido <- "catB"
+> condicion <- "WT"; curso2020 <- "IntroR"; x <- 25
+> ```
+
+<p align="center"> 
+  <img width="1915" height="1136" alt="image" src="https://github.com/user-attachments/assets/d4e7b512-710c-4ac6-bb14-e3d629898afb" />
+</p>
+
+**NOTAS:**
+- Dejar un espacio a cada lado de `<-`. No es obligatorio, pero hace el código mucho más legible.
+- Cada comando puede estar en una línea o varios comandos por línea separados por “;”.
+- Si al escribir un comando damos enter y el comando queda incompleto, entonces, de manera automática R colocará un símbolo de más (+) indicando que el comando se encuentra incompleto y permitiendo completarlo. Mientras no se complete el comando, seguirá apareciendo el símbolo +, cada vez que demos enter.
+
+<p align="center"> 
+  <img width="1198" height="1132" alt="Captura de pantalla 2026-11-27 212425" src="https://github.com/user-attachments/assets/95eaaa32-da1f-487f-8c66-c98426316232" />
+</p>
+
+> **Pregunta:** ¿Puedes notar el detalle faltante? 
 
 ### R es sensible a mayúsculas y minúsculas en los nombres de objetos
 
-Si bien es cierto que los nombres de variables pueden contener mayúsculas y minúsculas, es importante mencionar que, R distingue entre mayúsculas y minúsculas.
+Si bien es cierto que los nombres de variables pueden contener mayúsculas y minúsculas, es importante mencionar que, R **distingue entre mayúsculas y minúsculas**.
 
-```{r}
-genoma <-"ecoli"
-Genoma <-"ecoli"
-GENOMA <-"Klebsiella"
-GeNoMa <-"Geobacter"
-```
+### Actividad (3 min) 
 
-Todas las definiciones anteriores son variables diferentes.
+> **Pregunta:** ¿Puedes notar el error?
+
+> ```r
+> genoma <-"ecoli"
+> Genoma <-"ecoli"
+> GENOMA <-"Klebsiella"
+> GeNoMa <-"Geobacter"
+> ```
+
+<p align="center"> 
+  <img width="1342" height="1135" alt="Captura de pantalla 2026-11-27 213430" src="https://github.com/user-attachments/assets/f346c2f5-ea86-4320-906f-301b85a8a0e1" />
+</p>
+
+Son **cuatro variables distintas**. Por eso, si R te dice `object not found`, lo primero que debes revisar es si escribiste bien las mayúsculas.
+
+<p align="center"> 
+  <img width="1907" height="1132" alt="Captura de pantalla 2026-11-27 213643" src="https://github.com/user-attachments/assets/ede3e163-fbbf-4197-9fcd-62c7228c6f91" />
+</p>
 
 ### Tipos de datos
 
-En **R** (como en otros lenguajes de programación) hay diferentes tipos de datos; dentro de los más utilizados estan los **numéricos**, **lógicos** y **alfanuméricos** (o cadenas, strings en inglés).
+En **R** (como en otros lenguajes de programación) hay diferentes tipos de datos; dentro de los más utilizados estan los **numéricos**, **lógicos** y **alfanuméricos** (o cadenas, *strings* en inglés).
 
-```{r}
-Edad <- 18            # Valor numérico
-LogFoldC <- 2.0075    # Valor numérico
-resultado <- TRUE     # Valor lógico o booleano
-geneName = "CRP"      # Valor alfanumérico (caracter)
-```
+### Actividad (3 min)
+
+> Revisa lo siguiente
+
+> ``` r
+> Edad <- 18            # Valor numérico entero (int)
+> LogFoldC <- 2.0075    # Valor numérico decimal (float)
+> resultado <- TRUE     # Valor lógico, tiene dos estados (boolean)
+> geneName = "CRP"      # Valor alfanumérico (character)
+> ```
+
+<p align="center"> 
+  <img width="442" height="425" alt="image" src="https://github.com/user-attachments/assets/ac85097c-441c-40d1-b366-15ad213ed60d" />
+</p>
+
+<p align="center"> 
+<img width="1161" height="1135" alt="Captura de pantalla 2026-11-27 215336" src="https://github.com/user-attachments/assets/33935064-d2fc-4f25-88dc-085cae7656c1" />
+</p>
 
 **NOTA**: Es importante resaltar que los valores de tipo caracter deben ser delimitados por comillas simples o dobles, de lo contrario R considera que es el nombre de un objeto.
 
+Para saber de qué tipo es un objeto, usa `class()`:
+
+### Actividad (3 min)
+> Realiza la siguiente prueba
+
+> ``` r 
+> class(Edad)       # "numeric"
+> class(resultado)  # "boolean"
+> class(geneName)   # "character"
+> ```
+
+<p align="center">
+  <img width="1220" height="1136" alt="Captura de pantalla 2026-11-27 215924" src="https://github.com/user-attachments/assets/8b42032b-55a8-4aad-aa0d-a7559b446489" />
+</p>
+
 ## Valores perdidos
 
-Los valores perdidos constituyen una clase particular de dato, que se codifica siempre como NA (Not Available), independientemente de que la variable sea numérica o alfanumérica. Estos valores sirven, por ejemplo, cuando se registran datos y no es posible obtener la información de algunas variables para determinados casos. Con carácter general cualquier operación que involucre a un valor perdido dará como resultado también NA.
+Los valores perdidos constituyen una clase particular de dato, que se codifica siempre como `NA` (Not Available), independientemente de que la variable sea numérica o alfanumérica. Estos valores sirven, por ejemplo, cuando se registran datos y no es posible obtener la información de algunas variables para determinados casos. Con carácter general, cualquier operación que involucre a un valor perdido dará como resultado también `NA`.
+
+### Actividad (3 min)
+> Realiza la siguiente prueba
+
+> ``` r
+> x <- c(1, 2, NA, 4)
+>
+> is.na(x)                 # TRUE FALSE TRUE FALSE
+> mean(x)                  # NA
+> mean(x, na.rm = TRUE)    # 2.333...
+> ```
+
+<p align="center">
+  <img width="1092" height="1130" alt="image" src="https://github.com/user-attachments/assets/e86eebc1-5ce2-4ede-86e7-cb5d7ba3c672" />
+</p>
+
+
+
+
+
 
 
 
