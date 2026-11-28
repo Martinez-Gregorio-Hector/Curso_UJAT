@@ -672,15 +672,41 @@ La función base de R:
 
 >**Preguntas:** ¿cuántas filas y columnas tiene `cats`? ¿Qué diferencia hay entre `head()` y `str()`?
 
+## 4. Guardar gráficos
+
+Una gráfica que no guardaste no existe. Este bloque es corto pero se usa todas las veces que hagas un análisis.
+
+### La forma recomendada: `ggsave()`
+Este `ggsave()` guarda la **última gráfic que dibujaste**. No necesitas decirle cuál.
+
+> ```r
+> library(ggplot2)
+> ggplot(cats, aes(x = Sex)) +
+  > geom_bar(fill = "orange", color = "black") +
+  > theme_classic()
+> ggsave("plot/gatos.png", width = 4, height = 3)
+> ```
+
+¿Qué hace cada argumento?:
+- `"plot/gatos.png"` #Dónde guardarla. La extensión decide el formato.
+- `width = 4`, `height = 3` #Tamaño en pulgadas.
+- `dpi = 300`        #Resolución. Para publicación usa 300; para pantalla, 72 basta.
+
+Versión completa:
+
+> ggsave("plot/gatos.png", width = 4, height = 3, dpi = 300)
+
+**NOTA:** Recuerda que la carpeta `plot/` tiene que existir. `ggsave()` no la crea sola. Si te marca error, créala primero en el panel Files.
+
+### Formatos: cuál usar
+
+<p align="center">
+  <img width="892" height="217" alt="image" src="https://github.com/user-attachments/assets/7dfa02c3-5c0d-4008-b31c-2a81f8c3c20a" />
+</p>
 
 
-
-
-
-
-
-
-
+ggsave("plot/gatos.pdf", width = 4, height = 3)   # para publicar
+ggsave("plot/gatos.png", width = 4, height = 3, dpi = 300)  # para diapositiva
 
 
 # minicurso_dic2020 > estructuras_de_datos > estructuras_de_datos.r
