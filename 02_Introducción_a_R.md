@@ -316,6 +316,8 @@ Los nombres importan. Un buen nombre es:
 </p>
 
 
+
+
 ## 2. Variables y tipos de datos
 
 En R, todo lo que existe en tu sesión es un **objeto**: un número, una variable, un vector, una función, una base de datos, una gráfica. El panel **Environment** es la lista de los objetos que tienes vivos en este momento.
@@ -494,6 +496,168 @@ Los valores perdidos constituyen una clase particular de dato, que se codifica s
 <p align="center">
   <img width="1092" height="1130" alt="image" src="https://github.com/user-attachments/assets/e86eebc1-5ce2-4ede-86e7-cb5d7ba3c672" />
 </p>
+
+
+
+## 3. Importar y exportar archivos
+
+Hasta ahora escribimos los datos a mano. En realidad, los datos viven en archivos. Este bloque es el puente entre tu computadora y R.
+
+> **Antes de empezar:** asegúrate de estar dentro de tu proyecto `curso_r`.
+> Arriba de la consola debe decir `curso_r`. Si no, File > Open Project.
+
+Vamos a dejar nuestra sesión en blanco, realiza lo siguiente:
+1. Haz click dentro de la consola.
+2. Menú **Session** > **Restart R**.
+3. Mira el Environment: debe decir *Environment is empty*
+
+### Rutas relativas vs rutas absolutas
+
+**Ruta absoluta** — el camino completo desde la raíz del disco:
+
+> C:/Users/Julieta/Downloads/curso_r/data/cats.csv
+
+
+**Ruta relativa** — el camino desde donde estás parado (tu proyecto):
+
+> data/cats.csv
+
+**Regla de oro: usa siempre rutas relativas.**
+- Si usas absolutas, tu script solo funciona en tu computadora. 
+- Si usas relativas, funciona en la tuya y en la de tu compañero sin cambiar nada.
+
+**NOTA:** en R, las rutas usan **barra normal** `/`, incluso en Windows. No uses `\` (barra invertida), porque R la lee como carácter de escape.
+
+### Actividad (2 min)
+> Haz el intento.
+
+> ```r
+> # Bien
+> read.csv("data/cats.csv")
+> #Mal (en Windows)
+> read.csv("data\cats.csv")
+> ```
+
+<p align="center">
+  <img width="1097" height="1137" alt="image" src="https://github.com/user-attachments/assets/abebdd73-bec7-47bc-bb8d-50bd28867a14" />
+</p>
+
+### ¿Cómo sé en dónde estoy?
+
+> ```r
+> getwd()      # ¿cuál es mi directorio de trabajo?
+> list.files() # ¿qué archivos hay aquí?
+> ```
+
+### Importar y exportar archivos
+
+**Importar:** Implica traer o incorporar un archivo externo hacia el programa o sistema en el que trabajas, generalmente a otro formato distinto al propio de la aplicación.
+
+**Exportar:** Implica sacar o guardar datos desde tu programa hacia un archivo externo. Generalmente en formatos diferentes al nativo.
+
+### Importar un CSV
+Un archivo CSV (Comma Separated Values), es cualquier archivo de texto en el cual los caracteres están separados por comas, en el que los datos se organizan de manera tabular. Se compone de líneas de texto donde cada línea representa un registro (una fila) de la tabla y cada campo de datos se separa generalmente por comas. 
+
+En formato de tabla vemos algo como esto:
+
+<p align="center">
+  <img width="867" height="367" alt="image" src="https://github.com/user-attachments/assets/46c291f7-eb8b-4d3c-80d0-bc33301eca0a" />
+</p>
+
+En formato SCV:
+
+<p align="center">
+  <img width="437" height="290" alt="image" src="https://github.com/user-attachments/assets/83a73473-d066-4f74-b7e1-c5487f4fba8a" />
+</p>
+
+La función base de R:
+
+> cats <- read.csv("data/cats.csv")
+
+¿Qué hace cada argumento?:
+
+- `"data/cats.csv"`  #La ruta al archivo, entre comillas.
+- `header = TRUE`    #La primera fila tiene los nombres de las columnas (es el valor por defecto).
+- `sep = ","`        #El separador de columnas. Para CSV es coma; para TSV es "\t" (tabulador).
+
+Versión completa:
+
+> cats <- read.csv("data/cats.csv", header = TRUE, sep = ",")
+
+### Importar un TSV
+
+Un archivo TSV (Tab-Separated Values) es un formato de archivo de texto plano que representa valores delimitados por tabulaciones. La misma idea que un CSV, pero con pestañas en lugar de comas. 
+
+<p align="center">
+  <img width="505" height="277" alt="image" src="https://github.com/user-attachments/assets/4fbb2b51-e282-44c3-b865-fc0241c44682" />
+</p>
+
+La función base de R:
+
+> datos <- read.delim("data/amrfinderplus.tsv")
+
+¿Qué hace cada argumento?:
+
+- `"read.delim()"`   #Lo mismo que `read.csv()`.
+- `sep = "\t"`       #El separador de columnas. Para CSV es coma; para TSV es "\t" (tabulador).
+
+### El problema de los acentos y comillas
+Si tu archivo tiene acentos o eñes y sale con caracteres raros (`Ã±` en vez de `ñ`), el problema es la codificación. Prueba:
+
+> datos <- read.csv("data/datos.csv", fileEncoding = "UTF-8")
+
+<p align="center">
+  <img width="642" height="325" alt="image" src="https://github.com/user-attachments/assets/06a3392e-9366-4a63-88df-6f7363c3f4ec" />
+</p>
+
+### Exportar un CSV
+
+La función base de R:
+
+> write.csv(cats, "data/cats_limpio.csv", row.names = FALSE)
+
+¿Qué hace cada argumento?:
+
+- `cats`                     #El objeto que quieres guardar.
+- `"data/cats_limpio.csv"`   #Dónde guardarlo, **entre comillas**.
+- `row.names = FALSE`        #**Siempre ponlo**. Si no, R agrega una columna extra con los números de fila.
+
+### Exportar un TSV
+
+La función base de R:
+
+> write.table(cats, "data/cats_limpio.tsv",
+>            sep = "\t", row.names = FALSE, quote = FALSE)
+
+¿Qué hace cada argumento?:
+
+- `sep = "\t"`       #Separa con tabuladores.
+- `quote = FALSE`    #No pone comillas alrededor de cada valor.
+
+  ### Actividad (8 min)
+  
+> 1. Descarga este archivo y guárdalo en la carpeta `data/` de tu proyecto: cats.csv
+
+> 2. Corre:
+   > ``` r
+   > getwd()
+   > list.files("data")
+   > cats <- read.csv("data/cats.csv")
+   > head(cats)
+   > str(cats)
+
+> 3. Epórtalo:
+   > write.csv(cats, "data/cats_copia.csv", row.names = FALSE)
+
+> 5. Revisa la carpeta `data/` en el panel Files. Debe aparecer `cats_copia.csv`.
+
+> ````
+
+>**Preguntas:** ¿cuántas filas y columnas tiene `cats`? ¿Qué diferencia hay entre `head()` y `str()`?
+
+
+
+
 
 
 
