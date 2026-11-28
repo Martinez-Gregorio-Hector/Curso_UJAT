@@ -635,23 +635,40 @@ La función base de R:
 - `quote = FALSE`    #No pone comillas alrededor de cada valor.
 
   ### Actividad (8 min)
-  
-> 1. Descarga este archivo y guárdalo en la carpeta `data/` de tu proyecto: cats.csv
 
-> 2. Corre:
-   > ``` r
-   > getwd()
-   > list.files("data")
-   > cats <- read.csv("data/cats.csv")
-   > head(cats)
-   > str(cats)
+> 1. Confirma dónde estás con `getwd()` en la consola.
+> 2. En el panel **Files** (abajo a la derecha), entra a la carpeta `data` con doble clic (verás la ruta en la barra de arriba del panel).
+> 3. Descarga `cats.csv`y guárdalo en la carpeta `data/` de tu proyecto.
+  > ```r
+  > library(MASS)
+  > data(cats)
+  > write.csv(cats, "data/cats.csv", row.names = FALSE)
+  > list.files("data")
+  > ```   
 
-> 3. Epórtalo:
-   > write.csv(cats, "data/cats_copia.csv", row.names = FALSE)
+<p align="center">
+  <img width="1917" height="1136" alt="Captura de pantalla 2026-11-27 235947" src="https://github.com/user-attachments/assets/fd5167a7-574c-41f8-b271-7aaf28699d6a" />
+</p>
 
-> 5. Revisa la carpeta `data/` en el panel Files. Debe aparecer `cats_copia.csv`.
+> 4. Corre:
+  > ``` r
+  > getwd()
+  > list.files("data")
+  > cats <- read.csv("data/cats.csv")
+  > head(cats)
+  > str(cats)
+  > ```      
 
-> ````
+> 5. Epórtalo:
+  > ``` r 
+  > write.csv(cats, "data/cats_copia.csv", row.names = FALSE)
+  > ```   
+
+> 6. Revisa la carpeta `data/` en el panel Files. Debe aparecer `cats_copia.csv`.
+
+<p align="center">
+  <img width="1915" height="1136" alt="Captura de pantalla 2026-11-28 000510" src="https://github.com/user-attachments/assets/d467b98e-b250-47a9-818a-50606fc8ad4c" />
+</p>
 
 >**Preguntas:** ¿cuántas filas y columnas tiene `cats`? ¿Qué diferencia hay entre `head()` y `str()`?
 
